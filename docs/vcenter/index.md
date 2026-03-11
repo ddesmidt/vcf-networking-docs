@@ -1,5 +1,5 @@
 <h1>
-  <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> vCenter Network Services
+  <img src="../assets/vCenter.png" style="height:30px"; vertical-align:middle;> vCenter Network Services
 </h1>
 
 
