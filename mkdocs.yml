@@ -1,5 +1,6 @@
 site_name: VCF Networking Encyclopedia
 site_description: Technical configuration guide for VCF Networking services in VCF
+use_directory_urls: true
 
 theme:
   name: material
