@@ -1002,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="3e-community_policy/" class="md-nav__link">
+      <a href="3e-community_policy.md" class="md-nav__link">
         
   
   
@@ -1769,15 +1769,14 @@
 
 
 <h1>
-  <img src="../assets/vCenter.png" style="height:30px"; vertical-align:middle;>
-  vCenter Network Services
+  <img src="/assets/vCenter.png" style="height:30px"; vertical-align:middle;> vCenter Network Services
 </h1>
 
-<p>This section provides technical procedures for configuring and managing network services via the <strong>vSphere Client</strong>.  </p>
+<p>This section describes the procedures for configuring network services via the <strong>vSphere Client</strong>. </p>
 <hr />
 <h2 id="vpc-network-services">VPC Network Services</h2>
 <p>Explore the specific configuration guides for each VPC network service:</p>
-<div class="grid" style="grid-template-columns: 25% 75%; gap: 10px;">
+<div class="grid" style="grid-template-columns: 25% 75%">
 <div>
 <p><img alt="vCenter VPC Network Services" src="images/vCenter-VPCNetworkServices.jpg" width="100%" /></p>
 </div>
@@ -1785,29 +1784,43 @@
 <div style="height:20px;"></div>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8m1-7v3h2l-3 3-3-3h2v-3m-6 0h3v2l3-3-3-3v2H5m6 0V8H9l3-3 3 3h-2v3m6 0h-3V9l-3 3 3 3v-2h3"/></svg></span> <a href="1a-vpc_router/"><strong>VPC Router</strong></a><br />
-  Logical router.</li>
+  Logical router for VPC networking.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h1v2H2v2h4v2H5c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2H8v-2h8v2h-1c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2h-1v-2h4v-2h-9V9h1c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm0 2h4v3h-4zM5 17h4v3H5zm10 0h4v3h-4z"/></svg></span> <a href="1b-vpc_subnet/"><strong>VPC Subnet</strong></a><br />
-  Logical Subnet (for VMs/K8s connection).<br />
-  Option to also create Subnet-VLAN.</li>
+  Logical Subnet (to connect VMs/K8s workloads).<br />
+  Optionally, a Subnet-VLAN can also be created.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21 9-4-4v3h-7v2h7v3M7 11l-4 4 4 4v-3h7v-2H7z"/></svg></span> <a href="1c-vpc_nat/"><strong>NAT</strong></a><br />
-  External-IP (1:1 NAT)<br />
-  or Outbound-NAT (N:1 NAT)<br />
-  or NAT (SNAT/DNAT)</li>
+  Supports multiple NAT configurations:<br />
+  . External-IP (1:1 NAT)<br />
+  . Outbound-NAT (N:1 NAT)<br />
+  . NAT (SNAT/DNAT)</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-8-5V5h10v10zm3-9H8v8h2zm4 0h-3v8h2v-2h1a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m0 4h-1V8h1z"/></svg></span> <a href="1d-vpc_DHCP/"><strong>DHCP</strong></a><br />
-  DHCP Server (managed by VCF)<br />
-  or DHCP Relay (managed by 3rd party DHCP Server like Infoblox)</li>
+  DHCP services can be configured as:<br />
+  . DHCP Server (managed by VCF)<br />
+  . DHCP Relay (using an external DHCP server such as Infoblox)</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16v-3h-3v9h-2V2h2v9h3V8l4 4zM2 12l4 4v-3h3v9h2V2H9v9H6V8z"/></svg></span> <strong>Load Balancer</strong><br />
   VMware AVI Load Balancer.<br />
-  Configuration not available from vCenter (available from AVI).</li>
+  Configuration not available from vCenter (available through AVI).</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25M10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"/></svg></span> <strong>VPN</strong><br />
   Secure Site-to-Site connectivity.<br />
-  Configuration not available from vCenter (available from NSX).</li>
+  Configuration not available from vCenter (available through NSX).</li>
 </ul>
 </div>
 </div>
+<div class="grid" style="grid-template-columns: 10% 80% 10%">
+<div></div>
+<div>
+<div class="admonition warning">
+<p class="admonition-title">Prerequisite: vCenter must be VPC-ready</p>
+<p>Before configuring VPC network services, the VPC Network Connectivity (Centralized or Distributed) must be configured.<br />
+<img alt="vCenter VPC Ready" src="images/Validate_VPC_Ready.jpg" style="display: block; margin: 0 auto;" width="80%" /><br />
+See section <strong>North VPC Connectivity Configuration</strong> below to prepare the vCenter environment.</p>
+</div>
+</div>
+<div></div>
+</div>
 <hr />
 <h2 id="north-vpc-connectivity-configuration">North VPC Connectivity Configuration</h2>
-<p>Explore the specific configuration guides for each North VPC Connectivity Configuration:</p>
+<p>Explore the configuration guides for each North VPC connectivity component:</p>
 <div class="grid" style="grid-template-columns: 25% 75%; gap: 10px;">
 <div>
 <p><img alt="vCenter VPC Connectivity" src="images/vCenter-VPCConnectivity.jpg" width="100%" /></p>
@@ -1835,10 +1848,11 @@
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14h2v6H3v-6h2v4h14zM3 4v6h2V6h14v4h2V4zm8 7v2H8v2l-3-3 3-3v2zm5 0V9l3 3-3 3v-2h-3v-2z"/></svg></span> <a href="3d-network_span/"><strong>Network Span</strong></a><br />
   Defines how VPC subnets span across vCenter clusters.<br />
   Not represented in the diagram.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12c0-.81.3-1.5.89-2.11C10.5 9.3 11.19 9 12 9s1.5.3 2.11.89c.59.61.89 1.3.89 2.11s-.3 1.5-.89 2.11c-.61.59-1.3.89-2.11.89s-1.5-.3-2.11-.89C9.3 13.5 9 12.81 9 12M5.53 8.44l1.78 1.78L5.53 12l1.78 1.78-1.78 1.78L2 12zm2.91 10.03 1.78-1.78L12 18.47l1.78-1.78 1.78 1.78L12 22zm10.03-2.91-1.78-1.78L18.47 12l-1.78-1.78 1.78-1.78L22 12zM15.56 5.53l-1.78 1.78L12 5.53l-1.78 1.78-1.78-1.78L12 2z"/></svg></span> <a href="3e-community_policy/"><strong>Community Policy</strong></a><br />
-  Defines cross-VPC communication options.<br />
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 12c0-.81.3-1.5.89-2.11C10.5 9.3 11.19 9 12 9s1.5.3 2.11.89c.59.61.89 1.3.89 2.11s-.3 1.5-.89 2.11c-.61.59-1.3.89-2.11.89s-1.5-.3-2.11-.89C9.3 13.5 9 12.81 9 12M5.53 8.44l1.78 1.78L5.53 12l1.78 1.78-1.78 1.78L2 12zm2.91 10.03 1.78-1.78L12 18.47l1.78-1.78 1.78 1.78L12 22zm10.03-2.91-1.78-1.78L18.47 12l-1.78-1.78 1.78-1.78L22 12zM15.56 5.53l-1.78 1.78L12 5.53l-1.78 1.78-1.78-1.78L12 2z"/></svg></span> <a href="3e-connectivity_policy/"><strong>Connectivity Policy</strong></a><br />
+  Defines cross-VPC communication rules.<br />
   Not represented in the diagram.</li>
 </ul>
+<p>? Connectivity Pofile ?</p>
 </div>
 </div>
 <hr />
@@ -1903,7 +1917,7 @@ If you are running an older version, some options may not be available.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "nyan.grid"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "nyan.grid", "lightbox"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#configuration-vpc-subnet-overlay" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -501,6 +506,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPC Subnet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -517,6 +540,84 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-vpc-subnet-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration VPC Subnet Overlay
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration VPC Subnet Overlay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-new-vpc-subnet-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create new VPC Subnet (Overlay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-choose-the-vpc-subnet-name-vlan-option-subnet-mode-ip-block-size-connectivity-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block &amp; Size + Connectivity + DHCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result - Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-vpc-subnet-vlan-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration VPC Subnet VLAN-Extension
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -912,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3e-community_policy/" class="md-nav__link">
+      <a href="../3e-community_policy.md" class="md-nav__link">
         
   
   
@@ -1605,6 +1706,75 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-vpc-subnet-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration VPC Subnet Overlay
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration VPC Subnet Overlay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-new-vpc-subnet-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create new VPC Subnet (Overlay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-choose-the-vpc-subnet-name-vlan-option-subnet-mode-ip-block-size-connectivity-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block &amp; Size + Connectivity + DHCP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result - Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-vpc-subnet-vlan-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration VPC Subnet VLAN-Extension
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1620,22 +1790,42 @@
 
 
 
-  <h1>VPC Subnet</h1>
+<h1>
+  <img src="/assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC Subnet
+</h1>
 
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">vCenter UI</label><label for="__tabbed_1_2">API / PowerVCF</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ol>
-<li>Go to Networking.</li>
-<li>Click NAT.</li>
-</ol>
+<div class="grid" style="grid-template-columns: 85% 15%">
+<div>
+<p>This section describes the procedures for configuring a VPC Subnet using the vSphere Client.</p>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>POST<span class="w"> </span>/api/v1/nat-rules
-</code></pre></div>
+<div>
+<p><img alt="vCenter VPC Connectivity" src="../images/1b-0-VPC_Subnet.jpg" width="100%" /></p>
 </div>
 </div>
-</div>
+<hr />
+<h2 id="configuration-vpc-subnet-overlay">Configuration VPC Subnet Overlay</h2>
+<h3 id="1-create-new-vpc-subnet-overlay">1. Create new VPC Subnet (Overlay)</h3>
+<p><img alt="vCenter Create VPC" src="../images/1b-1-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="70%" /></p>
+<h3 id="2-choose-the-vpc-subnet-name-vlan-option-subnet-mode-ip-block-size-connectivity-dhcp">2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block &amp; Size + Connectivity + DHCP)</h3>
+<p><img alt="vCenter Create VPC" src="../images/1b-2-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="90%" /></p>
+<ul>
+<li><strong>VLAN Extensions</strong>:<br />
+  Disabled for the VPC-Subnet Overlay.</li>
+<li><strong>Access Mode</strong><br />
+  Select VPC Subnet mode based (Public / Private TGW / Private VPC) on the VM access you need.
+  <img alt="VPC Subnet" src="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg" style="width:80%; display:block; margin:0 auto;" /></li>
+</ul>
+<p><a href="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg"><img alt="VPC Subnet" src="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg" style="width:80%; display:block; margin:0 auto;" /></a></p>
+<ul>
+<li><strong>Connectivity Policy</strong><br />
+  Select the Connectivity Policy (Policy for cross-VPC communication).
+  That's to allow/deny communication to other VPC subnets.</li>
+</ul>
+<h3 id="result-topology">Result - Topology</h3>
+<p><img alt="vCenter Validation VPC" src="../images/1a-3-Validation_VPC_Router.jpg" style="display: block; margin: 0 auto;" width="90%" /></p>
+<h2 id="configuration-vpc-subnet-vlan-extension">Configuration VPC Subnet VLAN-Extension</h2>
+<p><a href="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg"><img alt="VPC Subnet - Access Mode" src="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg" style="width:80%; display:block; margin:0 auto;" /></a></p>
+<hr />
 
 
 
@@ -1691,7 +1881,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "nyan.grid"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "nyan.grid", "lightbox"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
