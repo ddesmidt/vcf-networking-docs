@@ -1,0 +1,81 @@
+site_name: VCF Networking Encyclopedia
+site_description: Technical configuration guide for VCF Networking services in VCF
+
+theme:
+  name: material
+  palette:
+    # This sets a "VMware-like" blue and white theme
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: assets/VMware_by_Broadcom_White.png
+  favicon: assets/VMware_by_Broadcom_White.png  # Optional: uses same logo for browser tab
+  features:
+    - navigation.tabs              # Top navigation bar
+    - navigation.sections          # Grouping in sidebar
+    - navigation.expand            # Auto-expand the sidebar
+    - navigation.top               # "Back to top" button
+    - content.code.copy            # "Copy" button on CLI commands
+    - nyan.grid            # This is the feature that enables "grid" and "cards"
+
+markdown_extensions:
+  - admonition                     # For "Warning" and "Note" boxes
+  - pymdownx.details               # For collapsible "Read More" sections
+  - pymdownx.superfences           # Better code blocks
+  - pymdownx.tabbed:               # For UI vs. API tabs
+      alternate_style: true
+  - attr_list                      # "grid cards" class to work
+  - md_in_html                     # Allows Markdown (the bullets) inside the <div>
+  - pymdownx.emoji: # <--- OPTIONAL: Makes the :material-xxx: icons appear
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# THIS IS YOUR TABLE OF CONTENTS
+nav:
+  - VCF Networking Configuration Guide: index.md
+  - vCenter Server:
+      - Introduction: vcenter/index.md
+      - VPC Network Services:
+          - VPC Router: vcenter/1a-vpc_router.md
+          - VPC Subnet: vcenter/1b-vpc_subnet.md
+          - NAT: vcenter/1c-vpc_nat.md
+          - DHCP: vcenter/1d-vpc_DHCP.md
+      - VPC Network Infrastructure:
+          - Edge Cluster / Node: vcenter/2a-edge.md
+          - VNA Cluster / Node: vcenter/2b-vna.md
+          - Tier-0 / BGP: vcenter/2c-tier0.md
+      - VCF North Connectivity:
+          - External Conenction: vcenter/3a-external_connection.md
+          - Transit Gateway: vcenter/3b-transit_gateway.md
+          - IP Block: vcenter/3c-ip_block.md
+          - Network Span: vcenter/3d-network_span.md
+          - Community Policy: vcenter/3e-community_policy.md
+  - VCF Automation:
+      - Introduction: vcfa/index.md
+      - VPC Network Services:
+          - VPC Router: vcfa/1a-vpc_router.md
+          - VPC Subnet: vcfa/1b-vpc_subnet.md
+          - NAT: vcfa/1c-vpc_nat.md
+          - DHCP: vcfa/1d-vpc_DHCP.md
+          - Load Balancer: vcfa/1e-vpc_lb.md
+          - VPN: vcfa/1f-vpc_vpn.md
+      - VPC Network Infrastructure:
+          - Edge Cluster / Node: vcfa/2a-edge.md
+          - VNA Cluster / Node: vcfa/2b-vna.md
+          - Tier-0 / BGP: vcfa/2c-tier0.md
+          - Subnet VLAN: vcfa/2d-vpc_subnet_vlan.md
+      - VCF North Connectivity:
+          - External Conenction: vcfa/3a-external_connection.md
+          - Transit Gateway: vcfa/3b-transit_gateway.md
+          - IP Block: vcfa/3c-ip_block.md
+
+
