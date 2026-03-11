@@ -1,5 +1,5 @@
 <h1>
-  <img src="../assets/VCFA.png" style="height:30px"; vertical-align:middle;>
+  <img src="/assets/VCFA.png" style="height:30px"; vertical-align:middle;>
   VCF Automation Network Services
 </h1>
 
@@ -10,7 +10,7 @@ This section provides technical procedures for configuring and managing network 
 ## VPC Network Services - VCF-A Tenant
 Explore the specific configuration guides for each VPC network service available to the VCF-A Tenants:
 
-<div class="grid" markdown style="grid-template-columns: 25% 75%; gap: 10px;">
+<div class="grid" markdown style="grid-template-columns: 25% 75%">
 
 <div markdown>
 ![VCFA VPC Network Services.](images/VCFA-VPCNetworkServices.jpg){ width="100%" }
@@ -69,11 +69,11 @@ Explore the specific configuration guides for each North VPC Connectivity Config
 * :material-code-block-brackets: [__IP Blocks External (Infoblox) + TGW Priv.__](3c-ip_block.md)  
   IP blocks used for VPC subnet allocation.  
   Not represented in the diagram.
-* :material-table-split-cell: [__Network Span__]  
+* :material-table-split-cell: __Network Span__  
   Defines how VPC subnets span across vCenter clusters.  
   Not represented in the diagram.  
   Configuration not available from VCF Automation (available from vCenter or NSX).
-* :material-camera-control: [__Community Policy__]  
+* :material-camera-control: __Community Policy__  
   Defines cross-VPC communication options.  
   Not represented in the diagram.  
   Configuration not available from VCF Automation (available from vCenter or NSX).

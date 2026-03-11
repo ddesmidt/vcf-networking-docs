@@ -16,7 +16,7 @@ Select the VCF component you are using to configure your network services.
 
 -   <img src="assets/VCFA.png" style="height:20px; vertical-align:middle;"> __VCF Automation (VCF-A)__  
     Best for **Cloud Admins**.  
-    [:octicons-arrow-right-24: Go to VCF Automation section](vcf-a/index.md)
+    [:octicons-arrow-right-24: Go to VCF Automation section](vcfa/index.md)
 
 </div>
 

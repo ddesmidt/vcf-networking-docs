@@ -25,7 +25,8 @@ theme:
     - navigation.expand            # Auto-expand the sidebar
     - navigation.top               # "Back to top" button
     - content.code.copy            # "Copy" button on CLI commands
-    - nyan.grid            # This is the feature that enables "grid" and "cards"
+    - nyan.grid                    # This is the feature that enables "grid" and "cards"
+    - lightbox                     # This is for the image zoom
 
 markdown_extensions:
   - admonition                     # For "Warning" and "Note" boxes

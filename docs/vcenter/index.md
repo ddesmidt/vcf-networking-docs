@@ -1,17 +1,16 @@
 <h1>
-  <img src="../assets/vCenter.png" style="height:30px"; vertical-align:middle;>
-  vCenter Network Services
+  <img src="/assets/vCenter.png" style="height:30px"; vertical-align:middle;> vCenter Network Services
 </h1>
 
 
-This section provides technical procedures for configuring and managing network services via the **vSphere Client**.  
+This section describes the procedures for configuring network services via the **vSphere Client**. 
 
 ---
 
 ## VPC Network Services
 Explore the specific configuration guides for each VPC network service:
 
-<div class="grid" markdown style="grid-template-columns: 25% 75%; gap: 10px;">
+<div class="grid" markdown style="grid-template-columns: 25% 75%">
 
 <div markdown>
 ![vCenter VPC Network Services](images/vCenter-VPCNetworkServices.jpg){ width="100%" }
@@ -20,30 +19,46 @@ Explore the specific configuration guides for each VPC network service:
 <div markdown>
 <div style="height:20px;"></div>
 * :material-router: [**VPC Router**](1a-vpc_router.md)  
-  Logical router.
+  Logical router for VPC networking.
 * :material-lan: [**VPC Subnet**](1b-vpc_subnet.md)  
-  Logical Subnet (for VMs/K8s connection).  
-  Option to also create Subnet-VLAN.
+  Logical Subnet (to connect VMs/K8s workloads).  
+  Optionally, a Subnet-VLAN can also be created.
 * :material-swap-horizontal: [**NAT**](1c-vpc_nat.md)  
-  External-IP (1:1 NAT)  
-  or Outbound-NAT (N:1 NAT)  
-  or NAT (SNAT/DNAT)
+  Supports multiple NAT configurations:  
+  . External-IP (1:1 NAT)  
+  . Outbound-NAT (N:1 NAT)  
+  . NAT (SNAT/DNAT)
 * :material-ip-network-outline: [**DHCP**](1d-vpc_DHCP.md)  
-  DHCP Server (managed by VCF)  
-  or DHCP Relay (managed by 3rd party DHCP Server like Infoblox)
-* :material-arrow-split-vertical: [**Load Balancer**]    
+  DHCP services can be configured as:  
+  . DHCP Server (managed by VCF)  
+  . DHCP Relay (using an external DHCP server such as Infoblox)
+* :material-arrow-split-vertical: **Load Balancer**  
   VMware AVI Load Balancer.  
-  Configuration not available from vCenter (available from AVI).
-* :octicons-lock-16: [**VPN**]  
+  Configuration not available from vCenter (available through AVI).
+* :octicons-lock-16: **VPN**  
   Secure Site-to-Site connectivity.  
-  Configuration not available from vCenter (available from NSX).
+  Configuration not available from vCenter (available through NSX).
+</div>
 </div>
 
+
+<div class="grid" markdown style="grid-template-columns: 10% 80% 10%">
+<div markdown>
 </div>
+<div markdown>
+!!! warning "Prerequisite: vCenter must be VPC-ready"
+    Before configuring VPC network services, the VPC Network Connectivity (Centralized or Distributed) must be configured.  
+    ![vCenter VPC Ready](images/Validate_VPC_Ready.jpg){ width="80%" style="display: block; margin: 0 auto;" }  
+    See section **North VPC Connectivity Configuration** below to prepare the vCenter environment.
+</div>
+<div markdown>
+</div>
+</div>
+
 ---
 
 ## North VPC Connectivity Configuration
-Explore the specific configuration guides for each North VPC Connectivity Configuration:
+Explore the configuration guides for each North VPC connectivity component:
 
 <div class="grid" markdown style="grid-template-columns: 25% 75%; gap: 10px;">
 
@@ -73,14 +88,14 @@ Explore the specific configuration guides for each North VPC Connectivity Config
 * :material-table-split-cell: [__Network Span__](3d-network_span.md)  
   Defines how VPC subnets span across vCenter clusters.  
   Not represented in the diagram.
-* :material-camera-control: [__Community Policy__](3e-community_policy.md)  
-  Defines cross-VPC communication options.  
+* :material-camera-control: [__Connectivity Policy__](3e-connectivity_policy.md)  
+  Defines cross-VPC communication rules.  
   Not represented in the diagram.
+
+  ? Connectivity Pofile ?
 </div>
 
 </div>
-
-
 
 
 ---
