@@ -1,5 +1,5 @@
 <h1>
-  <img src="assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC Router
+  <img src="../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC Router
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 85% 15%">
