@@ -31,7 +31,9 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 * **Access Mode**  
   Select VPC Subnet mode based (Public / Private TGW / Private VPC) on the VM access you need.  
 <div class="center-text" markdown="1">
+
 Click on image below to Zoom in.
+
 </div>
   [![VPC Subnet](images/1b-2-Create_VPC_Subnet_AccessMode.jpg){ style="width:80%; display:block; margin:0 auto;" }](images/1b-2-Create_VPC_Subnet_AccessMode.jpg)
 
