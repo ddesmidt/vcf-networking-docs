@@ -47,7 +47,7 @@ nav:
   - vCenter Server:
       - Introduction: vcenter/index.md
       - VPC Network Services:
-          - VPC Router: vcenter/1a-vpc_router.md
+          - VPC Gateway: vcenter/1a-vpc_gateway.md
           - VPC Subnet: vcenter/1b-vpc_subnet.md
           - NAT: vcenter/1c-vpc_nat.md
           - DHCP: vcenter/1d-vpc_DHCP.md
@@ -64,7 +64,7 @@ nav:
   - VCF Automation:
       - Introduction: vcfa/index.md
       - VPC Network Services:
-          - VPC Router: vcfa/1a-vpc_router.md
+          - VPC Gateway: vcfa/1a-vpc_gateway.md
           - VPC Subnet: vcfa/1b-vpc_subnet.md
           - NAT: vcfa/1c-vpc_nat.md
           - DHCP: vcfa/1d-vpc_DHCP.md

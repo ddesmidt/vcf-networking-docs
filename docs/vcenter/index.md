@@ -18,7 +18,7 @@ Explore the specific configuration guides for each VPC network service:
 
 <div markdown>
 <div style="height:20px;"></div>
-* :material-router: [**VPC Router**](1a-vpc_router.md)  
+* :material-router: [**VPC Gateway**](1a-vpc_gateway.md)  
   Logical router for VPC networking.
 * :material-lan: [**VPC Subnet**](1b-vpc_subnet.md)  
   Logical Subnet (to connect VMs/K8s workloads).  
