@@ -567,6 +567,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#overview-of-vpc-subnet-overlay-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of VPC Subnet Overlay Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1-create-new-vpc-subnet-overlay" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -612,6 +623,56 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Configuration VPC Subnet VLAN-Extension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-vpc-subnet-vlan-extension-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of VPC Subnet VLAN-Extension options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-create-new-vpc-subnet-overlay_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create new VPC Subnet (Overlay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-choose-the-vpc-subnet-name-vlan-extension-access-mode-vlan-id-gateway-ip-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-topology_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result - Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1725,6 +1786,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#overview-of-vpc-subnet-overlay-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of VPC Subnet Overlay Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#1-create-new-vpc-subnet-overlay" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1771,6 +1843,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Configuration VPC Subnet VLAN-Extension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-vpc-subnet-vlan-extension-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of VPC Subnet VLAN-Extension options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-create-new-vpc-subnet-overlay_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create new VPC Subnet (Overlay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-choose-the-vpc-subnet-name-vlan-extension-access-mode-vlan-id-gateway-ip-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#result-topology_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Result - Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1791,7 +1913,7 @@
 
 
 <h1>
-  <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC Subnet
+  <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC Subnet Configuration in vCenter
 </h1>
 
 <div class="grid" style="grid-template-columns: 85% 15%">
@@ -1804,6 +1926,37 @@
 </div>
 <hr />
 <h2 id="configuration-vpc-subnet-overlay">Configuration VPC Subnet Overlay</h2>
+<h3 id="overview-of-vpc-subnet-overlay-types">Overview of VPC Subnet Overlay Types</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Use Case</th>
+<th style="text-align: left;">Routing Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Public</strong></td>
+<td style="text-align: left;">Provide Public IPs to workloads with direct access to the physical network (No-NAT).</td>
+<td style="text-align: left;">External visibility is high; direct ingress/egress.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Private&nbsp;TGW</strong></td>
+<td style="text-align: left;">Provide Private IPs to workloadsw with no access to the physical network (requires NAT), but routably accessible to other VPCs.</td>
+<td style="text-align: left;">Best for shared internal services across the enterprise.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Private&nbsp;VPC</strong></td>
+<td style="text-align: left;">Provide Private IPs to workloadsw with no access to the physical network and other VPCs (requires NAT).</td>
+<td style="text-align: left;">Maximum isolation; workloads are "hidden" even from other VPCs.</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center;">
+Click on image below to Zoom in.
+</div>
+<p><a href="../images/1b-0-VPC_Subnet_AccessMode_Options.jpg"><img alt="VPC Subnet" src="../images/1b-0-VPC_Subnet_AccessMode_Options.jpg" style="width:80%; display:block; margin:0 auto;" /></a></p>
 <h3 id="1-create-new-vpc-subnet-overlay">1. Create new VPC Subnet (Overlay)</h3>
 <p><img alt="vCenter Create VPC" src="../images/1b-1-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="70%" /></p>
 <h3 id="2-choose-the-vpc-subnet-name-vlan-option-subnet-mode-ip-block-size-connectivity-dhcp">2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block &amp; Size + Connectivity + DHCP)</h3>
@@ -1816,15 +1969,8 @@
 </li>
 <li>
 <p><strong>Access Mode</strong><br />
-  Select VPC Subnet mode based (Public / Private TGW / Private VPC) on the VM access you need.
-<br />
-<div style="text-align:center;">
-  Click on image below to Zoom in.
-  </div></p>
+  Select VPC Subnet mode based (Public / Private TGW / Private VPC) based on the VM connectivity you need.</p>
 </li>
-</ul>
-<p><a href="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg"><img alt="VPC Subnet" src="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg" style="width:80%; display:block; margin:0 auto;" /></a></p>
-<ul>
 <li>
 <p><strong>IP Block</strong><br />
   Choose "Any", or select a specific IP Block for that VPC Subnet.</p>
@@ -1837,7 +1983,7 @@
 <li>
 <p><strong>Subnet size</strong><br />
   Choose the number of IPs you'll need in that subnet to connect your workloads.<br />
-  Keep in mind, 3 IP will be consumed by the VPC Gateway (subnet IP, default gateway, broadcast IP) + a 4th IP if you enable DHCP Server.</p>
+  Keep in mind, 3 IP will be consumed by the VPC Gateway (subnet IP, default gateway, broadcast IP) + optionally a 4th IP if you enable DHCP Server.</p>
 </li>
 <li>
 <p><strong>VPC Gateway Connectivity</strong><br />
@@ -1847,13 +1993,74 @@
 <li>
 <p><strong>DHCP Config</strong><br />
   . "None": No DHCP Service.<br />
-  . "DHCP Server: VPC Subnet will have a DHCP Server to offer DHCP service to the workloads connected to that VPC Subnet.<br />
-  . "DHCP Relay: VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server. This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.</p>
+  . "DHCP Server": VPC Subnet will have a DHCP Server to offer DHCP service to the workloads connected to that VPC Subnet.<br />
+  .  "DHCP Relay": VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server.This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.</p>
 </li>
 </ul>
 <h3 id="result-topology">Result - Topology</h3>
-<p><img alt="vCenter Validation VPC" src="../images/1a-3-Validation_VPC_Gateway.jpg" style="display: block; margin: 0 auto;" width="90%" /></p>
+<p><img alt="vCenter Validation VPC Subnet" src="../images/1b-3-Validation_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="90%" /></p>
+<hr />
 <h2 id="configuration-vpc-subnet-vlan-extension">Configuration VPC Subnet VLAN-Extension</h2>
+<h3 id="overview-of-vpc-subnet-vlan-extension-options">Overview of VPC Subnet VLAN-Extension options</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Use Case</th>
+<th style="text-align: left;">Routing Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>L2-Only</strong></td>
+<td style="text-align: left;">Provides direct access to a physical VLAN.</td>
+<td style="text-align: left;">Access to Public VPC Subnets is via the external network only. No access to Private VPC Subnets.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Public - No VPC Connectivity</strong></td>
+<td style="text-align: left;">The VPC Gateway is aware of the VLAN subnet, but provides no routing services to it.</td>
+<td style="text-align: left;">Not recommended in vCenter (only VCF-A).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Public - VPC Connectivity</strong></td>
+<td style="text-align: left;">Provides access to the physical VLAN via the VPC Gateway (bridges).</td>
+<td style="text-align: left;">Enables simultaneous access to the Physical VLAN and internal Overlay VPC Subnets..</td>
+</tr>
+</tbody>
+</table>
+<div style="text-align:center;">
+Click on image below to Zoom in.
+</div>
+<p><a href="../images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg"><img alt="VPC Subnet" src="../images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg" style="width:60%; display:block; margin:0 auto;" /></a></p>
+<h3 id="1-create-new-vpc-subnet-overlay_1">1. Create new VPC Subnet (Overlay)</h3>
+<p><img alt="vCenter Create VPC" src="../images/1b-1-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="70%" /></p>
+<h3 id="2-choose-the-vpc-subnet-name-vlan-extension-access-mode-vlan-id-gateway-ip-connectivity">2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity))</h3>
+<p><img alt="vCenter Create VPC" src="../images/1b-4-Create_VPC_Subnet_VLAN.jpg" style="display: block; margin: 0 auto;" width="70%" /></p>
+<ul>
+<li>
+<p><strong>VLAN Extensions</strong>:<br />
+  "Yes" for a VPC-Subnet VLAN-Extension.  </p>
+</li>
+<li>
+<p><strong>Access Mode</strong><br />
+  Select Access Mode (L2-Only* / Public - No VPC Connectivity / Public - VPC Connectivity) based on the VM connectivity you need.</p>
+</li>
+<li>
+<p><strong>VLAN ID</strong><br />
+  Enter the physical VLAN ID.</p>
+</li>
+<li>
+<p><strong>Gateway CIDR IPv4 Address</strong> (only for the Access Mode Public)<br />
+  Enter the default gateway of that VLAN (configured in the physical network).</p>
+</li>
+<li>
+<p><strong>VPC Gateway Connectivity</strong> (only for the Access Mode Public)<br />
+  . "No": The VPC Subnet VLAN-Extension will NOT be connected to the VPC Gateway, but directly to the physical VLAN.  <br />
+  . "Yes": The VPC Subnet VLAN-Extention will be connected to the VPC Gateway and bridged to the physical VLAN.  </p>
+</li>
+</ul>
+<h3 id="result-topology_1">Result - Topology</h3>
+<p><img alt="vCenter Validation VPC Subnet" src="../images/1b-5-Validation_VPC_Subnet_VLAN.png" style="display: block; margin: 0 auto;" width="90%" /></p>
 <hr />
 
 

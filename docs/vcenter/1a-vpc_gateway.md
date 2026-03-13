@@ -1,5 +1,5 @@
 <h1>
-  <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC Gateway
+  <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC Gateway Configuration in vCenter
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 85% 15%">
@@ -18,7 +18,7 @@ This section describes the procedures for configuring a VPC Gateway using the vS
 
 ---
 
-## Configuration
+## Configuration VPC Gateway
 
 ### 1. Create new VPC Gateway
 ![vCenter Create VPC](images/1a-1-Create_VPC_Gateway.jpg){ width="80%" style="display: block; margin: 0 auto;" }
@@ -39,6 +39,6 @@ This section describes the procedures for configuring a VPC Gateway using the vS
 
 ### Result - Topology
 You can see the VPC Gateway in a graphical way under Topology:
-![vCenter Validation VPC](images/1a-3-Validation_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter Validation VPC Gateway](images/1a-3-Validation_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

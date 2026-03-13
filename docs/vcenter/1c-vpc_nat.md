@@ -1,47 +1,57 @@
-# NAT Configuration in vCenter
+<h1>
+  <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC NAT Configuration in vCenter
+</h1>
 
-Use this section to configure Network Address Translation (NAT) for your VPC workloads. NAT allows private subnets to communicate with external networks or provides a way for external users to reach internal services.
+<div class="grid" markdown style="grid-template-columns: 85% 15%">
+
+<div markdown>
+
+This section describes the procedures for configuring Network Address Translation (NAT) for your VPC workloads in private subnets.<br><br>
+NAT allows private subnets to communicate with external networks or provides a way for external users to reach private VPC workloads.
+</div>
+
+
+<div markdown>
+![vCenter VPC Connectivity](images/1c-0-VPC_NAT.jpg){ width="100%" }
+</div>
+
+</div>
+
+---
 
 ## Overview of NAT Types
 
 | Type | Use Case |
 | :--- | :--- |
-| **SNAT** | Source NAT: Allows VMs on private subnets to reach the Internet. |
-| **DNAT** | Destination NAT: Allows external users to reach a specific VM (e.g., a Web Server). |
-| **Reflexive** | Stateless NAT: One-to-one mapping between a private and public IP. |
+| **External-IP (1:1 NAT)** | Allows communication between Workloads on Private VPC and Private TGW subnets and external networks. |
+| **Outbound-NAT (N:1 NAT)** | Allows communication from Destination NAT: Workloads on Private VPC and Private TGW subnets and external networks. |
+| **NAT (SNAT/DNAT)** | Stateful Layer4 NAT for flexible communication between Workloads on Private VPC and Private TGW subnets and external networks.  |
+<div style="text-align:center;">
+Click on image below to Zoom in.
+</div>
+[![VPC Subnet](images/1c-0-VPC_NAT_types.jpg){ style="width:80%; display:block; margin:0 auto;" }](images/1c-0-VPC_NAT_types.jpg)
 
 ---
 
-## Configuration Steps
+## Configuration External-IP (1:1 NAT)
 
-Choose your preferred method for configuring NAT rules.
+### 1. Create new VPC Subnet (Overlay)
+![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-=== "vCenter UI"
 
-    1. Log in to **vCenter Server**.
-    2. Navigate to **Inventory > Networking**.
-    3. Select your **VPC** from the list.
-    4. Click the **Configure** tab and select **Network Services > NAT**.
-    5. Click **Add Rule** and fill in the details:
-        * **Name:** `Production-SNAT`
-        * **Type:** `SNAT`
-        * **External IP:** Select an IP from your public block.
+## Configuration Outbound-IP (N:1 NAT)
 
-=== "PowerVCF / CLI"
+### 1. Create new VPC Subnet (Overlay)
+![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-    To automate NAT creation, use the following API call structure:
 
-    ```bash
-    POST /api/v1/vpc/nat-rules
-    {
-        "display_name": "Production-SNAT",
-        "action": "SNAT",
-        "translated_network": "192.168.1.0/24",
-        "public_ip": "10.0.0.50"
-    }
-    ```
+## Configuration NAT (SNAT/DNAT)
+
+### 1. Create new VPC Subnet (Overlay)
+![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+
+
+
 
 ---
 
-!!! warning "Routing Dependency"
-    Before NAT will function, ensure your **Tier-0
