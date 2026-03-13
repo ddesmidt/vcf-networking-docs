@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../1a-vpc_router/">
+        <link rel="prev" href="../1a-vpc_gateway/">
       
       
         <link rel="next" href="../1c-vpc_nat/">
@@ -471,14 +471,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../1a-vpc_router/" class="md-nav__link">
+      <a href="../1a-vpc_gateway/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    VPC Router
+    VPC Gateway
   
 
     
@@ -1192,14 +1192,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/1a-vpc_router/" class="md-nav__link">
+      <a href="../../vcfa/1a-vpc_gateway.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    VPC Router
+    VPC Gateway
   
 
     
@@ -1809,22 +1809,50 @@
 <h3 id="2-choose-the-vpc-subnet-name-vlan-option-subnet-mode-ip-block-size-connectivity-dhcp">2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block &amp; Size + Connectivity + DHCP)</h3>
 <p><img alt="vCenter Create VPC" src="../images/1b-2-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="90%" /></p>
 <ul>
-<li><strong>VLAN Extensions</strong>:<br />
-  Disabled for the VPC-Subnet Overlay.</li>
 <li>
-<p><strong>Access Mode</strong><br />
-  Select VPC Subnet mode based (Public / Private TGW / Private VPC) on the VM access you need.<br />
-  Click on image below to Zoom in.
-  <a href="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg"><img alt="VPC Subnet" src="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg" style="width:80%; display:block; margin:0 auto;" /></a></p>
+<p><strong>VLAN Extensions</strong>:<br />
+  "No" for a VPC-Subnet Overlay.<br />
+  Note: VLAN Extension is detailed in a the section below.</p>
 </li>
 <li>
-<p><strong>Connectivity Policy</strong><br />
-  Select the Connectivity Policy (Policy for cross-VPC communication).
-  That's to allow/deny communication to other VPC subnets.</p>
+<p><strong>Access Mode</strong><br />
+  Select VPC Subnet mode based (Public / Private TGW / Private VPC) on the VM access you need.
+<br />
+<div style="text-align:center;">
+  Click on image below to Zoom in.
+  </div></p>
+</li>
+</ul>
+<p><a href="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg"><img alt="VPC Subnet" src="../images/1b-2-Create_VPC_Subnet_AccessMode.jpg" style="width:80%; display:block; margin:0 auto;" /></a></p>
+<ul>
+<li>
+<p><strong>IP Block</strong><br />
+  Choose "Any", or select a specific IP Block for that VPC Subnet.</p>
+</li>
+<li>
+<p><strong>Auto allocate Subnet CIDR from IP Blocks</strong><br />
+  "Yes" to let VCF Networking choose the VPC Subnet CIDR,<br />
+  "No" to choose manually the CIDR to use (you can see the "Available Ranges" when clicking on "View IPs..." - not showed in the screenshot).</p>
+</li>
+<li>
+<p><strong>Subnet size</strong><br />
+  Choose the number of IPs you'll need in that subnet to connect your workloads.<br />
+  Keep in mind, 3 IP will be consumed by the VPC Gateway (subnet IP, default gateway, broadcast IP) + a 4th IP if you enable DHCP Server.</p>
+</li>
+<li>
+<p><strong>VPC Gateway Connectivity</strong><br />
+  "Yes": The VPC Subnet will be connected to the VPC Gateway and so workloads connected on that VPC Subnet will have access to outside of that VPC Subnet.<br />
+  "No": The VPC Subnet will NOT be connected to the VPC Gateway and so workloads connected on that VPC Subnet will NOT have access outside of that VPC Subnet.  </p>
+</li>
+<li>
+<p><strong>DHCP Config</strong><br />
+  "None": No DHCP Service.<br />
+  "DHCP Server: VPC Subnet will have a DHCP Server to offer DHCP service to the workloads connected to that VPC Subnet.<br />
+  "DHCP Relay: VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server. This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.</p>
 </li>
 </ul>
 <h3 id="result-topology">Result - Topology</h3>
-<p><img alt="vCenter Validation VPC" src="../images/1a-3-Validation_VPC_Router.jpg" style="display: block; margin: 0 auto;" width="90%" /></p>
+<p><img alt="vCenter Validation VPC" src="../images/1a-3-Validation_VPC_Gateway.jpg" style="display: block; margin: 0 auto;" width="90%" /></p>
 <h2 id="configuration-vpc-subnet-vlan-extension">Configuration VPC Subnet VLAN-Extension</h2>
 <hr />
 
