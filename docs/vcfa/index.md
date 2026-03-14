@@ -69,19 +69,17 @@ Explore the specific configuration guides for each North VPC Connectivity Config
 * :material-code-block-brackets: [__IP Blocks External (Infoblox) + TGW Priv.__](3c-ip_block.md)  
   IP blocks used for VPC subnet allocation.  
   Not represented in the diagram.
-* :material-table-split-cell: __Network Span__  
+* :material-table-split-cell: ~~__Network Span__~~  
   Defines how VPC subnets span across vCenter clusters.  
   Not represented in the diagram.  
-  Configuration not available from VCF Automation (available from vCenter or NSX).
-* :material-camera-control: __Community Policy__  
+  Configuration not available from VCF Automation (available from vCenter or NSX).  
+* :material-camera-control: ~~__Community Policy__~~  
   Defines cross-VPC communication options.  
   Not represented in the diagram.  
-  Configuration not available from VCF Automation (available from vCenter or NSX).
+  Configuration not available from VCF Automation (available from vCenter or NSX).  
 </div>
 
 </div>
-
-
 
 
 ---

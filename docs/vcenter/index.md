@@ -32,11 +32,9 @@ Explore the specific configuration guides for each VPC network service:
   DHCP services can be configured as:  
   . DHCP Server (managed by VCF)  
   . DHCP Relay (using an external DHCP server such as Infoblox)
-* :material-arrow-split-vertical: **Load Balancer**  
-  VMware AVI Load Balancer.  
-  Configuration not available from vCenter (available through AVI).
-* :octicons-lock-16: **VPN**  
-  Secure Site-to-Site connectivity.  
+* :material-arrow-split-vertical: ~~**Load Balancer**~~  
+  Configuration not available from vCenter (available through VMware AVI Load Balancer).
+* :octicons-lock-16: ~~**VPN**~~  
   Configuration not available from vCenter (available through NSX).
 </div>
 </div>

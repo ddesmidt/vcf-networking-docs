@@ -51,10 +51,11 @@ markdown_extensions:
   - pymdownx.emoji: # <--- OPTIONAL: Makes the :material-xxx: icons appear
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tilde
 
 # THIS IS YOUR TABLE OF CONTENTS
 nav:
-  - VCF Networking Configuration Guide: index.md
+  - VCF Networking Encyclopedia: index.md
   - vCenter Server:
       - Introduction: vcenter/index.md
       - VPC Network Services:
