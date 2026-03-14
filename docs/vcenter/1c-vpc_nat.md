@@ -7,7 +7,7 @@
 <div markdown>
 
 This section describes the procedures for configuring Network Address Translation (NAT) for your VPC workloads in private subnets.<br><br>
-NAT allows private subnets to communicate with external networks or provides a way for external users to reach private VPC workloads.
+NAT allows **VPC Private subnets** to communicate with external networks or provides a way for external users to reach private VPC workloads.
 </div>
 
 
@@ -42,9 +42,11 @@ NAT allows private subnets to communicate with external networks or provides a w
 ---
 
 ## Configuration Outbound-NAT (N:1 SNAT) {: #outbound-nat }
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 !!! warning "Limitation"
     Outbound-NAT is **not supported** on VPCs connected to Distributed Transit Gateways without VNA.  
     (only supported on VPCs connected to Centralized Transit Gateways or Distributed Transit Gateways with VNA)
+</div>
 
 ### 1. Check Outbound-NAT configuration in the VPC Gateway
 ![vCenter Check Outbound NAT Config](images/1c-2a-Check_VPC_ONAT_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }

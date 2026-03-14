@@ -978,7 +978,7 @@
   <span class="md-ellipsis">
     
   
-    External Conenction
+    External Connection
   
 
     
@@ -1673,7 +1673,7 @@
   <span class="md-ellipsis">
     
   
-    External Conenction
+    External Connection
   
 
     
@@ -1928,7 +1928,7 @@
 <div class="grid" style="grid-template-columns: 85% 15%">
 <div>
 <p>This section describes the procedures for configuring Network Address Translation (NAT) for your VPC workloads in private subnets.<br><br>
-NAT allows private subnets to communicate with external networks or provides a way for external users to reach private VPC workloads.</p>
+NAT allows <strong>VPC Private subnets</strong> to communicate with external networks or provides a way for external users to reach private VPC workloads.</p>
 </div>
 <div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-0-VPC_NAT.jpg" data-desc-position="bottom"><img alt="vCenter VPC Connectivity" src="../images/1c-0-VPC_NAT.jpg" width="100%"></a></p>
@@ -1971,10 +1971,12 @@ NAT allows private subnets to communicate with external networks or provides a w
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <hr>
 <h2 id="outbound-nat">Configuration Outbound-NAT (N:1 SNAT)</h2>
+<div style="margin-left: 40px; margin-right: 40px;">
 <div class="admonition warning">
 <p class="admonition-title">Limitation</p>
 <p>Outbound-NAT is <strong>not supported</strong> on VPCs connected to Distributed Transit Gateways without VNA.<br>
 (only supported on VPCs connected to Centralized Transit Gateways or Distributed Transit Gateways with VNA)</p>
+</div>
 </div>
 <h3 id="1-check-outbound-nat-configuration-in-the-vpc-gateway">1. Check Outbound-NAT configuration in the VPC Gateway</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2a-Check_VPC_ONAT_Config.jpg" data-desc-position="bottom"><img alt="vCenter Check Outbound NAT Config" src="../images/1c-2a-Check_VPC_ONAT_Config.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>

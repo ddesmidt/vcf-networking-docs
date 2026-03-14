@@ -46,8 +46,7 @@ Explore the specific configuration guides for each VPC network service:
 <div markdown>
 !!! warning "Prerequisite: vCenter must be VPC-ready"
     Before configuring VPC network services, the VPC Network Connectivity (Centralized or Distributed) must be configured.  
-    ![vCenter VPC Ready](images/Validate_VPC_Ready.jpg){ width="80%" style="display: block; margin: 0 auto;" }  
-    See section **North VPC Connectivity Configuration** below to prepare the vCenter environment.
+    ![vCenter VPC Ready](images/Validate_VPC_Ready.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 </div>
 <div markdown>
 </div>

@@ -36,7 +36,7 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 ### 2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block & Size + Connectivity + DHCP)
 ![vCenter Create VPC](images/1b-2-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
-* **VLAN Extensions**:  
+* **VLAN Extensions**  
   "No" for a VPC-Subnet Overlay.  
   Note: VLAN Extension is detailed in a the section below.
 
@@ -89,7 +89,7 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 ### 2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity))
 ![vCenter Create VPC](images/1b-4-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-* **VLAN Extensions**:  
+* **VLAN Extensions**  
   "Yes" for a VPC-Subnet VLAN-Extension.  
 
 * **Access Mode**  

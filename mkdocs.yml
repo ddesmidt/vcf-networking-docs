@@ -68,7 +68,7 @@ nav:
           - VNA Cluster / Node: vcenter/2b-vna.md
           - Tier-0 / BGP: vcenter/2c-tier0.md
       - VCF North Connectivity:
-          - External Conenction: vcenter/3a-external_connection.md
+          - External Connection: vcenter/3a-external_connection.md
           - Transit Gateway: vcenter/3b-transit_gateway.md
           - IP Block: vcenter/3c-ip_block.md
           - Network Span: vcenter/3d-network_span.md
@@ -88,7 +88,7 @@ nav:
           - Tier-0 / BGP: vcfa/2c-tier0.md
           - Subnet VLAN: vcfa/2d-vpc_subnet_vlan.md
       - VCF North Connectivity:
-          - External Conenction: vcfa/3a-external_connection.md
+          - External Connection: vcfa/3a-external_connection.md
           - Transit Gateway: vcfa/3b-transit_gateway.md
           - IP Block: vcfa/3c-ip_block.md
 
