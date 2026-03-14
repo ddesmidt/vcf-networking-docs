@@ -28,6 +28,7 @@ NAT allows private subnets to communicate with external networks or provides a w
 | [**NAT<br>(SNAT/DNAT)**](#full-nat) | Provides stateful Layer 4 translation for granular traffic control. | Enables flexible port-level translation and mapping between Private subnets and external networks. |
 
 ![VPC NAT](images/1c-0-VPC_NAT_types.jpg){: .center style="width:90%" }
+
 ---
 
 ## Configuration External-IP (1:1 NAT) {: #ext-ip }
@@ -38,9 +39,10 @@ NAT allows private subnets to communicate with external networks or provides a w
 ### 2. Result - Show the External IP
 ![vCenter Result VPC Subnet](images/1c-1b-Validation_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
+---
 
 ## Configuration Outbound-NAT (N:1 SNAT) {: #outbound-nat }
-!!! warning "Requirement"
+!!! warning "Limitation"
     Outbound-NAT is **not supported** on VPCs connected to Distributed Transit Gateways without VNA.  
     (only supported on VPCs connected to Centralized Transit Gateways or Distributed Transit Gateways with VNA)
 
@@ -56,6 +58,7 @@ NAT allows private subnets to communicate with external networks or provides a w
 ### 4. Result - Show the Outbound-NAT IP used by the VPC
 ![vCenter Result VPC Subnet](images/1c-2d-Validation_VPC_ONAT.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
+---
 
 ## Configuration NAT (SNAT/DNAT) {: #full-nat }
 

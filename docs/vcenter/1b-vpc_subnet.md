@@ -18,7 +18,6 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 
 ---
 
-
 ## Configuration VPC Subnet Overlay
 
 ### Overview of VPC Subnet Overlay Types
@@ -29,8 +28,7 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 | **Private-TGW** | Provide Private IPs to workloads with no access to the physical network (requires NAT), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
 | **Private-VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs (requires NAT). | Maximum isolation; workloads are "hidden" even from other VPCs. |
 
-
-![VPC Subnet](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){: .center style="width:80%" }
+![VPC Subnet](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){: .center style="width:95%" }
 
 ### 1. Create new VPC Subnet (Overlay)
 ![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
