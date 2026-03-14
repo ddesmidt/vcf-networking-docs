@@ -26,14 +26,11 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
 | **Public** | Provide Public IPs to workloads with direct access to the physical network (No-NAT). | External visibility is high; direct ingress/egress. |
-| **Private&nbsp;TGW** | Provide Private IPs to workloadsw with no access to the physical network (requires NAT), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
-| **Private&nbsp;VPC** | Provide Private IPs to workloadsw with no access to the physical network and other VPCs (requires NAT). | Maximum isolation; workloads are "hidden" even from other VPCs. |
+| **Private&nbsp;TGW** | Provide Private IPs to workloads with no access to the physical network (requires NAT), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
+| **Private&nbsp;VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs (requires NAT). | Maximum isolation; workloads are "hidden" even from other VPCs. |
 
-<div style="text-align:center;">
-Click on image below to Zoom in.
-</div>
-[![VPC Subnet](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){ style="width:80%; display:block; margin:0 auto;" }](images/1b-0-VPC_Subnet_AccessMode_Options.jpg)
 
+![VPC Subnet](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){: .center style="width:80%" }
 
 ### 1. Create new VPC Subnet (Overlay)
 ![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }

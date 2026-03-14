@@ -7,7 +7,7 @@ theme:
   palette:
     # This sets a "VMware-like" blue and white theme
     - scheme: default
-      primary: blue
+      primary: custom
       accent: light blue
       toggle:
         icon: material/brightness-7
@@ -28,6 +28,17 @@ theme:
     - content.code.copy            # "Copy" button on CLI commands
     - nyan.grid                    # This is the feature that enables "grid" and "cards"
     - lightbox                     # This is for the image zoom
+
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      zoomable: true
+      draggable: true
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition                     # For "Warning" and "Note" boxes

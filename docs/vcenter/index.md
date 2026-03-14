@@ -88,7 +88,7 @@ Explore the configuration guides for each North VPC connectivity component:
 * :material-table-split-cell: [__Network Span__](3d-network_span.md)  
   Defines how VPC subnets span across vCenter clusters.  
   Not represented in the diagram.
-* :material-camera-control: [__Connectivity Policy__](3e-connectivity_policy.md)  
+* :material-camera-control: [__Connectivity Policy__](3e-community_policy.md)  
   Defines cross-VPC communication rules.  
   Not represented in the diagram.
 
