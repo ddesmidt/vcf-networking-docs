@@ -21,35 +21,45 @@ NAT allows private subnets to communicate with external networks or provides a w
 
 ## Overview of NAT Types
 
-| Type | Use Case |
-| :--- | :--- |
-| **External-IP (1:1 NAT)** | Allows communication between Workloads on Private VPC and Private TGW subnets and external networks. |
-| **Outbound-NAT (N:1 NAT)** | Allows communication from Destination NAT: Workloads on Private VPC and Private TGW subnets and external networks. |
-| **NAT (SNAT/DNAT)** | Stateful Layer4 NAT for flexible communication between Workloads on Private VPC and Private TGW subnets and external networks.  |
-<div style="text-align:center;">
-Click on image below to Zoom in.
-</div>
-[![VPC Subnet](images/1c-0-VPC_NAT_types.jpg){ style="width:80%; display:block; margin:0 auto;" }](images/1c-0-VPC_NAT_types.jpg)
+| Type | Use Case | Routing Logic |
+| :--- | :--- | :--- |
+| [**External-IP<br>(1:1)**](#ext-ip) | Maps a single Public IP to a single Private IP for specific workloads. | Provides Bi-directional communication (Inbound/Outbound) for Private VPC and TGW workloads. |
+| [**Outbound-NAT<br>(N:1 SNAT)**](#outbound-nat)| Allows multiple workloads to share a single Public IP for external access. | Supports outbound requests only; hides internal IP addresses from the physical network. |
+| [**NAT<br>(SNAT/DNAT)**](#full-nat) | Provides stateful Layer 4 translation for granular traffic control. | Enables flexible port-level translation and mapping between Private subnets and external networks. |
 
+![VPC NAT](images/1c-0-VPC_NAT_types.jpg){: .center style="width:90%" }
 ---
 
-## Configuration External-IP (1:1 NAT)
+## Configuration External-IP (1:1 NAT) {: #ext-ip }
 
-### 1. Create new VPC Subnet (Overlay)
-![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+### 1. Create a new External IP
+![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-
-## Configuration Outbound-IP (N:1 NAT)
-
-### 1. Create new VPC Subnet (Overlay)
-![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+### 2. Result - Show the External IP
+![vCenter Result VPC Subnet](images/1c-1b-Validation_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 
-## Configuration NAT (SNAT/DNAT)
+## Configuration Outbound-NAT (N:1 SNAT) {: #outbound-nat }
+!!! warning "Requirement"
+    Outbound-NAT is **not supported** on VPCs connected to Distributed Transit Gateways without VNA.  
+    (only supported on VPCs connected to Centralized Transit Gateways or Distributed Transit Gateways with VNA)
 
-### 1. Create new VPC Subnet (Overlay)
-![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+### 1. Check Outbound-NAT configuration in the VPC Gateway
+![vCenter Check Outbound NAT Config](images/1c-2a-Check_VPC_ONAT_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
+### 2. If disabled, Edit the VPC to find the Conenctivity Profile used by the VPC
+![vCenter Validation VPC Subnet](images/1c-2b-Find_Connectivity_Profile.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+
+### 3. Edit the Conenctivity Profile and enable Outbound-NAT
+![vCenter Validation VPC Subnet](images/1c-2c-Enable_ONAT.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+
+### 4. Result - Show the Outbound-NAT IP used by the VPC
+![vCenter Result VPC Subnet](images/1c-2d-Validation_VPC_ONAT.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+
+
+## Configuration NAT (SNAT/DNAT) {: #full-nat }
+
+To do...
 
 
 

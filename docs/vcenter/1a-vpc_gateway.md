@@ -37,7 +37,7 @@ This section describes the procedures for configuring a VPC Gateway using the vS
   Select the Connectivity Policy (rules governing cross-VPC communication).  
   This determines whether communication with other VPC subnets is allowed or denied.
 
-### Result - Topology
+### 3. Result - Topology
 You can see the VPC Gateway in a graphical way under Topology:
 ![vCenter Validation VPC Gateway](images/1a-3-Validation_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 

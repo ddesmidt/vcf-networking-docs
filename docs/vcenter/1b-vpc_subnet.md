@@ -26,8 +26,8 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
 | **Public** | Provide Public IPs to workloads with direct access to the physical network (No-NAT). | External visibility is high; direct ingress/egress. |
-| **Private&nbsp;TGW** | Provide Private IPs to workloads with no access to the physical network (requires NAT), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
-| **Private&nbsp;VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs (requires NAT). | Maximum isolation; workloads are "hidden" even from other VPCs. |
+| **Private-TGW** | Provide Private IPs to workloads with no access to the physical network (requires NAT), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
+| **Private-VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs (requires NAT). | Maximum isolation; workloads are "hidden" even from other VPCs. |
 
 
 ![VPC Subnet](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){: .center style="width:80%" }
@@ -66,7 +66,7 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
   .  "DHCP Relay": VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server.This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.
 
 
-### Result - Topology
+### 3. Result - Topology
 ![vCenter Validation VPC Subnet](images/1b-3-Validation_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
@@ -81,14 +81,10 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 | **Public - No VPC Connectivity** | The VPC Gateway is aware of the VLAN subnet, but provides no routing services to it. | Not recommended in vCenter (only VCF-A). |
 | **Public - VPC Connectivity** | Provides access to the physical VLAN via the VPC Gateway (bridges). | Enables simultaneous access to the Physical VLAN and internal Overlay VPC Subnets.. |
 
-
-<div style="text-align:center;">
-Click on image below to Zoom in.
-</div>
-[![VPC Subnet](images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg){ style="width:60%; display:block; margin:0 auto;" }](images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg)
+![VPC Subnet](images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg){: .center style="width:0%" }
 
 
-### 1. Create new VPC Subnet (Overlay)
+### 1. Create new VPC Subnet VLAN-Extension
 ![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 
@@ -112,7 +108,7 @@ Click on image below to Zoom in.
   . "Yes": The VPC Subnet VLAN-Extention will be connected to the VPC Gateway and bridged to the physical VLAN.  
 
 
-### Result - Topology
-![vCenter Validation VPC Subnet](images/1b-5-Validation_VPC_Subnet_VLAN.png){ width="90%" style="display: block; margin: 0 auto;" }
+### 3. Result - Topology
+![vCenter Validation VPC Subnet](images/1b-5-Validation_VPC_Subnet_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
