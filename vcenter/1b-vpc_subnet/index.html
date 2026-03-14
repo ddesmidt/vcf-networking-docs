@@ -609,10 +609,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#result-topology" class="md-nav__link">
+  <a href="#3-result-topology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Result - Topology
+        3. Result - Topology
       
     </span>
   </a>
@@ -648,10 +648,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-create-new-vpc-subnet-overlay_1" class="md-nav__link">
+  <a href="#1-create-new-vpc-subnet-vlan-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Create new VPC Subnet (Overlay)
+        1. Create new VPC Subnet VLAN-Extension
       
     </span>
   </a>
@@ -670,10 +670,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#result-topology_1" class="md-nav__link">
+  <a href="#3-result-topology_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Result - Topology
+        3. Result - Topology
       
     </span>
   </a>
@@ -1828,10 +1828,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#result-topology" class="md-nav__link">
+  <a href="#3-result-topology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Result - Topology
+        3. Result - Topology
       
     </span>
   </a>
@@ -1867,10 +1867,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-create-new-vpc-subnet-overlay_1" class="md-nav__link">
+  <a href="#1-create-new-vpc-subnet-vlan-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Create new VPC Subnet (Overlay)
+        1. Create new VPC Subnet VLAN-Extension
       
     </span>
   </a>
@@ -1889,10 +1889,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#result-topology_1" class="md-nav__link">
+  <a href="#3-result-topology_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Result - Topology
+        3. Result - Topology
       
     </span>
   </a>
@@ -1951,12 +1951,12 @@
 <td style="text-align: left;">External visibility is high; direct ingress/egress.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Private&nbsp;TGW</strong></td>
+<td style="text-align: left;"><strong>Private-TGW</strong></td>
 <td style="text-align: left;">Provide Private IPs to workloads with no access to the physical network (requires NAT), but routably accessible to other VPCs.</td>
 <td style="text-align: left;">Best for shared internal services across the enterprise.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Private&nbsp;VPC</strong></td>
+<td style="text-align: left;"><strong>Private-VPC</strong></td>
 <td style="text-align: left;">Provide Private IPs to workloads with no access to the physical network and other VPCs (requires NAT).</td>
 <td style="text-align: left;">Maximum isolation; workloads are "hidden" even from other VPCs.</td>
 </tr>
@@ -2003,7 +2003,7 @@
   .  "DHCP Relay": VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server.This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.</p>
 </li>
 </ul>
-<h3 id="result-topology">Result - Topology</h3>
+<h3 id="3-result-topology">3. Result - Topology</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-3-Validation_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="../images/1b-3-Validation_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <hr>
 <h2 id="configuration-vpc-subnet-vlan-extension">Configuration VPC Subnet VLAN-Extension</h2>
@@ -2034,11 +2034,8 @@
 </tr>
 </tbody>
 </table>
-<div style="text-align:center;">
-Click on image below to Zoom in.
-</div>
-<p><a href="../images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg"><img alt="VPC Subnet" src="../images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg" style="width:60%; display:block; margin:0 auto;"></a></p>
-<h3 id="1-create-new-vpc-subnet-overlay_1">1. Create new VPC Subnet (Overlay)</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg" data-desc-position="bottom"><img alt="VPC Subnet" class="center" src="../images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg" style="width:0%"></a></p>
+<h3 id="1-create-new-vpc-subnet-vlan-extension">1. Create new VPC Subnet VLAN-Extension</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1-Create_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-1-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
 <h3 id="2-choose-the-vpc-subnet-name-vlan-extension-access-mode-vlan-id-gateway-ip-connectivity">2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity))</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-4-Create_VPC_Subnet_VLAN.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-4-Create_VPC_Subnet_VLAN.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
@@ -2065,8 +2062,8 @@ Click on image below to Zoom in.
   . "Yes": The VPC Subnet VLAN-Extention will be connected to the VPC Gateway and bridged to the physical VLAN.  </p>
 </li>
 </ul>
-<h3 id="result-topology_1">Result - Topology</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-5-Validation_VPC_Subnet_VLAN.png" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="../images/1b-5-Validation_VPC_Subnet_VLAN.png" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<h3 id="3-result-topology_1">3. Result - Topology</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-5-Validation_VPC_Subnet_VLAN.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="../images/1b-5-Validation_VPC_Subnet_VLAN.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <hr>
 
 
