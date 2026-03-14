@@ -33,7 +33,7 @@ DHCP is used to dynamically assign IP addresses to workloads.
 ## DHCP Server Configuration {: #dhcp-server }
 
 ### 1. Edit VPC subnet and enable DHCP Server
-![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Create External IP](images/){ width="70%" style="display: block; margin: 0 auto;" }
 
 Talk about:
 . Reserved IP Ranges
@@ -46,7 +46,7 @@ Talk about where is configured the DHCP Server settings (DNS, etc).
 
 
 ### 2. Result - Validate DHCP Server configuration
-![vCenter Result VPC Subnet](images/1c-1b-Validation_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter Result VPC Subnet](images/){ width="90%" style="display: block; margin: 0 auto;" }
 
 Talk if possible to see the DHCP leases.
 
@@ -57,12 +57,12 @@ Talk if possible to see the DHCP leases.
     DHCP Relay is supported exclusively on **VPC Public Subnets**.
 
 ### 1. Edit VPC subnet and enable DHCP Relay
-![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Create External IP](images/){ width="70%" style="display: block; margin: 0 auto;" }
 
 Talk about where is configured the DHCP Relay settings.
 
 ### 2. Result - Validate DHCP Server configuration
-![vCenter Result VPC Subnet](images/1c-1b-Validation_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter Result VPC Subnet](images/){ width="90%" style="display: block; margin: 0 auto;" }
 
 
 ---
