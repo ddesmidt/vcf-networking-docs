@@ -72,7 +72,8 @@ nav:
           - Transit Gateway: vcenter/3b-transit_gateway.md
           - IP Block: vcenter/3c-ip_block.md
           - Network Span: vcenter/3d-network_span.md
-          - Community Policy: vcenter/3e-community_policy.md
+          - Community Profile: vcenter/3e-community_profile.md
+          - Community Policy: vcenter/3f-community_policy.md
   - VCF Automation:
       - Introduction: vcfa/index.md
       - VPC Network Services:
