@@ -66,7 +66,6 @@ nav:
       - VPC Network Infrastructure:
           - Edge Cluster / Node: vcenter/2a-edge.md
           - VNA Cluster / Node: vcenter/2b-vna.md
-          - Tier-0 / BGP: vcenter/2c-tier0.md
       - VCF North Connectivity:
           - External Connection: vcenter/3a-external_connection.md
           - Transit Gateway: vcenter/3b-transit_gateway.md
@@ -86,7 +85,6 @@ nav:
       - VPC Network Infrastructure:
           - Edge Cluster / Node: vcfa/2a-edge.md
           - VNA Cluster / Node: vcfa/2b-vna.md
-          - Tier-0 / BGP: vcfa/2c-tier0.md
           - Subnet VLAN: vcfa/2d-vpc_subnet_vlan.md
       - VCF North Connectivity:
           - External Connection: vcfa/3a-external_connection.md

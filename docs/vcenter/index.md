@@ -71,8 +71,9 @@ Explore the configuration guides for each North VPC connectivity component:
   NSX Edge appliances providing centralized network services for Central Transit Gateway Designs.
 * :material-layers-outline: [__VNA Cluster / VNA Node__](2b-vna.md)  
   NSX Virtual Network appliances providing centralized network services for Distributed Transit Gateway Designs.
-* :material-router: [__Tier-0 / BGP__](2c-tier0.md)  
-  Tier-0 logical router providing connectivity between Centralized Transit Gateways and the physical network.
+* :material-router: ~~__Tier-0 / BGP__~~  
+  Tier-0 logical router providing connectivity between Centralized Transit Gateways and the physical network.  
+  Configuration not available from vCenter (available from NSX).  
 
 #### VCF North Connectivity
 * :fontawesome-solid-external-link: [__External Connection__](3a-external_connection.md)  

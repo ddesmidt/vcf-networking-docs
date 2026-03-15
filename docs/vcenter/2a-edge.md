@@ -1,14 +1,14 @@
 <h1>
-  <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC Edge Configuration in vCenter
+  <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> Edge Configuration in vCenter
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 85% 15%">
 
 <div markdown>
 
-This section describes the procedures for configuring Edge Clusters and Nodes using the vSphere Client.  
+This section describes the procedures for configuring NSX Edge Clusters and Nodes using the vSphere Client.  
 
-Edge Nodes provide the centralized network services required for **Centralized Transit Gateway (CTGW)** designs within the VPC architecture.
+NSX Edge Nodes provide the centralized network services required for **Centralized Transit Gateway (CTGW)** designs within the VPC architecture.
 </div>
 
 
@@ -23,10 +23,10 @@ Edge Nodes provide the centralized network services required for **Centralized T
 ## Configuration Edge Cluster / Edge Nodes
 
 ### 1. Create new Edge Cluster / Edge Nodes
-![vCenter Create VPC](images/2a-1-Create_Edge.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![vCenter Edge Cluster](images/2a-1-Create_Edge.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ### 2. Configure Edge Cluster Identity
-![vCenter Create VPC](images/2a-2-Create_Edge.jpg){ width="50%" style="display: block; margin: 0 auto;" }
+![vCenter Edge Cluster](images/2a-2-Create_Edge.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 
 * **Node Form Factor**:  
   Select the appliance size (vCPU / Memory) of the Edge Nodes.  
@@ -36,7 +36,7 @@ Edge Nodes provide the centralized network services required for **Centralized T
   Enabling this option automates password generation and allows SDDC Manager to handle credential lifecycle management.
 
 ### 3. Configure Edge Nodes Placement and Networking
-![vCenter Create VPC](images/2a-3a-Configure_EdgeNode1.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![vCenter Edge Node](images/2a-3a-Configure_EdgeNode1.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **vSphere Cluster / Resource Pool / Host Group Affinity / Data Store**:  
   Defines the physical placement of the Edge Node VM.  
@@ -76,6 +76,6 @@ Edge Nodes provide the centralized network services required for **Centralized T
 
 
 ### 4. Result - Status of Edge Cluster / Edge Nodes deployment
-![vCenter Validation VPC Gateway](images/2a-4-Validation_Edge.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter VNA Status](images/2a-4-Validation_Edge.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
