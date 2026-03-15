@@ -51,10 +51,10 @@ NAT allows **VPC Private subnets** to communicate with external networks or prov
 ### 1. Check Outbound-NAT configuration in the VPC Gateway
 ![vCenter Check Outbound NAT Config](images/1c-2a-Check_VPC_ONAT_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-### 2. If disabled, Edit the VPC to find the Conenctivity Profile used by the VPC
+### 2. If disabled, Edit the VPC to find the Connectivity Profile used by the VPC
 ![vCenter Validation VPC Subnet](images/1c-2b-Find_Connectivity_Profile.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-### 3. Edit the Conenctivity Profile and enable Outbound-NAT
+### 3. Edit the Connectivity Profile and enable Outbound-NAT
 ![vCenter Validation VPC Subnet](images/1c-2c-Enable_ONAT.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ### 4. Result - Show the Outbound-NAT IP used by the VPC

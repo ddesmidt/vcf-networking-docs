@@ -76,24 +76,28 @@ Explore the configuration guides for each North VPC connectivity component:
 
 #### VCF North Connectivity
 * :fontawesome-solid-external-link: [__External Connection__](3a-external_connection.md)  
-  Connection between the NSX environment and the physical network.
+  Connection between the VPC environment and the physical network.
 * :material-transit-connection: [__Transit Gateway__](3b-transit_gateway.md)  
-  Logical router connecting VPC networks to external physical networks.
+  Logical router connecting VPC Gateways to physical networks.
 * :material-code-block-brackets: [__IP Blocks External (Infoblox) + TGW Priv.__](3c-ip_block.md)  
   IP blocks used for VPC subnet allocation.  
   Not represented in the diagram.
 * :material-table-split-cell: [__Network Span__](3d-network_span.md)  
   Defines how VPC subnets span across vCenter clusters.  
   Not represented in the diagram.
-* :material-camera-control: [__Connectivity Policy__](3e-community_policy.md)  
+* :material-transit-connection: [__Connectivity Profile__](3e-community_profile.md)  
+  Defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services are enabled.  
+  Not represented in the diagram.
+* :material-camera-control: [__Connectivity Policy__](3f-community_policy.md)  
   Defines cross-VPC communication rules.  
   Not represented in the diagram.
 
-  ? Connectivity Pofile ?
 </div>
 
 </div>
 
+
+:material-vector-polyline-plus: ??? How to talk about "Internet / DC1" ???
 
 ---
 

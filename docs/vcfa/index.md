@@ -18,7 +18,7 @@ Explore the specific configuration guides for each VPC network service available
 
 <div markdown>
 <div style="height:20px;"></div>
-* :material-router: [**VPC Router**](1a-vpc_gateway.md)  
+* :material-router: [**VPC Gateway**](1a-vpc_gateway.md)  
   Logical router.
 * :material-lan: [**VPC Subnet**](1b-vpc_subnet.md)  
   Logical Subnet (for VMs/K8s connection).  
@@ -63,9 +63,9 @@ Explore the specific configuration guides for each North VPC Connectivity Config
 
 #### VCF North Connectivity
 * :fontawesome-solid-external-link: [__External Connection__](3a-external_connection.md)  
-  Connection between the NSX environment and the physical network.
+  Connection between the VPC environment and the physical network.
 * :material-transit-connection: [__Transit Gateway__](3b-transit_gateway.md)  
-  Logical router connecting VPC networks to external physical networks.
+  Logical router connecting VPC Gateways to physical networks.
 * :material-code-block-brackets: [__IP Blocks External (Infoblox) + TGW Priv.__](3c-ip_block.md)  
   IP blocks used for VPC subnet allocation.  
   Not represented in the diagram.
@@ -73,13 +73,18 @@ Explore the specific configuration guides for each North VPC Connectivity Config
   Defines how VPC subnets span across vCenter clusters.  
   Not represented in the diagram.  
   Configuration not available from VCF Automation (available from vCenter or NSX).  
-* :material-camera-control: ~~__Community Policy__~~  
-  Defines cross-VPC communication options.  
+* :material-transit-connection: [__Connectivity Profile__](3e-community_profile.md)  
+  Defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services are enabled.  
+  Not represented in the diagram.
+* :material-camera-control: ~~__Connectivity Policy__~~  
+  Defines cross-VPC communication rules.  
   Not represented in the diagram.  
   Configuration not available from VCF Automation (available from vCenter or NSX).  
 </div>
 
 </div>
+
+:material-vector-polyline-plus: ??? How to talk about "Internet / DC1" ???
 
 
 ---
