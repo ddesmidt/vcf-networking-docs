@@ -40,7 +40,7 @@ External Connections provide the connection from the Transit Gateway (Centralize
 </div>
 
 ### 1. Create new Centralized External Connection
-![Cent Ext Conn config](images/3a-1-Create_Cent_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Cent Ext Conn config](images/3a-1a-Create_Cent_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **Tier-0 Gateway**:  
   Select the pre-provisioned Tier-0 Gateway that serves as the exit point for this connection.
@@ -71,12 +71,15 @@ The status reflects the successful application of the configuration.
 !!! info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 
+![Cent Ext Conn validation](images/3a-1b-Validation_Cent_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+
+
 ---
 
 ## Configuration Distributed External Connection {: #dist-conn }
 
 ### 1. Create new Distributed External Connection
-![Dist Ext Conn config](images/3a-2-Create_Dist_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Dist Ext Conn config](images/3a-2a-Create_Dist_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **VLAN ID**:  
   Specifies the VLAN ID used for the Layer 2 handoff to the physical network.
@@ -89,5 +92,7 @@ The status reflects the successful application of the configuration.
 
 !!! info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+
+![Dist Ext Conn validation](images/3a-2b-Validation_Dist_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ---

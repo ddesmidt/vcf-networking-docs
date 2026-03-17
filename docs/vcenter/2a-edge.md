@@ -23,10 +23,10 @@ NSX Edge Nodes provide the centralized network services required for **Centraliz
 ## Configuration Edge Cluster / Edge Nodes
 
 ### 1. Create new Edge Cluster / Edge Nodes
-![vCenter Edge Cluster](images/2a-1-Create_Edge.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![vCenter Edge Cluster](images/2a-1-Create_Edge.jpg){ width="100%" style="display: block; margin: 0 auto;" }
 
 ### 2. Configure Edge Cluster Identity
-![vCenter Edge Cluster](images/2a-2-Create_Edge.jpg){ width="50%" style="display: block; margin: 0 auto;" }
+![vCenter Edge Cluster identity](images/2a-2-Create_Edge.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 
 * **Node Form Factor**:  
   Select the appliance size (vCPU / Memory) of the Edge Nodes.  

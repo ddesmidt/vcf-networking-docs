@@ -26,7 +26,7 @@ NSX Virtual Network Appliances (VNA) providing centralized network services for 
 ![vCenter VNA Cluster](images/2b-1-Create_VNA.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ### 2. Configure VNA Cluster Identity
-![vCenter VNA Cluster](images/2b-2-Create_VNA.jpg){ width="50%" style="display: block; margin: 0 auto;" }
+![vCenter VNA Cluster identity](images/2b-2-Create_VNA.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 
 * **Node Form Factor**:  
   Select the appliance size (vCPU / Memory) of the VNA Nodes.  
