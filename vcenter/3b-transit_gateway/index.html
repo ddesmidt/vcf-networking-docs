@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview-of-transit-gateway-types" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -808,6 +813,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transit Gateway
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -824,6 +847,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-transit-gateway-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of Transit Gateway Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cent-tgw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Centralized Transit Gateway
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Centralized Transit Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-new-centralized-transit-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create new Centralized Transit Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-result-centralized-external-connection-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Result - Centralized External Connection Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dist-tgw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Distributed Transit Gateway
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Distributed Transit Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-result-centralized-external-connection-status_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Result - Centralized External Connection Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1586,6 +1704,92 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-transit-gateway-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of Transit Gateway Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cent-tgw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Centralized Transit Gateway
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Centralized Transit Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-new-centralized-transit-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create new Centralized Transit Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-result-centralized-external-connection-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Result - Centralized External Connection Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dist-tgw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Distributed Transit Gateway
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration Distributed Transit Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-result-centralized-external-connection-status_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Result - Centralized External Connection Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1601,9 +1805,103 @@
 
 
 
-  <h1>Transit Gateway</h1>
+<h1>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/vCenter.png" data-desc-position="bottom"><img src="../../assets/vCenter.png" style="height:30px" ;="" vertical-align:middle;=""></a> Transit Gateway Configuration in vCenter
+</h1>
 
-
+<div class="grid" style="grid-template-columns: 85% 15%">
+<div>
+<p>This section describes the procedures for configuring Transit Gateways using the vSphere Client.  </p>
+<p>Transit Gateways (Centralized or Distributed) provide the routing between VPC Gateways and physical networks.</p>
+</div>
+<div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-0-Transit_Gateway.jpg" data-desc-position="bottom"><img alt="vCenter External Connection" src="../images/3b-0-Transit_Gateway.jpg" width="100%"></a></p>
+</div>
+</div>
+<hr>
+<h2 id="overview-of-transit-gateway-types">Overview of Transit Gateway Types</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Use Case</th>
+<th style="text-align: left;">Routing Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#cent-tgw"><strong>Centralized TGW</strong></a></td>
+<td style="text-align: left;">Supports extra stateful services (VPN).</td>
+<td style="text-align: left;">Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#dist-tgw"><strong>Distributed TGW</strong></a></td>
+<td style="text-align: left;">Optimized for high-throughput distributed routing (supports Outbound-NAT and LB via VNA Nodes)..</td>
+<td style="text-align: left;">Routing occurs locally at the ESXi host level (distributed dataplane). NAT and LB traffic is redirected through a VNA Gateway in a VNA Cluster.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-0-Transit_Gateway_Types.jpg" data-desc-position="bottom"><img alt="TGW Types" class="center" src="../images/3b-0-Transit_Gateway_Types.jpg" style="width:60%"></a></p>
+<hr>
+<h2 id="cent-tgw">Configuration Centralized Transit Gateway</h2>
+<h3 id="1-create-new-centralized-transit-gateway">1. Create new Centralized Transit Gateway</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-1-Create_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW config" src="../images/3b-1-Create_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<ul>
+<li>
+<p><strong>Tier-0 Gateway</strong>:<br>
+  Select the pre-provisioned Tier-0 Gateway that serves as the exit point for this connection.</p>
+</li>
+<li>
+<p><strong>Remote Networks</strong>:<br>
+  Specifies the remote networks reachable via this connection.<br>
+  Leaving this blank is equivalent to 0.0.0.0/0: routing all external/Internet traffic through this path.</p>
+</li>
+<li>
+<p><strong>External IP Blocks</strong>:<br>
+ Select the External IP Block(s) permitted to be advertised to the physical network via the selected Tier-0.</p>
+</li>
+<li>
+<p><strong>Private IP Blocks</strong>:<br>
+  Enables the advertisement of TGW Private IP Blocks via the Tier-0 for the Centralized Transit Gateway also enabling this.<br>
+  This option is typically used for connectivity to remote data centers/private MPLS rather than the public Internet.<br>
+  By default it is disabled so only External IP Blkocks are advertised.</p>
+</li>
+<li>
+<p><strong>Provider Outbound SNAT</strong>:<br>
+  Enables communication for VPC subnets using External IP Blocks other than those explicitly listed in the "External IP Blocks" field.<br>
+  Traffic from these subnets will be Source NATed (SNAT) using an IP from the SNAT IP Block defined below.</p>
+</li>
+<li>
+<p><strong>SNAT IP Block</strong>:<br>
+  Select the specific External IP Block to be used for the Provider Outbound SNAT.</p>
+</li>
+</ul>
+<h3 id="2-result-centralized-external-connection-status">2. Result - Centralized External Connection Status</h3>
+<p>The status reflects the successful application of the configuration.</p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
+</div>
+<hr>
+<h2 id="dist-tgw">Configuration Distributed Transit Gateway</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2-Create_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW config" src="../images/3b-2-Create_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<ul>
+<li>
+<p><strong>VLAN ID</strong>:<br>
+  Specifies the VLAN ID used for the Layer 2 handoff to the physical network.</p>
+</li>
+<li>
+<p><strong>Gateway CIDR IPv4 Address</strong>:<br>
+  Specifies the IP address of the upstream physical router or firewall (the Next Hop) that acts as the default gateway for this connection.</p>
+</li>
+</ul>
+<h3 id="2-result-centralized-external-connection-status_1">2. Result - Centralized External Connection Status</h3>
+<p>The status reflects the successful application of the configuration.</p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
+</div>
+<hr>
 
 
 
