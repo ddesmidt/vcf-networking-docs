@@ -25,7 +25,7 @@ Transit Gateways (Centralized or Distributed) provide the routing between VPC Ga
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
 | [**Centralized TGW**](#cent-tgw) | Supports extra network stateful services (VPN). | Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster. |
-| [**Distributed TGW**](#dist-tgw)| Optimized for high-throughput distributed routing (supports Outbound-NAT and LB via VNA Nodes).. | Routing occurs locally at the ESXi host level (distributed dataplane). NAT and LB traffic is redirected through a VNA Gateway in a VNA Cluster. |
+| [**Distributed TGW**](#dist-tgw)| Optimized for high-throughput distributed routing (supports Outbound-NAT and LB via VNA Nodes). | Routing occurs locally at the ESXi host level (distributed dataplane). NAT and LB traffic is redirected through a VNA Gateway in a VNA Cluster. |
 
 ![TGW Types](images/3b-0-Transit_Gateway_Types.jpg){: .center style="width:60%" }
 

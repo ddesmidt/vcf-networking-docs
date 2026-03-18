@@ -28,13 +28,13 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 | **Private-TGW** | Provide Private IPs to workloads with no access to the physical network (requires NAT), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
 | **Private-VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs (requires NAT). | Maximum isolation; workloads are "hidden" even from other VPCs. |
 
-![VPC Subnet](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){: .center style="width:95%" }
+![VPC Subnet Option](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){: .center style="width:95%" }
 
 ### 1. Create new VPC Subnet (Overlay)
-![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 ### 2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block & Size + Connectivity + DHCP)
-![vCenter Create VPC](images/1b-2-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **VLAN Extensions**  
   "No" for a VPC-Subnet Overlay.  
@@ -65,7 +65,7 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 
 
 ### 3. Result - Topology
-![vCenter Validation VPC Subnet](images/1b-3-Validation_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter Validation VPC Subnet](images/1b-1c-Validation_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
 
@@ -77,17 +77,16 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 | :--- | :--- | :--- |
 | **L2-Only** | Provides direct access to a physical VLAN. | Access to Public VPC Subnets is via the external network only. No access to Private VPC Subnets. |
 | **Public - No VPC Connectivity** | The VPC Gateway is aware of the VLAN subnet, but provides no routing services to it. | Not recommended in vCenter (only VCF-A). |
-| **Public - VPC Connectivity** | Provides access to the physical VLAN via the VPC Gateway (bridges). | Enables simultaneous access to the Physical VLAN and internal Overlay VPC Subnets.. |
+| **Public - VPC Connectivity** | Provides access to the physical VLAN via the VPC Gateway (bridges). | Enables simultaneous access to the Physical VLAN and internal Overlay VPC Subnets. |
 
-![VPC Subnet](images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg){: .center style="width:0%" }
-
+![VPC Subnet VLAN Option](images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg){: .center style="width:80%" }
 
 ### 1. Create new VPC Subnet VLAN-Extension
-![vCenter Create VPC](images/1b-1-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Create VPC](images/1b-2a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 
 ### 2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity))
-![vCenter Create VPC](images/1b-4-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Create VPC](images/1b-2b-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **VLAN Extensions**  
   "Yes" for a VPC-Subnet VLAN-Extension.  
@@ -107,6 +106,6 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 
 
 ### 3. Result - Topology
-![vCenter Validation VPC Subnet](images/1b-5-Validation_VPC_Subnet_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter Validation VPC Subnet](images/1b-2c-Validation_VPC_Subnet_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

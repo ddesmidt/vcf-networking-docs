@@ -27,15 +27,16 @@ This section describes the procedures for configuring a VPC Gateway using the vS
 ![vCenter Create VPC](images/1a-2-Create_VPC_Gateway.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 
 * **Private - VPC IP CIDRs**:  
-  (Optional) IP Block reserved for future VPC  Private-VPC subnets.  
-  The IP Block is flexible because VMs connected to Private VPC subnets are always **NATed** with a public IP when accessing external networks.
+  (Optional) Defines the IP address space reserved for internal VPC subnets.  
+  Address selection here is highly flexible; since all traffic from Private VPC subnets is **Source NATed (SNATed)** using a Public/External IP before exiting the VPC, these internal addresses can not conflict with your existing physical network infrastructure.
+
 * **Connectivity Profile**  
-  Select the Connectivity Profile (the profile containing the Transit Gateway + Span).  
-  This defines how the VPC connects to the physical network.
+  Select the pre-defined [Connectivity Profile](3e-connectivity_profile.md), which links this VPC to a specific [Transit Gateway](3b-transit_gateway.md) and defines its [Network Span](3d-network_span.md).  
+  This determines the primary North/South path to the physical network.
 
 * **Connectivity Policy**  
-  Select the Connectivity Policy (rules governing cross-VPC communication).  
-  This determines whether communication with other VPC subnets is allowed or denied.
+  Select the [Connectivity Policy](3f-connectivity_policy.md) to govern East/West traffic.  
+  This determines whether communication is permitted or denied between this VPC and other VPC subnets within the environment.
 
 ### 3. Result - Topology
 You can see the VPC Gateway in a graphical way under Topology:

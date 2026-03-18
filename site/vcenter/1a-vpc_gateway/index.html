@@ -1768,18 +1768,20 @@
 <h3 id="2-choose-the-vpc-gateway-name-ip-block-north-connectivity-cross-vpc-communication">2. Choose the VPC Gateway name (+ IP Block + North connectivity + Cross-VPC communication)</h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-2-Create_VPC_Gateway.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1a-2-Create_VPC_Gateway.jpg" style="display: block; margin: 0 auto;" width="50%"></a></p>
 <ul>
-<li><strong>Private - VPC IP CIDRs</strong>:<br>
-  (Optional) IP Block reserved for future VPC  Private-VPC subnets.<br>
-  The IP Block is flexible because VMs connected to Private VPC subnets are always <strong>NATed</strong> with a public IP when accessing external networks.</li>
+<li>
+<p><strong>Private - VPC IP CIDRs</strong>:<br>
+  (Optional) Defines the IP address space reserved for internal VPC subnets.<br>
+  Address selection here is highly flexible; since all traffic from Private VPC subnets is <strong>Source NATed (SNATed)</strong> using a Public/External IP before exiting the VPC, these internal addresses can not conflict with your existing physical network infrastructure.</p>
+</li>
 <li>
 <p><strong>Connectivity Profile</strong><br>
-  Select the Connectivity Profile (the profile containing the Transit Gateway + Span).<br>
-  This defines how the VPC connects to the physical network.</p>
+  Select the pre-defined <a href="../3e-connectivity_profile/">Connectivity Profile</a>, which links this VPC to a specific <a href="../3b-transit_gateway/">Transit Gateway</a> and defines its <a href="../3d-network_span/">Network Span</a>.<br>
+  This determines the primary North/South path to the physical network.</p>
 </li>
 <li>
 <p><strong>Connectivity Policy</strong><br>
-  Select the Connectivity Policy (rules governing cross-VPC communication).<br>
-  This determines whether communication with other VPC subnets is allowed or denied.</p>
+  Select the <a href="../3f-connectivity_policy/">Connectivity Policy</a> to govern East/West traffic.<br>
+  This determines whether communication is permitted or denied between this VPC and other VPC subnets within the environment.</p>
 </li>
 </ul>
 <h3 id="3-result-topology">3. Result - Topology</h3>
