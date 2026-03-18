@@ -50,7 +50,7 @@ This is the IP Block used for future VPC Subnets Public.
 * **Reserved for Specific Subnet**:  
   Enable for the Subnet-VLAN use case, otherwise disabled.
 
-### 2. Result -IP Block External Status
+### 2. Result - IP Block External Status
 The status reflects the successful application of the configuration.
 
 !!! info "Note"
@@ -79,7 +79,7 @@ This is the IP Block used for future VPC Subnets Private-TGW.
 * **Reserved for Specific Subnet**:  
   Not Applicable.
 
-### 2. Result -IP Block Private-TGW Status
+### 2. Result - IP Block Private-TGW Status
 The status reflects the successful application of the configuration.
 
 !!! info "Note"

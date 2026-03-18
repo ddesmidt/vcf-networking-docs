@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-configuration-network-span" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -864,6 +869,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Span
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -880,6 +903,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-configuration-network-span" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Configuration Network Span
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Configuration Network Span">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-network-span" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create Network Span
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-result-network-span-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Result - Network Span Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1586,6 +1665,53 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-configuration-network-span" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Configuration Network Span
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Configuration Network Span">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-network-span" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create Network Span
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-result-network-span-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Result - Network Span Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1601,9 +1727,48 @@
 
 
 
-  <h1>Network Span</h1>
+<h1>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/vCenter.png" data-desc-position="bottom"><img src="../../assets/vCenter.png" style="height:30px" ;="" vertical-align:middle;=""></a> Network Span in vCenter
+</h1>
 
-
+<div class="grid" style="grid-template-columns: 20% 80%">
+<div>
+<p>This section describes the procedures for configuring Network Span using the vSphere Client.  </p>
+</div>
+<div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3d-0-Network_Span.jpg" data-desc-position="bottom"><img alt="vCenter Network Span" src="../images/3d-0-Network_Span.jpg" width="100%"></a></p>
+</div>
+</div>
+<hr>
+<h2 id="1-configuration-network-span">1. Configuration Network Span</h2>
+<h3 id="1-create-network-span">1. Create Network Span</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-1a-Create_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="vCenter Network Span config" src="../images/3c-1a-Create_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="100%"></a></p>
+<ul>
+<li>
+<p><strong>Visibility</strong>:<br>
+  Set to External.</p>
+</li>
+<li>
+<p><strong>CIDRs/Ranges</strong>:<br>
+  Enter the specific CIDR blocks or IP ranges to be managed by this block.</p>
+</li>
+<li>
+<p><strong>Excluded IP Ranges</strong>:<br>
+  (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).</p>
+</li>
+<li>
+<p><strong>Reserved for Specific Subnet</strong>:<br>
+  Enable for the Subnet-VLAN use case, otherwise disabled.</p>
+</li>
+</ul>
+<h3 id="2-result-network-span-status">2. Result - Network Span Status</h3>
+<p>The status reflects the successful application of the configuration.</p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-1b-Validation_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="../images/3c-1b-Validation_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<hr>
 
 
 
