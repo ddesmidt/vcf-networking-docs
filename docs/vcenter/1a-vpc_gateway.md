@@ -2,7 +2,7 @@
   <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VPC Gateway Configuration in vCenter
 </h1>
 
-<div class="grid" markdown style="grid-template-columns: 85% 15%">
+<div class="grid" markdown style="grid-template-columns: 80% 20%">
 
 <div markdown>
 
