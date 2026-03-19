@@ -20,12 +20,14 @@ NSX Edge Nodes provide the centralized network services required for **Centraliz
 
 ---
 
-## Configuration Edge Cluster / Edge Nodes
+## Edge Cluster / Edge Nodes
 
-### 1. Create new Edge Cluster / Edge Nodes
+### Configuration
+
+#### Step1. Create new Edge Cluster / Edge Nodes
 ![vCenter Edge Cluster](images/2a-1-Create_Edge.jpg){ width="100%" style="display: block; margin: 0 auto;" }
 
-### 2. Configure Edge Cluster Identity
+#### Step2. Configure Edge Cluster Identity
 ![vCenter Edge Cluster identity](images/2a-2-Create_Edge.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 
 * **Node Form Factor**:  
@@ -35,7 +37,7 @@ NSX Edge Nodes provide the centralized network services required for **Centraliz
 * **Auto generate passwords and manage them via SDDC Manager**  
   Enabling this option automates password generation and allows SDDC Manager to handle credential lifecycle management.
 
-### 3. Configure Edge Nodes Placement and Networking
+#### Step3. Configure Edge Nodes Placement and Networking
 ![vCenter Edge Node](images/2a-3a-Configure_EdgeNode1.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **vSphere Cluster / Resource Pool / Host Group Affinity / Data Store**:  
@@ -74,8 +76,7 @@ NSX Edge Nodes provide the centralized network services required for **Centraliz
     ![Add Edge Node2](images/2a-3c-Configure_EdgeNode2.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 </div>
 
-
-### 4. Result - Edge Cluster / Edge Nodes deployment Status
+### Monitoring
 ![vCenter VNA Status](images/2a-4-Validation_Edge.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

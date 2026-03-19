@@ -17,9 +17,11 @@ This section describes the procedures for configuring Network Span using the vSp
 
 ---
 
-## 1. Configuration Network Span
+## Network Span
 
-### 1. Create Network Span
+### Configuration
+
+#### Step1. Create Network Span
 ![vCenter Network Span config](images/3c-1a-Create_IPBlock_Ext.jpg){ width="100%" style="display: block; margin: 0 auto;" }
 
 * **Visibility**:  
@@ -34,7 +36,7 @@ This section describes the procedures for configuring Network Span using the vSp
 * **Reserved for Specific Subnet**:  
   Enable for the Subnet-VLAN use case, otherwise disabled.
 
-### 2. Result - Network Span Status
+### Monitoring
 The status reflects the successful application of the configuration.
 
 !!! info "Note"

@@ -7,6 +7,11 @@
 <div markdown>
 
 This section describes the procedures for configuring a VPC Subnet using the vSphere Client.
+
+There are 2 types of VPC Subnets:  
+
+* Overlay
+* VLAN
 </div>
 
 
@@ -18,9 +23,9 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 
 ---
 
-## Configuration VPC Subnet Overlay
+## VPC Subnet Overlay
 
-### Overview of VPC Subnet Overlay Types
+### Overview of Overlay options
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
@@ -30,10 +35,12 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 
 ![VPC Subnet Option](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){: .center style="width:95%" }
 
-### 1. Create new VPC Subnet (Overlay)
+### Configuration
+
+#### Step1. Create new VPC Subnet (Overlay)
 ![vCenter Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-### 2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block & Size + Connectivity + DHCP)
+#### Step2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block & Size + Connectivity + DHCP)
 ![vCenter Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **VLAN Extensions**  
@@ -64,14 +71,15 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
   .  "DHCP Relay": VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server.This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.
 
 
-### 3. Result - Topology
+### Monitoring
+#### Topology
 ![vCenter Validation VPC Subnet](images/1b-1c-Validation_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
 
-## Configuration VPC Subnet VLAN-Extension
+## VPC Subnet VLAN-Extension
 
-### Overview of VPC Subnet VLAN-Extension options
+### Overview of VLAN options
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
@@ -81,11 +89,13 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 
 ![VPC Subnet VLAN Option](images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg){: .center style="width:80%" }
 
-### 1. Create new VPC Subnet VLAN-Extension
+### Configuration
+
+#### Step1. Create new VPC Subnet VLAN-Extension
 ![vCenter Create VPC](images/1b-2a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 
-### 2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity))
+#### Step2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity))
 ![vCenter Create VPC](images/1b-2b-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **VLAN Extensions**  
@@ -104,8 +114,8 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
   . "No": The VPC Subnet VLAN-Extension will NOT be connected to the VPC Gateway, but directly to the physical VLAN.    
   . "Yes": The VPC Subnet VLAN-Extention will be connected to the VPC Gateway and bridged to the physical VLAN.  
 
-
-### 3. Result - Topology
+### Monitoring 
+#### Topology
 ![vCenter Validation VPC Subnet](images/1b-2c-Validation_VPC_Subnet_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

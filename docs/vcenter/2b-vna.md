@@ -2,7 +2,7 @@
   <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VNA Configuration in vCenter
 </h1>
 
-<div class="grid" markdown style="grid-template-columns: 80% 20%">
+<div class="grid" markdown style="grid-template-columns: 72% 28%">
 
 <div markdown>
 
@@ -20,19 +20,21 @@ NSX Virtual Network Appliances (VNA) providing centralized network services for 
 
 ---
 
-## Configuration VNA Cluster / VNA Nodes
+## VNA Cluster / VNA Nodes
 
-### 1. Create new VNA Cluster / VNA Nodes
+### Configuration
+
+#### Step1. Create new VNA Cluster / VNA Nodes
 ![vCenter VNA Cluster](images/2b-1-Create_VNA.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-### 2. Configure VNA Cluster Identity
+#### Step2. Configure VNA Cluster Identity
 ![vCenter VNA Cluster identity](images/2b-2-Create_VNA.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 
 * **Node Form Factor**:  
   Select the appliance size (vCPU / Memory) of the VNA Nodes.  
   This determines the scale and performance limits for the logical routers (VNA Gateways) hosted on the node.
 
-### 3. Configure VNA Nodes Placement and Networking
+#### Step3. Configure VNA Nodes Placement and Networking
 ![vCenter VNA Node](images/2b-3a-Configure_VNANode1.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **vSphere Cluster / Resource Pool / Host Group Affinity / Data Store**:  
@@ -52,7 +54,7 @@ NSX Virtual Network Appliances (VNA) providing centralized network services for 
 </div>
 
 
-### 4. Result - VNA Cluster / VNA Nodes deployment Status
+### Monitoring
 ![vCenter VNA Status](images/2b-4-Validation_VNA.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

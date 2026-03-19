@@ -2,7 +2,7 @@
   <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> IP Blocks in vCenter
 </h1>
 
-<div class="grid" markdown style="grid-template-columns: 80% 20%">
+<div class="grid" markdown style="grid-template-columns: 60% 40%">
 
 <div markdown>
 This section describes the procedures for configuring IP Blocks using the vSphere Client.  
@@ -25,17 +25,18 @@ This section describes the procedures for configuring IP Blocks using the vSpher
 | [**Private-TGW**](#privatetgw-ipblock)| Used for **VPC Subnets Private-TGW** | Best for shared internal services across the enterprise. |
 | [**Private-VPC**](#privatevpc-ipblock)| **VPC Subnets Private-VPC**. <br> Note: Configuration in within the [VPC Gateway](1a-vpc_gateway.md). | Maximum isolation; workloads are "hidden" even from other VPCs. |
 
-![vCenter IP Blocks Types](images/3c-0-IP_Block-Types.jpg){: .center style="width:70%" }
+![vCenter IP Blocks Types](images/3c-0-IP_Block-Types.jpg){: .center style="width:75%" }
 
 For more information on VPC Subnets, refer to the [VPC Subnet](1b-vpc_subnet.md) page.
 
 ---
+## IP Block External {: #ext-ipblock }
 
-## 1. Configuration IP Block External {: #ext-ipblock }
+### Configuration
 
 This is the IP Block used for future VPC Subnets Public.
 
-### 1. Create new IP Block External
+#### Step1. Create new IP Block External
 ![IP Block Ext config](images/3c-1a-Create_IPBlock_Ext.jpg){ width="100%" style="display: block; margin: 0 auto;" }
 
 * **Visibility**:  
@@ -50,7 +51,7 @@ This is the IP Block used for future VPC Subnets Public.
 * **Reserved for Specific Subnet**:  
   Enable for the Subnet-VLAN use case, otherwise disabled.
 
-### 2. Result - IP Block External Status
+### Monitoring
 The status reflects the successful application of the configuration.
 
 !!! info "Note"
@@ -60,11 +61,13 @@ The status reflects the successful application of the configuration.
 
 ---
 
-## 2. Configuration IP Block Private-TGW {: #privatetgw-ipblock }
+## IP Block Private-TGW {: #privatetgw-ipblock }
+
+### Configuration
 
 This is the IP Block used for future VPC Subnets Private-TGW.
 
-### 1. Create new IP Block Private-TGW
+#### Step1. Create new IP Block Private-TGW
 ![IP Block Ext config](images/3c-2a-Create_IPBlock_Private_TGW.jpg){ width="100%" style="display: block; margin: 0 auto;" }
 
 * **Visibility**:  
@@ -79,7 +82,7 @@ This is the IP Block used for future VPC Subnets Private-TGW.
 * **Reserved for Specific Subnet**:  
   Not Applicable.
 
-### 2. Result - IP Block Private-TGW Status
+### Monitoring
 The status reflects the successful application of the configuration.
 
 !!! info "Note"
@@ -89,14 +92,16 @@ The status reflects the successful application of the configuration.
 
 ---
 
-## 3. Configuration IP Block Private-VPC {: #privatevpc-ipblock }
+## IP Block Private-VPC {: #privatevpc-ipblock }
+
+### Configuration
 
 This is the IP Block used for future VPC Subnets Private-VPC.  
 It's configuration is managed directly within the [VPC Gateway](1a-vpc_gateway.md) settings.
 
 ---
 
-## 4. Statistics IP Blocks
+## Monitoring IP Blocks
 
 Real-time utilization metrics for IP Blocks can be monitored via the following indicators:
 

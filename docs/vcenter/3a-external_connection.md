@@ -31,7 +31,9 @@ External Connections provide the connection from the Transit Gateway (Centralize
 
 ---
 
-## Configuration Centralized External Connection {: #cent-conn }
+## Centralized External Connection {: #cent-conn }
+
+### Configuration 
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 !!! warning "Requirement"
@@ -39,7 +41,7 @@ External Connections provide the connection from the Transit Gateway (Centralize
     Note: This resource cannot be created via vCenter; it must be configured within the NSX Manager.
 </div>
 
-### 1. Create new Centralized External Connection
+#### Step1. Create new Centralized External Connection
 ![Cent Ext Conn config](images/3a-1a-Create_Cent_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **Tier-0 Gateway**:  
@@ -64,8 +66,8 @@ External Connections provide the connection from the Transit Gateway (Centralize
 * **SNAT IP Block**:  
   Select the specific External IP Block to be used for the Provider Outbound SNAT.
 
-
-### 2. Result - Centralized External Connection Status
+### Monitoring
+#### 1. Centralized External Connection Status
 The status reflects the successful application of the configuration.
 
 !!! info "Note"
@@ -76,9 +78,11 @@ The status reflects the successful application of the configuration.
 
 ---
 
-## Configuration Distributed External Connection {: #dist-conn }
+## Distributed External Connection {: #dist-conn }
 
-### 1. Create new Distributed External Connection
+### Configuration
+
+#### Step1. Create new Distributed External Connection
 ![Dist Ext Conn config](images/3a-2a-Create_Dist_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **VLAN ID**:  
@@ -87,7 +91,7 @@ The status reflects the successful application of the configuration.
 * **Gateway CIDR IPv4 Address**:  
   Specifies the IP address of the upstream physical router or firewall (the Next Hop) that acts as the default gateway for this connection.
 
-### 2. Result - Centralized External Connection Status
+### Monitoring
 The status reflects the successful application of the configuration.
 
 !!! info "Note"

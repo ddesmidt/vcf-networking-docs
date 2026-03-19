@@ -30,9 +30,11 @@ DHCP is used to dynamically assign IP addresses to workloads.
 
 ---
 
-## DHCP Server Configuration {: #dhcp-server }
+## DHCP Server {: #dhcp-server }
 
-### 0. Edit Global DHCP Server Configuration
+### Configuration
+
+#### Step0. Edit Global DHCP Server Configuration
 ![vCenter Edit Gloabl DHCP Server](images/1d-0a-Edit_DHCP_Server_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **Enable DHCP Server Config**  
@@ -49,11 +51,11 @@ DHCP is used to dynamically assign IP addresses to workloads.
   Specifies the IP addresses of the NTP servers to be provided to the DHCP clients for time synchronization.
 
 
-### 1. Enable DHCP Server in the VPC subnet
+#### Step1. Enable DHCP Server in the VPC subnet
 ![vCenter Enable DHCP Server](images/1d-1a-Enable_DHCP_Server.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 
-### 2. (Optional) Configure Advanced DHCP Server Settings
+#### Step2. (Optional) Configure Advanced DHCP Server Settings
 ![vCenter Configure DHCP Server settings](images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **DNS Server IPs / Lease Time (Seconds) / NTP Server IPs**  
@@ -72,7 +74,8 @@ DHCP is used to dynamically assign IP addresses to workloads.
   Creates fixed MAC-to-IP address mappings to ensure specific workloads always receive the same IP address.
 
 
-### 3. Result - Validate DHCP Server configuration
+### Monitoring
+#### DHCP Server Configuration
 ![vCenter Result VPC Subnet](images/1d-3a-Validation_VPC_DHCP_Server.jpg){ width="60%" style="display: block; margin: 0 auto;" }
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
@@ -83,12 +86,14 @@ DHCP is used to dynamically assign IP addresses to workloads.
 ---
 
 ## DHCP Relay Configuration {: #dhcp-relay }
+
+### Configuration
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 !!! warning "Limitation"
     When the 3rd party DHCP Server is connected to the physical network (not VPC subnet), DHCP Relay is supported exclusively on **VPC Public Subnets**.
 </div>
 
-### 0. Edit Global DHCP Server Configuration
+#### Step0. Edit Global DHCP Server Configuration
 ![vCenter Edit Gloabl DHCP Server](images/1d-0b-Edit_DHCP_Relay_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **Enable DHCP Replay Config**  
@@ -98,14 +103,14 @@ DHCP is used to dynamically assign IP addresses to workloads.
   Specifies the external IP addresses of the 3rd party DNS servers.
 
 
-### 1. Enable DHCP Relay in the VPC subnet
+#### Step1. Enable DHCP Relay in the VPC subnet
 ![vCenter Enable DHCP Server](images/1d-1b-Enable_DHCP_Relay.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **External DHCP Server Addresses**  
   This value is pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.
 
-
-### 2. Result - Validate DHCP Relay configuration
+### Monitoring
+#### DHCP Relay Configuration
 ![vCenter Result VPC Subnet](images/1d-2b-Validation_VPC_DHCP_Relay.jpg){ width="60%" style="display: block; margin: 0 auto;" }
 
 

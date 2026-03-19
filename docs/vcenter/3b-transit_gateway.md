@@ -31,17 +31,19 @@ Transit Gateways (Centralized or Distributed) provide the routing between VPC Ga
 
 ---
 
-## Configuration Centralized Transit Gateway {: #cent-tgw }
+## Centralized Transit Gateway {: #cent-tgw }
+
+### Configuration
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 !!! warning "Requirement"
     An [**Edge Cluster**](2a-edge.md) must be pre-provisioned in the environment.  
 </div>
 
-### 1. Create new Centralized Transit Gateway 
+#### Step1. Create new Centralized Transit Gateway 
 ![Cent TGW config](images/3b-1a-Create_Cent_TGW.jpg){ width="60%" style="display: block; margin: 0 auto;" }
 
-### 2. Configure Centralized Transit Gateway Connectivity
+#### Step2. Configure Centralized Transit Gateway Connectivity
 ![Cent TGW connectivity](images/3b-1b-Configure_Cent_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **Span**:  
@@ -59,7 +61,7 @@ Transit Gateways (Centralized or Distributed) provide the routing between VPC Ga
 * **TGW Edge Cluster**:  
   Select the specific Edge Cluster that will host this Centralized Transit Gateway.
 
-### 3. Configure Workload Domain Connectivity
+#### Step3. Configure Workload Domain Connectivity
 ![Cent WLD connectivity](images/3b-1c-Configure_WLD.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **External Connection**:  
@@ -74,8 +76,7 @@ Transit Gateways (Centralized or Distributed) provide the routing between VPC Ga
     * **Private - Transit Gateway IP Blocks:** Select or create a new Private TGW IP Block used for future VPC Private-TGW subnets.
     * **Default Outbound NAT:** Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.
 
-
-### 4. Result - Centralized External Connection Status
+### Monitoring
 The status reflects the successful application of the configuration.
 
 !!! info "Note"
@@ -85,15 +86,17 @@ The status reflects the successful application of the configuration.
 
 ---
 
-## Configuration Distributed Transit Gateway  {: #dist-tgw }
+## Distributed Transit Gateway  {: #dist-tgw }
 
-### 1. Create new Distributed Transit Gateway 
+## Configuration
+
+#### Step1. Create new Distributed Transit Gateway 
 ![Dist TGW config](images/3b-2a-Create_Dist_TGW.jpg){ width="60%" style="display: block; margin: 0 auto;" }
 
-### 2. Configure Distributed Transit Gateway Connectivity
+#### Step2. Configure Distributed Transit Gateway Connectivity
 ![Dist TGW connectivity](images/3b-2b-Configure_Dist_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-### 3. Configure External Network Connectivity
+#### Step3. Configure External Network Connectivity
 ![Dist WLD connectivity](images/3b-2c-Configure_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **External Connection**:  
@@ -107,7 +110,7 @@ The status reflects the successful application of the configuration.
     * **VPC External IP Blocks:** Select or create a new External IP Block for future VPC Public subnets.
     * **Private - Transit Gateway IP Blocks:** Select or create a new Private TGW IP Block used for future VPC Private-TGW subnets.
 
-### 4. Configure VPC Service
+#### Step4. Configure VPC Service
 Option to offer Network Services NAT, LB, AVI Plugin.
 ![Dist WLD connectivity](images/3b-2d-Configure_VPC_Service.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
@@ -118,7 +121,7 @@ Option to offer Network Services NAT, LB, AVI Plugin.
 * **Default Outbound NAT**  
   Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.
 
-### 5. Result - Distributed External Connection Status
+### Monitoring
 The status reflects the successful application of the configuration.
 
 !!! info "Note"

@@ -1,5 +1,5 @@
 <h1>
-  <img src="/assets/VCFA.png" style="height:30px"; vertical-align:middle;>
+  <img src="../assets/VCFA.png" style="height:30px"; vertical-align:middle;>
   VCF Automation Network Services
 </h1>
 

@@ -19,7 +19,7 @@ NAT allows **VPC Private subnets** to communicate with external networks or prov
 
 ---
 
-## Overview of NAT Types
+## Overview of NAT types
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
@@ -31,38 +31,45 @@ NAT allows **VPC Private subnets** to communicate with external networks or prov
 
 ---
 
-## Configuration External-IP (1:1 NAT) {: #ext-ip }
+## External-IP (1:1 NAT) {: #ext-ip }
 
-### 1. Create a new External IP
+### Configuration
+
+#### Step1. Create a new External IP
 ![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-### 2. Result - Show the External IP
+### Monitoring
+#### Show External IPs
 ![vCenter Result VPC Subnet](images/1c-1b-Validation_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
-
 ## Configuration Outbound-NAT (N:1 SNAT) {: #outbound-nat }
+
+### Configuration
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 !!! warning "Limitation"
     Outbound-NAT is **not supported** on VPCs connected to Distributed Transit Gateways without VNA.  
     (only supported on VPCs connected to Centralized Transit Gateways or Distributed Transit Gateways with VNA)
 </div>
 
-### 1. Check Outbound-NAT configuration in the VPC Gateway
+#### Step1. Check Outbound-NAT configuration in the VPC Gateway
 ![vCenter Check Outbound NAT Config](images/1c-2a-Check_VPC_ONAT_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-### 2. If disabled, Edit the VPC to find the Connectivity Profile used by the VPC
+#### Step2. If disabled, Edit the VPC to find the Connectivity Profile used by the VPC
 ![vCenter Validation VPC Subnet](images/1c-2b-Find_Connectivity_Profile.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-### 3. Edit the Connectivity Profile and enable Outbound-NAT
+#### Step3. Edit the Connectivity Profile and enable Outbound-NAT
 ![vCenter Validation VPC Subnet](images/1c-2c-Enable_ONAT.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
-### 4. Result - Show the Outbound-NAT IP used by the VPC
+### Monitoring
+#### Show the Outbound-NAT IP used by the VPC
 ![vCenter Result VPC Subnet](images/1c-2d-Validation_VPC_ONAT.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ---
 
-## Configuration NAT (SNAT/DNAT) {: #full-nat }
+## NAT (SNAT/DNAT) {: #full-nat }
+
+### Configuration
 
 To do...
 
