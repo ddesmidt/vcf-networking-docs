@@ -1949,7 +1949,11 @@
 <p>For more information on VPC Subnets, refer to the <a href="../1b-vpc_subnet/">VPC Subnet</a> page.</p>
 <hr>
 <h2 id="ext-ipblock">IP Block External</h2>
-<p>This is the IP Block used for VPC Subnets Public or VLAN.</p>
+<p>This IP Block type is used for Public VPC Subnets and VLAN-backed Subnets.</p>
+<ul>
+<li><strong>Public VPC Subnets</strong>: These IP Blocks must be manually defined in this section (see configuration steps below).</li>
+<li><strong>VLAN-backed Subnets</strong>: These IP Blocks are not created here; they are configured directly within the <a href="../1b-vpc_subnet/#vlan">VPC Subnet VLAN Extension</a></li>
+</ul>
 <h3 id="configuration">Configuration</h3>
 <h4 id="step1-create-new-ip-block-external">Step1. Create new IP Block External</h4>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-1a-Create_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="IP Block Ext config" src="../images/3c-1a-Create_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="100%"></a></p>
@@ -1969,7 +1973,8 @@
 </li>
 <li>
 <p><strong>Reserved for Specific Subnet</strong>:<br>
-  Enable for the Subnet-VLAN use case, otherwise disabled.</p>
+  This setting is specifically for VLAN-backed Subnets.<br>
+  However, since IP Blocks for VLAN-backed Subnets are managed directly within the <a href="../1b-vpc_subnet/#vlan">VPC Subnet VLAN Extension</a>, this option should be left Disabled.</p>
 </li>
 </ul>
 <h3 id="monitoring">Monitoring</h3>
