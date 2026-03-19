@@ -44,7 +44,7 @@ This is the IP Block used for future VPC Subnets Public or VLAN.
 
 * **CIDRs/Ranges**:  
   Enter the specific CIDR blocks or IP ranges to be managed by this block.  
-  CIDR can be used for VPC Subnets Public or VLAN.
+  CIDR can be used for VPC Subnets Public or VLAN.  
   Range can be used only for VPC VLAN.
   
 * **Excluded IP Ranges**:  
