@@ -1743,32 +1743,7 @@
 <h2 id="network-span">Network Span</h2>
 <h3 id="configuration">Configuration</h3>
 <h4 id="step1-create-network-span">Step1. Create Network Span</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-1a-Create_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="vCenter Network Span config" src="../images/3c-1a-Create_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="100%"></a></p>
-<ul>
-<li>
-<p><strong>Visibility</strong>:<br>
-  Set to External.</p>
-</li>
-<li>
-<p><strong>CIDRs/Ranges</strong>:<br>
-  Enter the specific CIDR blocks or IP ranges to be managed by this block.</p>
-</li>
-<li>
-<p><strong>Excluded IP Ranges</strong>:<br>
-  (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).</p>
-</li>
-<li>
-<p><strong>Reserved for Specific Subnet</strong>:<br>
-  Enable for the Subnet-VLAN use case, otherwise disabled.</p>
-</li>
-</ul>
 <h3 id="monitoring">Monitoring</h3>
-<p>The status reflects the successful application of the configuration.</p>
-<div class="admonition info">
-<p class="admonition-title">Note</p>
-<p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-1b-Validation_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="../images/3c-1b-Validation_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <hr>
 
 
