@@ -32,9 +32,9 @@ For more information on VPC Subnets, refer to the [VPC Subnet](1b-vpc_subnet.md)
 ---
 ## IP Block External {: #ext-ipblock }
 
-### Configuration
+This is the IP Block used for VPC Subnets Public or VLAN.
 
-This is the IP Block used for future VPC Subnets Public or VLAN.
+### Configuration
 
 #### Step1. Create new IP Block External
 ![IP Block Ext config](images/3c-1a-Create_IPBlock_Ext.jpg){ width="100%" style="display: block; margin: 0 auto;" }
@@ -43,9 +43,8 @@ This is the IP Block used for future VPC Subnets Public or VLAN.
   Set to External.
 
 * **CIDRs/Ranges**:  
-  Enter the specific CIDR blocks or IP ranges to be managed by this block.  
-  CIDR can be used for VPC Subnets Public or VLAN.  
-  Range can be used only for VPC VLAN.
+  Enter the specific CIDR block(s) to be managed by this block.  
+  Do not use Range.
   
 * **Excluded IP Ranges**:  
   (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).
@@ -76,7 +75,8 @@ This is the IP Block used for future VPC Subnets Private-TGW.
   Set to Private.
 
 * **CIDRs/Ranges**:  
-  Enter the specific CIDR blocks or IP ranges to be managed by this block.
+  Enter the specific CIDR block(s) to be managed by this block.  
+  Do not use Range.
   
 * **Excluded IP Ranges**:  
   (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).
