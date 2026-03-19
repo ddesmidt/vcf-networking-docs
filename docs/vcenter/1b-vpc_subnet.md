@@ -10,8 +10,8 @@ This section describes the procedures for configuring a VPC Subnet using the vSp
 
 There are 2 types of VPC Subnets:  
 
-* Overlay
-* VLAN
+* [Overlay](#overlay)
+* [VLAN](#vlan)
 </div>
 
 
@@ -23,7 +23,7 @@ There are 2 types of VPC Subnets:
 
 ---
 
-## VPC Subnet Overlay
+## VPC Subnet Overlay {: #overlay }
 
 ### Overview of Overlay options
 
@@ -77,7 +77,7 @@ There are 2 types of VPC Subnets:
 
 ---
 
-## VPC Subnet VLAN-Extension
+## VPC Subnet VLAN-Extension {: #vlan }
 
 ### Overview of VLAN options
 
@@ -95,7 +95,7 @@ There are 2 types of VPC Subnets:
 ![vCenter Create VPC](images/1b-2a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 
-#### Step2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity))
+#### Step2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity)
 ![vCenter Create VPC](images/1b-2b-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **VLAN Extensions**  

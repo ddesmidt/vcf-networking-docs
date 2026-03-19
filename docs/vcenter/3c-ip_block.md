@@ -32,7 +32,10 @@ For more information on VPC Subnets, refer to the [VPC Subnet](1b-vpc_subnet.md)
 ---
 ## IP Block External {: #ext-ipblock }
 
-This is the IP Block used for VPC Subnets Public or VLAN.
+This IP Block type is used for Public VPC Subnets and VLAN-backed Subnets.
+
+* **Public VPC Subnets**: These IP Blocks must be manually defined in this section (see configuration steps below).
+* **VLAN-backed Subnets**: These IP Blocks are not created here; they are configured directly within the [VPC Subnet VLAN Extension](1b-vpc_subnet.md#vlan)
 
 ### Configuration
 
@@ -50,7 +53,9 @@ This is the IP Block used for VPC Subnets Public or VLAN.
   (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).
   
 * **Reserved for Specific Subnet**:  
-  Enable for the Subnet-VLAN use case, otherwise disabled.
+  This setting is specifically for VLAN-backed Subnets.  
+  However, since IP Blocks for VLAN-backed Subnets are managed directly within the [VPC Subnet VLAN Extension](1b-vpc_subnet.md#vlan), this option should be left Disabled.
+  
 
 ### Monitoring
 The status reflects the successful application of the configuration.
