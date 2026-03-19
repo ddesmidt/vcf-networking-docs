@@ -54,7 +54,7 @@ This IP Block type is used for Public VPC Subnets and VLAN-backed Subnets.
   
 * **Reserved for Specific Subnet**:  
   This setting is specifically for VLAN-backed Subnets.  
-  However, since IP Blocks for VLAN-backed Subnets are managed directly within the [VPC Subnet VLAN Extension](1b-vpc_subnet.md#vlan), this option should be left Disabled.
+  However, IP Blocks for VLAN-backed Subnets are created directly within the [VPC Subnet VLAN Extension](1b-vpc_subnet.md#vlan), for the creation of VPC-Subnet Public this option should be left Disabled.
   
 
 ### Monitoring
