@@ -1964,8 +1964,10 @@
 </li>
 <li>
 <p><strong>CIDRs/Ranges</strong>:<br>
-  Enter the specific CIDR block(s) to be managed by this block.<br>
-  Do not use Range.</p>
+  Enter the specific CIDR(s) or IP Range(s) to be managed by this block.<br>
+  Note the following requirements based on the intended use case:<br>
+    . CIDR: Must be used if this block will be used for VPC-Subnet Publics<br>
+    . Range: May be used if the block is intended only for NAT, LB-VIP, or VPN services</p>
 </li>
 <li>
 <p><strong>Excluded IP Ranges</strong>:<br>
