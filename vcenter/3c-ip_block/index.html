@@ -1950,7 +1950,7 @@
 <hr>
 <h2 id="ext-ipblock">IP Block External</h2>
 <h3 id="configuration">Configuration</h3>
-<p>This is the IP Block used for future VPC Subnets Public.</p>
+<p>This is the IP Block used for future VPC Subnets Public or VLAN.</p>
 <h4 id="step1-create-new-ip-block-external">Step1. Create new IP Block External</h4>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-1a-Create_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="IP Block Ext config" src="../images/3c-1a-Create_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="100%"></a></p>
 <ul>
@@ -1960,7 +1960,9 @@
 </li>
 <li>
 <p><strong>CIDRs/Ranges</strong>:<br>
-  Enter the specific CIDR blocks or IP ranges to be managed by this block.</p>
+  Enter the specific CIDR blocks or IP ranges to be managed by this block.<br>
+  CIDR can be used for VPC Subnets Public or VLAN.
+  Range can be used only for VPC VLAN.</p>
 </li>
 <li>
 <p><strong>Excluded IP Ranges</strong>:<br>
