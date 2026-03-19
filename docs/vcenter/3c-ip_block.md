@@ -53,8 +53,9 @@ This IP Block type is used for Public VPC Subnets and VLAN-backed Subnets.
   (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).
   
 * **Reserved for Specific Subnet**:  
-  This setting is specifically for VLAN-backed Subnets.  
-  However, IP Blocks for VLAN-backed Subnets are created directly within the [VPC Subnet VLAN Extension](1b-vpc_subnet.md#vlan), for the creation of VPC-Subnet Public this option should be left Disabled.
+  This setting is used exclusively for VLAN-backed Subnets. 
+  IP Blocks for VLAN-backed Subnets are created directly within the [VPC Subnet VLAN Extension](1b-vpc_subnet.md#vlan).  
+  For the creation of VPC-Subnet Public this option must be left Disabled.
   
 
 ### Monitoring
