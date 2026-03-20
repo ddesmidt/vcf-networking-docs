@@ -19,13 +19,23 @@ This section describes the procedures for configuring Network Span using the vSp
 
 ## Network Span
 
+Network Span defines how VPC subnets span across vCenter clusters.
+
 ### Configuration
 
 #### Step1. Create Network Span
-
+![vCenter Network Span config](images/3d-1a-Create_Network_Span.jpg){ width="100%" style="display: block; margin: 0 auto;" }
 
 
 ### Monitoring
+
+#### Status
+The status reflects the successful application of the configuration.
+
+!!! info "Note"
+    Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+
+![vCenter Network Span validation](images/3d-1b-Validation_Network_Span.jpg){ width="100%" style="display: block; margin: 0 auto;" }
 
 
 ---

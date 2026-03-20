@@ -75,7 +75,7 @@ DHCP is used to dynamically assign IP addresses to workloads.
 
 
 ### Monitoring
-#### DHCP Server Configuration
+#### Configuration
 ![vCenter Result VPC Subnet](images/1d-3a-Validation_VPC_DHCP_Server.jpg){ width="60%" style="display: block; margin: 0 auto;" }
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
@@ -110,7 +110,7 @@ DHCP is used to dynamically assign IP addresses to workloads.
   This value is pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.
 
 ### Monitoring
-#### DHCP Relay Configuration
+#### Configuration
 ![vCenter Result VPC Subnet](images/1d-2b-Validation_VPC_DHCP_Relay.jpg){ width="60%" style="display: block; margin: 0 auto;" }
 
 

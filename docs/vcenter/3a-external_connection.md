@@ -67,7 +67,7 @@ External Connections provide the connection from the Transit Gateway (Centralize
   Select the specific External IP Block to be used for the Provider Outbound SNAT.
 
 ### Monitoring
-#### 1. Centralized External Connection Status
+#### Status
 The status reflects the successful application of the configuration.
 
 !!! info "Note"
@@ -92,6 +92,7 @@ The status reflects the successful application of the configuration.
   Specifies the IP address of the upstream physical router or firewall (the Next Hop) that acts as the default gateway for this connection.
 
 ### Monitoring
+#### Status
 The status reflects the successful application of the configuration.
 
 !!! info "Note"

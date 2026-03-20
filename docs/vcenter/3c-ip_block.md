@@ -46,8 +46,10 @@ This IP Block type is used for Public VPC Subnets and VLAN-backed Subnets.
   Set to External.
 
 * **CIDRs/Ranges**:  
-  Enter the specific CIDR block(s) to be managed by this block.  
-  Do not use Range.
+  Enter the specific CIDR(s) or IP Range(s) to be managed by this block.  
+  Note the following requirements based on the intended use case:  
+    . CIDR: Must be used if this block will be used for VPC-Subnet Publics  
+    . Range: May be used if the block is intended only for NAT, LB-VIP, or VPN services
   
 * **Excluded IP Ranges**:  
   (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).
@@ -91,6 +93,8 @@ This is the IP Block used for future VPC Subnets Private-TGW.
   Not Applicable.
 
 ### Monitoring
+
+#### Status
 The status reflects the successful application of the configuration.
 
 !!! info "Note"
@@ -111,6 +115,7 @@ It's configuration is managed directly within the [VPC Gateway](1a-vpc_gateway.m
 
 ## Monitoring IP Blocks
 
+#### Utilization
 Real-time utilization metrics for IP Blocks can be monitored via the following indicators:
 
 * **Available IPs**: The remaining number of addresses in the pool ready for allocation.

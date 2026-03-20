@@ -1964,8 +1964,10 @@
 </li>
 <li>
 <p><strong>CIDRs/Ranges</strong>:<br>
-  Enter the specific CIDR block(s) to be managed by this block.<br>
-  Do not use Range.</p>
+  Enter the specific CIDR(s) or IP Range(s) to be managed by this block.<br>
+  Note the following requirements based on the intended use case:<br>
+    . CIDR: Must be used if this block will be used for VPC-Subnet Publics<br>
+    . Range: May be used if the block is intended only for NAT, LB-VIP, or VPN services</p>
 </li>
 <li>
 <p><strong>Excluded IP Ranges</strong>:<br>
@@ -2011,6 +2013,7 @@
 </li>
 </ul>
 <h3 id="monitoring_1">Monitoring</h3>
+<h4 id="status">Status</h4>
 <p>The status reflects the successful application of the configuration.</p>
 <div class="admonition info">
 <p class="admonition-title">Note</p>
@@ -2024,6 +2027,7 @@
 It's configuration is managed directly within the <a href="../1a-vpc_gateway/">VPC Gateway</a> settings.</p>
 <hr>
 <h2 id="monitoring-ip-blocks">Monitoring IP Blocks</h2>
+<h4 id="utilization">Utilization</h4>
 <p>Real-time utilization metrics for IP Blocks can be monitored via the following indicators:</p>
 <ul>
 <li>

@@ -77,6 +77,7 @@ NSX Edge Nodes provide the centralized network services required for **Centraliz
 </div>
 
 ### Monitoring
-![vCenter VNA Status](images/2a-4-Validation_Edge.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+#### Status
+![vCenter Edge Status](images/2a-4-Validation_Edge.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

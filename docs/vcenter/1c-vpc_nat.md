@@ -33,6 +33,10 @@ NAT allows **VPC Private subnets** to communicate with external networks or prov
 
 ## External-IP (1:1 NAT) {: #ext-ip }
 
+Maps a single Public IP to a single Private IP for specific workloads.
+
+![VPC NAT Ext-IP](images/1c-1-VPC_NAT_ExtIP.jpg){: .center style="width:70%" }
+
 ### Configuration
 
 #### Step1. Create a new External IP
@@ -44,6 +48,10 @@ NAT allows **VPC Private subnets** to communicate with external networks or prov
 
 ---
 ## Configuration Outbound-NAT (N:1 SNAT) {: #outbound-nat }
+
+Allows multiple workloads to share a single Public IP for external access.
+
+![VPC NAT Ext-IP](images/1c-2-VPC_ONAT.jpg){: .center style="width:70%" }
 
 ### Configuration
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
@@ -68,6 +76,12 @@ NAT allows **VPC Private subnets** to communicate with external networks or prov
 ---
 
 ## NAT (SNAT/DNAT) {: #full-nat }
+
+Provides stateful Layer 4 translation for granular traffic control.
+
+xxx To correct picture.
+
+![VPC NAT Ext-IP](images/1c-3-VPC_NAT.jpg){: .center style="width:70%" }
 
 ### Configuration
 

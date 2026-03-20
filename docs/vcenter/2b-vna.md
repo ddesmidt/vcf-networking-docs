@@ -55,6 +55,7 @@ NSX Virtual Network Appliances (VNA) providing centralized network services for 
 
 
 ### Monitoring
+#### Status
 ![vCenter VNA Status](images/2b-4-Validation_VNA.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

@@ -77,6 +77,8 @@ Transit Gateways (Centralized or Distributed) provide the routing between VPC Ga
     * **Default Outbound NAT:** Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.
 
 ### Monitoring
+
+#### Status
 The status reflects the successful application of the configuration.
 
 !!! info "Note"
@@ -122,6 +124,8 @@ Option to offer Network Services NAT, LB, AVI Plugin.
   Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.
 
 ### Monitoring
+
+#### Status
 The status reflects the successful application of the configuration.
 
 !!! info "Note"
