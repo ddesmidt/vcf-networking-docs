@@ -40,7 +40,7 @@ This IP Block type is used for Public VPC Subnets and VLAN-backed Subnets.
 ### Configuration
 
 #### Step1. Create new IP Block External
-![IP Block Ext config](images/3c-1a-Create_IPBlock_Ext.jpg){ width="100%" style="display: block; margin: 0 auto;" }
+![IP Block Ext config](images/3c-1a-Create_IPBlock_Ext.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Visibility**:  
   Set to External.
@@ -66,7 +66,7 @@ The status reflects the successful application of the configuration.
 !!! info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 
-![IP Block Ext validation](images/3c-1b-Validation_IPBlock_Ext.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![IP Block Ext validation](images/3c-1b-Validation_IPBlock_Ext.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
 
@@ -77,7 +77,7 @@ The status reflects the successful application of the configuration.
 This is the IP Block used for future VPC Subnets Private-TGW.
 
 #### Step1. Create new IP Block Private-TGW
-![IP Block Ext config](images/3c-2a-Create_IPBlock_Private_TGW.jpg){ width="100%" style="display: block; margin: 0 auto;" }
+![IP Block Ext config](images/3c-2a-Create_IPBlock_Private_TGW.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Visibility**:  
   Set to Private.
@@ -100,7 +100,7 @@ The status reflects the successful application of the configuration.
 !!! info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 
-![IP Block Ext validation](images/3c-2b-Validation_IPBlock_Private_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![IP Block Ext validation](images/3c-2b-Validation_IPBlock_Private_TGW.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
 

@@ -35,7 +35,7 @@ DHCP is used to dynamically assign IP addresses to workloads.
 ### Configuration
 
 #### Step0. Edit Global DHCP Server Configuration
-![vCenter Edit Gloabl DHCP Server](images/1d-0a-Edit_DHCP_Server_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Edit Gloabl DHCP Server](images/1d-0a-Edit_DHCP_Server_Config.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **Enable DHCP Server Config**  
   "Yes" to enable native DHCP services across all subnets within the VPC.
@@ -52,11 +52,11 @@ DHCP is used to dynamically assign IP addresses to workloads.
 
 
 #### Step1. Enable DHCP Server in the VPC subnet
-![vCenter Enable DHCP Server](images/1d-1a-Enable_DHCP_Server.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Enable DHCP Server](images/1d-1a-Enable_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 
 #### Step2. (Optional) Configure Advanced DHCP Server Settings
-![vCenter Configure DHCP Server settings](images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Configure DHCP Server settings](images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **DNS Server IPs / Lease Time (Seconds) / NTP Server IPs**  
   These values are pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.
@@ -94,7 +94,7 @@ DHCP is used to dynamically assign IP addresses to workloads.
 </div>
 
 #### Step0. Edit Global DHCP Server Configuration
-![vCenter Edit Gloabl DHCP Server](images/1d-0b-Edit_DHCP_Relay_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Edit Gloabl DHCP Server](images/1d-0b-Edit_DHCP_Relay_Config.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **Enable DHCP Replay Config**  
   "Yes" to enable DHCP Relay service across all subnets within the VPC.

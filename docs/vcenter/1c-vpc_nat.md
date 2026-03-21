@@ -40,7 +40,7 @@ Maps a single Public IP to a single Private IP for specific workloads.
 ### Configuration
 
 #### Step1. Create a new External IP
-![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ### Monitoring
 #### Show External IPs

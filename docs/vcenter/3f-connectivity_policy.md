@@ -34,7 +34,7 @@ This section describes the procedures for configuring Connectivity Policy using 
 ### Configuration
 
 #### Step1. Create Connectivity Policy
-![vCenter Conn Policy config](images/3f-1a-Create_ConnPolicy.jpg){ width="100%" style="display: block; margin: 0 auto;" }
+![vCenter Conn Policy config](images/3f-1a-Create_ConnPolicy.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Visibility**:  
   Set to External.

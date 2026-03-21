@@ -39,7 +39,7 @@ Defines the VPC's connection to the Transit Gateway, specifies the assigned Exte
 ### Configuration
 
 #### Step1. Create Connectivity Profile
-![vCenter Network Span config](images/3e-1a-Create_ConnProf.jpg){ width="100%" style="display: block; margin: 0 auto;" }
+![vCenter Network Span config](images/3e-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Transit Gateway**:  
   Select the Centralized Transit Gateway, VPC Gateways will be connected to.
@@ -80,7 +80,7 @@ The status reflects the successful application of the configuration.
 ### Configuration
 
 #### Step1. Create Connectivity Profile
-![vCenter Network Span config](images/3e-2a-Create_ConnProf.jpg){ width="100%" style="display: block; margin: 0 auto;" }
+![vCenter Network Span config](images/3e-2a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Transit Gateway**:  
   Select the Distributed Transit Gateway, VPC Gateways will be connected to.
