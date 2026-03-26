@@ -24,10 +24,10 @@ Transit Gateways (Centralized or Distributed) provide the routing between VPC Ga
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
-| [**Centralized TGW**](#cent-tgw) | Supports extra network stateful services (VPN). | Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster. |
-| [**Distributed TGW**](#dist-tgw)| Optimized for high-throughput distributed routing (supports Outbound-NAT and LB via VNA Nodes). | Routing occurs locally at the ESXi host level (distributed dataplane). NAT and LB traffic is redirected through a VNA Gateway in a VNA Cluster. |
+| [**Centralized TGW**](#cent-tgw) | Supports L2 and L3 Fabric. Offers Stateful Network Services (Outbound-NAT and NAT). | Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster. |
+| [**Distributed TGW**](#dist-tgw)| Supports only L2 Fabric. Offers Stateful Network Services (Outbound-NAT and NAT) with VNA Nodes. | Routing occurs locally at the ESXi host level (distributed dataplane). Stateful Network Services traffic is redirected through a VNA Gateway in a VNA Cluster. |
 
-![TGW Types](images/3b-0-Transit_Gateway_Types.jpg){: .center style="width:60%" }
+![TGW Types](images/3b-0-Transit_Gateway_Types.jpg){: .center style="width:70%" }
 
 ---
 
@@ -105,7 +105,6 @@ The status reflects the successful application of the configuration.
 
 * **External Connection**:  
   You can create a new or use an existing Distributed External Connection.  
-  Limited configuration settings are available if creating a new Distributed External Connection from here (only Tier-0 information).  
   For more information on External Connection, refer to the [External Connection](3a-external_connection.md) page.
 
 * **VPC Network Configuration**  

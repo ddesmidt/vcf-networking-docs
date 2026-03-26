@@ -24,10 +24,10 @@ Transit Gateways (Centralized or Distributed) provide the routing between VPC Ga
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
-| [**Centralized TGW**](#cent-tgw) | Supports extra network stateful services (VPN). | Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster. |
-| [**Distributed TGW**](#dist-tgw)| Optimized for high-throughput distributed routing (supports Outbound-NAT and LB via VNA Nodes). | Routing occurs locally at the ESXi host level (distributed dataplane). NAT and LB traffic is redirected through a VNA Gateway in a VNA Cluster. |
+| [**Centralized TGW**](#cent-tgw) | Supports L2 and L3 Fabric. Offers all Stateful Network Services (Outbound-NAT, NAT, LB, and VPN). | Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster. |
+| [**Distributed TGW**](#dist-tgw)| Supports only L2 Fabric. Offers Stateful Network Services (Outbound-NAT, NAT, and LB) with VNA Nodes. | Routing occurs locally at the ESXi host level (distributed dataplane). Stateful Network Services traffic is redirected through a VNA Gateway in a VNA Cluster. |
 
-![TGW Types](images/3b-0-Transit_Gateway_Types.jpg){: .center style="width:60%" }
+![TGW Types](images/1a-0-Transit_Gateway_Types.jpg){: .center style="width:70%" }
 
 ---
 
@@ -120,7 +120,7 @@ Option to offer Network Services NAT, LB, AVI Plugin.
 
 * **Virtual Network Appliance Cluster**:  
   Select the VNA Cluster to host the VNA Gateway.  
-  For more information on VNA, refer to the [VNA](2b-vna.md) page.
+  For more information on VNA, refer to the [VNA](3b-vna.md) page.
 
 * **Default Outbound NAT**  
   Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.
