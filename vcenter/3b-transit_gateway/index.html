@@ -2166,8 +2166,9 @@
 
 <div class="grid" style="grid-template-columns: 80% 20%">
 <div>
-<p>This section describes the procedures for configuring Transit Gateways using the vSphere Client.  </p>
-<p>Transit Gateways (Centralized or Distributed) provide the routing between VPC Gateways and physical networks.</p>
+<p>This section describes the procedures for configuring Transit Gateways using the vSphere Client.
+<br><br>
+<strong>Transit Gateways</strong> (Centralized or Distributed) provide the routing between VPC Gateways and physical networks.</p>
 </div>
 <div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-0-Transit_Gateway.jpg" data-desc-position="bottom"><img alt="vCenter External Connection" src="../images/3b-0-Transit_Gateway.jpg" width="100%"></a></p>
@@ -2175,6 +2176,7 @@
 </div>
 <hr>
 <h2 id="overview-of-transit-gateway-types">Overview of Transit Gateway Types</h2>
+<p>Different Transit Gateway types are available:</p>
 <table>
 <thead>
 <tr>
@@ -2186,12 +2188,12 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><a href="#cent-tgw"><strong>Centralized TGW</strong></a></td>
-<td style="text-align: left;">Supports L2 and L3 Fabric. Offers Stateful Network Services (Outbound-NAT and NAT).</td>
+<td style="text-align: left;">Supports L2 and L3 Fabric. Offers Stateful Network Services (Outbound-NAT and NAT). VPN can also be configured but from NSX.</td>
 <td style="text-align: left;">Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#dist-tgw"><strong>Distributed TGW</strong></a></td>
-<td style="text-align: left;">Supports only L2 Fabric. Offers Stateful Network Services (Outbound-NAT and NAT) with VNA Nodes.</td>
+<td style="text-align: left;">Supports only L2 Fabric. Offers Stateful Network Services (Outbound-NAT and NAT) with VNA Nodes. VPN can also be configured but from NSX.</td>
 <td style="text-align: left;">Routing occurs locally at the ESXi host level (distributed dataplane). Stateful Network Services traffic is redirected through a VNA Gateway in a VNA Cluster.</td>
 </tr>
 </tbody>
@@ -2242,10 +2244,11 @@
 </li>
 <li>
 <p><strong>VPC Network Configuration</strong><br>
-  This optional settings creates a new Connectivity Profile:
-  For more information on Connectivity Profile, refer to the <a href="../3e-connectivity_profile/">Connectivity Profile</a> page.</p>
+  (Optional) Create a new Connectivity Profile for future VPC.<br>
+  For more information on Connectivity Profile, refer to the <a href="../3e-connectivity_profile/">Connectivity Profile</a> page.<br>
+  The Connectivity Profile will be associated with this Transit Gateway and with:</p>
 <ul>
-<li><strong>VPC External IP Blocks:</strong> Select or create a new External IP Block for future VPC Public subnets.</li>
+<li><strong>VPC External IP Blocks:</strong> Select or create a new External IP Block for future VPC Public subnets, NAT, LB VIP (AVI configuration), and VPN (NSX configuration).</li>
 <li><strong>Private - Transit Gateway IP Blocks:</strong> Select or create a new Private TGW IP Block used for future VPC Private-TGW subnets.</li>
 <li><strong>Default Outbound NAT:</strong> Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.</li>
 </ul>
@@ -2278,16 +2281,18 @@
 </li>
 <li>
 <p><strong>VPC Network Configuration</strong><br>
-  This optional settings creates a new Connectivity Profile:
-  For more information on Connectivity Profile, refer to the <a href="../3e-connectivity_profile/">Connectivity Profile</a> page.</p>
+  (Optional) Create a new Connectivity Profile for future VPC.<br>
+  For more information on Connectivity Profile, refer to the <a href="../3e-connectivity_profile/">Connectivity Profile</a> page.<br>
+  The Connectivity Profile will be associated with this Transit Gateway and with:</p>
 <ul>
-<li><strong>VPC External IP Blocks:</strong> Select or create a new External IP Block for future VPC Public subnets.</li>
+<li><strong>VPC External IP Blocks:</strong> Select or create a new External IP Block for future VPC Public subnets, NAT, LB VIP (AVI configuration), and VPN (NSX configuration).</li>
 <li><strong>Private - Transit Gateway IP Blocks:</strong> Select or create a new Private TGW IP Block used for future VPC Private-TGW subnets.</li>
+<li><strong>Default Outbound NAT:</strong> Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.</li>
 </ul>
 </li>
 </ul>
 <h4 id="step4-configure-vpc-service">Step4. Configure VPC Service</h4>
-<p>Option to offer Network Services NAT, LB, AVI Plugin.
+<p>Option to offer Network Services NAT, AVI Plugin.
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2d-Configure_VPC_Service.jpg" data-desc-position="bottom"><img alt="Dist WLD connectivity" src="../images/3b-2d-Configure_VPC_Service.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
 <ul>
 <li>
