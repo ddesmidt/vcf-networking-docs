@@ -2186,17 +2186,17 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><a href="#cent-tgw"><strong>Centralized TGW</strong></a></td>
-<td style="text-align: left;">Supports extra network stateful services (VPN).</td>
+<td style="text-align: left;">Supports L2 and L3 Fabric. Offers all Stateful Network Services (Outbound-NAT, NAT, LB, and VPN).</td>
 <td style="text-align: left;">Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#dist-tgw"><strong>Distributed TGW</strong></a></td>
-<td style="text-align: left;">Optimized for high-throughput distributed routing (supports Outbound-NAT and LB via VNA Nodes).</td>
-<td style="text-align: left;">Routing occurs locally at the ESXi host level (distributed dataplane). NAT and LB traffic is redirected through a VNA Gateway in a VNA Cluster.</td>
+<td style="text-align: left;">Supports only L2 Fabric. Offers Stateful Network Services (Outbound-NAT, NAT, and LB) with VNA Nodes.</td>
+<td style="text-align: left;">Routing occurs locally at the ESXi host level (distributed dataplane). Stateful Network Services traffic is redirected through a VNA Gateway in a VNA Cluster.</td>
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-0-Transit_Gateway_Types.jpg" data-desc-position="bottom"><img alt="TGW Types" class="center" src="images/3b-0-Transit_Gateway_Types.jpg" style="width:60%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-0-Transit_Gateway_Types.jpg" data-desc-position="bottom"><img alt="TGW Types" class="center" src="../images/1a-0-Transit_Gateway_Types.jpg" style="width:70%"></a></p>
 <hr>
 <h2 id="cent-tgw">Centralized Transit Gateway</h2>
 <h3 id="configuration">Configuration</h3>
@@ -2294,7 +2294,7 @@
 <li>
 <p><strong>Virtual Network Appliance Cluster</strong>:<br>
   Select the VNA Cluster to host the VNA Gateway.<br>
-  For more information on VNA, refer to the <a href="2b-vna.md">VNA</a> page.</p>
+  For more information on VNA, refer to the <a href="../3b-vna/">VNA</a> page.</p>
 </li>
 <li>
 <p><strong>Default Outbound NAT</strong><br>
