@@ -40,9 +40,9 @@ img.center {
   background-color: #fafafa;
 }
 
-/* Make bold text slightly more vibrant */
+/* Make bold text use Blue color */
 .md-typeset strong {
-  color: #007cbb; /* Traditional VMware Blue */
+#  color: #007cbb; /* Traditional VMware Blue */
 }
 
 /* Style inline code (like `None`) to look like a UI button */
