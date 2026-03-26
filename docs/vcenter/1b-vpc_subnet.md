@@ -40,7 +40,7 @@ There are 2 types of VPC Subnets:
 #### Step1. Create new VPC Subnet (Overlay)
 ![vCenter Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-#### Step2. Choose the VPC Subnet name (+ VLAN option + Subnet mode + IP Block & Size + Connectivity + DHCP)
+#### Step2. Configure new VPC Subnet Identity
 ![vCenter Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **VLAN Extensions**  

@@ -8,7 +8,7 @@
 
 This section describes the procedures for configuring NSX Edge Clusters and Nodes using the vSphere Client.  
 
-NSX Edge Nodes provide the centralized network services required for **Centralized Transit Gateway (CTGW)** designs within the VPC architecture.
+**NSX Edge Nodes** provide the centralized network services required **for Centralized Transit Gateway (CTGW)** designs within the VPC architecture.
 </div>
 
 
@@ -25,14 +25,15 @@ NSX Edge Nodes provide the centralized network services required for **Centraliz
 ### Configuration
 
 #### Step1. Create new Edge Cluster / Edge Nodes
-![vCenter Edge Cluster](images/2a-1-Create_Edge.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter Edge Cluster](images/2a-1-Create_Edge.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 #### Step2. Configure Edge Cluster Identity
-![vCenter Edge Cluster identity](images/2a-2-Create_Edge.jpg){ width="50%" style="display: block; margin: 0 auto;" }
+![vCenter Edge Cluster identity](images/2a-2-Create_Edge.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **Node Form Factor**:  
   Select the appliance size (vCPU / Memory) of the Edge Nodes.  
-  This determines the scale and performance limits for the logical routers (Tier-0, CTGW, and VPC) hosted on the node.
+  This determines the scale and performance limits for the logical routers (Tier-0, CTGW, and VPC) hosted on the node.  
+  More information on [VMware NSX Configmax](https://configmax.broadcom.com/guest?vmwareproduct=NSX).
 
 * **Auto generate passwords and manage them via SDDC Manager**  
   Enabling this option automates password generation and allows SDDC Manager to handle credential lifecycle management.

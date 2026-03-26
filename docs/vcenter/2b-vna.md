@@ -8,7 +8,7 @@
 
 This section describes the procedures for configuring NSX Virtual Network Appliances (VNA) using the vSphere Client.  
 
-NSX Virtual Network Appliances (VNA) providing centralized network services for Distributed Transit Gateway Designs.
+**NSX Virtual Network Appliances (VNA)** provide the centralized network services required **for Distributed Transit Gateway (DTGW)** designs within the VPC architecture.
 </div>
 
 

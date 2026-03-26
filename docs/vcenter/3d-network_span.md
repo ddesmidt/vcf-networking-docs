@@ -32,8 +32,10 @@ Network Span defines how VPC subnets span across vCenter clusters.
 #### Status
 The status reflects the successful application of the configuration.
 
-!!! info "Note"
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+</div>
 
 ![vCenter Network Span validation](images/3d-1b-Validation_Network_Span.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 

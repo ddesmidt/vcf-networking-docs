@@ -8,7 +8,7 @@ This section describes the procedures for configuring network services via the *
 ---
 
 ## VPC Network Services
-Explore the specific configuration guides for each VPC network service:
+Explore the configuration guides for each VPC network service:
 
 <div class="grid" markdown style="grid-template-columns: 25% 75%">
 
@@ -26,7 +26,7 @@ Explore the specific configuration guides for each VPC network service:
 * :material-swap-horizontal: [**NAT**](1c-vpc_nat.md)  
   Supports multiple NAT configurations:  
   . External-IP (1:1 NAT)  
-  . Outbound-NAT (N:1 NAT)  
+  . Outbound-NAT (N:1 SNAT)  
   . NAT (SNAT/DNAT)
 * :material-ip-network-outline: [**DHCP**](1d-vpc_DHCP.md)  
   DHCP services can be configured as:  
@@ -54,8 +54,12 @@ Explore the specific configuration guides for each VPC network service:
 
 ---
 
-## North VPC Connectivity Configuration
-Explore the configuration guides for each North VPC connectivity component:
+## VPC Northbound Architecture
+xxx Add section to talk about "Design / Educate" how customers choose between all those options.  
+:material-vector-polyline-plus: xxx Add how to do the use case "Internet / DC1" ???  
+xxx talk about Infoblox???
+
+Explore the configuration guides for each VCF Network Infrastructure and External Connectivity & Service:
 
 <div class="grid" markdown style="grid-template-columns: 25% 75%; gap: 10px;">
 
@@ -66,7 +70,7 @@ Explore the configuration guides for each North VPC connectivity component:
 <div markdown>
 <div style="height:20px;"></div>
 
-#### VCF Network Infrastructure
+### VCF Network Infrastructure
 * :material-layers-outline: [__Edge Cluster / Edge Node__](2a-edge.md)  
   NSX Edge appliances providing centralized network services for Central Transit Gateway Designs.
 * :material-layers-outline: [__VNA Cluster / VNA Node__](2b-vna.md)  
@@ -75,7 +79,7 @@ Explore the configuration guides for each North VPC connectivity component:
   Tier-0 logical router providing connectivity between Centralized Transit Gateways and the physical network.  
   Configuration not available from vCenter (available from NSX).  
 
-#### VCF North Connectivity
+### External Connectivity & Services
 * :fontawesome-solid-external-link: [__External Connection__](3a-external_connection.md)  
   Connection between the VPC environment and the physical network.
 * :material-transit-connection: [__Transit Gateway__](3b-transit_gateway.md)  
@@ -86,10 +90,10 @@ Explore the configuration guides for each North VPC connectivity component:
 * :material-table-split-cell: [__Network Span__](3d-network_span.md)  
   Defines how VPC subnets span across vCenter clusters.  
   Not represented in the diagram.
-* :material-transit-connection: [__Connectivity Profile__](3e-community_profile.md)  
+* :material-transit-connection: [__Connectivity Profile__](3e-connectivity_profile.md)  
   Defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services are enabled.  
   Not represented in the diagram.
-* :material-camera-control: [__Connectivity Policy__](3f-community_policy.md)  
+* :material-camera-control: [__Connectivity Policy__](3f-connectivity_policy.md)  
   Defines cross-VPC communication rules.  
   Not represented in the diagram.
 
@@ -98,7 +102,7 @@ Explore the configuration guides for each North VPC connectivity component:
 </div>
 
 
-:material-vector-polyline-plus: ??? How to talk about "Internet / DC1" ???
+
 
 ---
 

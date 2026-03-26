@@ -63,8 +63,10 @@ This IP Block type is used for Public VPC Subnets and VLAN-backed Subnets.
 ### Monitoring
 The status reflects the successful application of the configuration.
 
-!!! info "Note"
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+</div>
 
 ![IP Block Ext validation](images/3c-1b-Validation_IPBlock_Ext.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
@@ -97,8 +99,10 @@ This is the IP Block used for future VPC Subnets Private-TGW.
 #### Status
 The status reflects the successful application of the configuration.
 
-!!! info "Note"
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+</div>
 
 ![IP Block Ext validation](images/3c-2b-Validation_IPBlock_Private_TGW.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 

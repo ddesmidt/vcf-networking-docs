@@ -23,7 +23,6 @@ theme:
   features:
     - navigation.tabs              # Top navigation bar
     - navigation.sections          # Grouping in sidebar
-    - navigation.expand            # Auto-expand the sidebar
     - navigation.top               # "Back to top" button
     - content.code.copy            # "Copy" button on CLI commands
     - nyan.grid                    # This is the feature that enables "grid" and "cards"
@@ -61,36 +60,44 @@ nav:
   - vCenter Server:
       - Introduction: vcenter/index.md
       - VPC Network Services:
-          - VPC Gateway: vcenter/1a-vpc_gateway.md
-          - VPC Subnet: vcenter/1b-vpc_subnet.md
-          - NAT: vcenter/1c-vpc_nat.md
-          - DHCP: vcenter/1d-vpc_DHCP.md
-      - VPC Network Infrastructure:
-          - Edge Cluster / Node: vcenter/2a-edge.md
-          - VNA Cluster / Node: vcenter/2b-vna.md
-      - VCF North Connectivity:
-          - External Connection: vcenter/3a-external_connection.md
-          - Transit Gateway: vcenter/3b-transit_gateway.md
-          - IP Block: vcenter/3c-ip_block.md
-          - Network Span: vcenter/3d-network_span.md
-          - Connectivity Profile: vcenter/3e-connectivity_profile.md
-          - Connectivity Policy: vcenter/3f-connectivity_policy.md
+        - VPC Gateway: vcenter/1a-vpc_gateway.md
+        - VPC Subnet: vcenter/1b-vpc_subnet.md
+        - NAT: vcenter/1c-vpc_nat.md
+        - DHCP: vcenter/1d-vpc_DHCP.md
+      - VPC Northbound Architecture:
+          - VCF Network Infrastructure:
+            - Edge Cluster / Node: vcenter/2a-edge.md
+            - VNA Cluster / Node: vcenter/2b-vna.md
+          - External Connectivity & Services:
+            - External Connection: vcenter/3a-external_connection.md
+            - Transit Gateway: vcenter/3b-transit_gateway.md
+            - IP Block: vcenter/3c-ip_block.md
+            - Network Span: vcenter/3d-network_span.md
+            - Connectivity Profile: vcenter/3e-connectivity_profile.md
+            - Connectivity Policy: vcenter/3f-connectivity_policy.md
   - VCF Automation:
       - Introduction: vcfa/index.md
-      - VPC Network Services:
-          - VPC Gateway: vcfa/1a-vpc_gateway.md
-          - VPC Subnet: vcfa/1b-vpc_subnet.md
-          - NAT: vcfa/1c-vpc_nat.md
-          - DHCP: vcfa/1d-vpc_DHCP.md
-          - Load Balancer: vcfa/1e-vpc_lb.md
-          - VPN: vcfa/1f-vpc_vpn.md
-      - VPC Network Infrastructure:
-          - Edge Cluster / Node: vcfa/2a-edge.md
-          - VNA Cluster / Node: vcfa/2b-vna.md
-          - Subnet VLAN: vcfa/2d-vpc_subnet_vlan.md
-      - VCF North Connectivity:
-          - External Connection: vcfa/3a-external_connection.md
-          - Transit Gateway: vcfa/3b-transit_gateway.md
-          - IP Block: vcfa/3c-ip_block.md
+      - VCF-A Tenant:
+          - External Connectivity & Services:
+            - Transit Gateway: vcfa/1a-transit_gateway.md
+            - Connectivity Profile: vcfa/1b-connectivity_profile.md
+            - Tenant IP Quota: vcfa/1d-ip_quota-tenant.md
+          - Network Services:
+            - VPC Gateway: vcfa/2a-vpc_gateway.md
+            - VPC Subnet: vcfa/2b-vpc_subnet.md
+            - NAT: vcfa/2c-vpc_nat.md
+            - DHCP: vcfa/2d-vpc_DHCP.md
+            - Load Balancer: vcfa/2e-vpc_lb.md
+            - VPN: vcfa/2f-vpc_vpn.md
+      - VCF-A Provider:
+          - Provider Infrastructure:
+            - Edge Cluster / Node: vcfa/3a-edge.md
+            - VNA Cluster / Node: vcfa/3b-vna.md
+          - External Connectivity & Services:
+            - External Connection: vcfa/4a-external_connection.md
+            - Subnet VLAN: vcfa/4b-vpc_subnet_vlan.md
+            - IP Block: vcfa/4c-ip_block.md
+            - Provider IP Quota: vcfa/4d-ip_quota_provider.md
 
+  
 

@@ -81,8 +81,10 @@ Transit Gateways (Centralized or Distributed) provide the routing between VPC Ga
 #### Status
 The status reflects the successful application of the configuration.
 
-!!! info "Note"
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+</div>
 
 ![Cent TGW validation](images/3b-1d-Validation_Cent_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
@@ -90,7 +92,7 @@ The status reflects the successful application of the configuration.
 
 ## Distributed Transit Gateway  {: #dist-tgw }
 
-## Configuration
+### Configuration
 
 #### Step1. Create new Distributed Transit Gateway 
 ![Dist TGW config](images/3b-2a-Create_Dist_TGW.jpg){ width="60%" style="display: block; margin: 0 auto;" }
@@ -128,8 +130,10 @@ Option to offer Network Services NAT, LB, AVI Plugin.
 #### Status
 The status reflects the successful application of the configuration.
 
-!!! info "Note"
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+</div>
 
 ![Dist TGW validation](images/3b-2e-Validation_Dist_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 ---

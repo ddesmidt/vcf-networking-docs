@@ -67,8 +67,10 @@ Defines the VPC's connection to the Transit Gateway, specifies the assigned Exte
 #### Status
 The status reflects the successful application of the configuration.
 
-!!! info "Note"
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+</div>
 
 ![IP Block Ext validation](images/3e-1b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
@@ -107,10 +109,11 @@ The status reflects the successful application of the configuration.
 #### Status
 The status reflects the successful application of the configuration.
 
-!!! info "Note"
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Note"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 
 ![IP Block Ext validation](images/3e-2b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
-
+</div>
 
 ---
