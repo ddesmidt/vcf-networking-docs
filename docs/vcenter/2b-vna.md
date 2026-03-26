@@ -6,8 +6,8 @@
 
 <div markdown>
 
-This section describes the procedures for configuring NSX Virtual Network Appliances (VNA) using the vSphere Client.  
-
+This section describes the procedures for configuring NSX Virtual Network Appliances (VNA) using the vSphere Client.
+<br><br>
 **NSX Virtual Network Appliances (VNA)** provide the centralized network services required **for Distributed Transit Gateway (DTGW)** designs within the VPC architecture.
 </div>
 
@@ -27,8 +27,8 @@ This section describes the procedures for configuring NSX Virtual Network Applia
 #### Step1. Create new VNA Cluster / VNA Nodes
 ![vCenter VNA Cluster](images/2b-1-Create_VNA.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-#### Step2. Configure VNA Cluster Identity
-![vCenter VNA Cluster identity](images/2b-2-Create_VNA.jpg){ width="50%" style="display: block; margin: 0 auto;" }
+#### Step2. Configure VNA Cluster
+![vCenter VNA Cluster config](images/2b-2-Create_VNA.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 
 * **Node Form Factor**:  
   Select the appliance size (vCPU / Memory) of the VNA Nodes.  

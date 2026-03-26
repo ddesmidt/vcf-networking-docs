@@ -6,8 +6,8 @@
 
 <div markdown>
 
-This section describes the procedures for configuring NSX Edge Clusters and Nodes using the vSphere Client.  
-
+This section describes the procedures for configuring NSX Edge Clusters and Nodes using the vSphere Client.
+<br><br>
 **NSX Edge Nodes** provide the centralized network services required **for Centralized Transit Gateway (CTGW)** designs within the VPC architecture.
 </div>
 
@@ -27,8 +27,8 @@ This section describes the procedures for configuring NSX Edge Clusters and Node
 #### Step1. Create new Edge Cluster / Edge Nodes
 ![vCenter Edge Cluster](images/2a-1-Create_Edge.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-#### Step2. Configure Edge Cluster Identity
-![vCenter Edge Cluster identity](images/2a-2-Create_Edge.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+#### Step2. Configure Edge Cluster
+![vCenter Edge Cluster config](images/2a-2-Create_Edge.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **Node Form Factor**:  
   Select the appliance size (vCPU / Memory) of the Edge Nodes.  

@@ -96,7 +96,7 @@ Explore the configuration guides for Provider-Level Networking:
   Defines how VPC subnets span across vCenter clusters.  
   Not represented in the diagram.  
   Configuration not available from VCF Automation (available from vCenter or NSX).  
-  VCF-Regions and Zones can be used.
+  VCF-Regions and Zones can be used for this use case.
 </div>
 
 </div>

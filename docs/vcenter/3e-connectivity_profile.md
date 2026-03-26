@@ -5,9 +5,10 @@
 <div class="grid" markdown style="grid-template-columns: 60% 40%">
 
 <div markdown>
-This section describes the procedures for configuring  Connectivity Profile using the vSphere Client.  
+This section describes the procedures for configuring  Connectivity Profile using the vSphere Client.
+<br><br>
+**Connectivity Profile** defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services can be enabled.
 </div>
-
 
 <div markdown>
 ![vCenter Conn Profile](images/3e-0-Conn_Prof.jpg){ width="100%" }
@@ -19,7 +20,7 @@ This section describes the procedures for configuring  Connectivity Profile usin
 
 ## Overview of Connectivity Profile Types
 
-Connectivity Profile defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services can be enabled.
+Different Connectivity Profile types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |

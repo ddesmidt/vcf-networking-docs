@@ -6,9 +6,9 @@
 
 <div markdown>
 
-This section describes the procedures for configuring External Connections using the vSphere Client.  
-
-External Connections provide the connection from the Transit Gateway (Centralized or Distributed) to the physical network.
+This section describes the procedures for configuring External Connections using the vSphere Client.
+<br><br>
+**External Connections** provide the connection from the Transit Gateway (Centralized or Distributed) to the physical network.
 </div>
 
 
@@ -21,6 +21,8 @@ External Connections provide the connection from the Transit Gateway (Centralize
 ---
 
 ## Overview of External Connection Types
+
+Different Transit Gateway types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
@@ -42,10 +44,10 @@ External Connections provide the connection from the Transit Gateway (Centralize
 </div>
 
 #### Step1. Create new Centralized External Connection
-![Dist Ext Conn config](images/3a-1a-Create_Cent_Ext_Conn.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![Cent Ext Conn config](images/3a-1a-Create_Cent_Ext_Conn.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
-#### Step2. Configure new Centralized External Connection Identity
-![Dist Ext Conn config](images/3a-1b-Create_Cent_Ext_Conn.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+#### Step2. Configure new Centralized External Connection
+![Cent Ext Conn config](images/3a-1b-Create_Cent_Ext_Conn.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **Tier-0 Gateway**:  
   Select the pre-provisioned Tier-0 Gateway that serves as the exit point for this connection.
@@ -90,7 +92,7 @@ The status reflects the successful application of the configuration.
 #### Step1. Create new Distributed External Connection
 ![Dist Ext Conn config](images/3a-2a-Create_Dist_Ext_Conn.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
-#### Step2. Configure new Distributed External Connection Identity
+#### Step2. Configure new Distributed External Connection
 ![Dist Ext Conn config](images/3a-2b-Create_Dist_Ext_Conn.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **VLAN ID**:  

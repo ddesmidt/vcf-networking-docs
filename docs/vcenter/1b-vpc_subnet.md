@@ -7,8 +7,8 @@
 <div markdown>
 
 This section describes the procedures for configuring a VPC Subnet using the vSphere Client.
-
-There are 2 types of VPC Subnets:  
+<br><br>
+There are 2 types of **VPC Subnets**:
 
 * [Overlay](#overlay)
 * [VLAN](#vlan)
@@ -26,6 +26,7 @@ There are 2 types of VPC Subnets:
 ## VPC Subnet Overlay {: #overlay }
 
 ### Overview of Overlay options
+Different Subnet Overlay types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
@@ -40,7 +41,7 @@ There are 2 types of VPC Subnets:
 #### Step1. Create new VPC Subnet (Overlay)
 ![vCenter Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-#### Step2. Configure new VPC Subnet Identity
+#### Step2. Configure new VPC Subnet
 ![vCenter Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **VLAN Extensions**  
@@ -80,6 +81,7 @@ There are 2 types of VPC Subnets:
 ## VPC Subnet VLAN-Extension {: #vlan }
 
 ### Overview of VLAN options
+Different Subnet VLAN options are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |

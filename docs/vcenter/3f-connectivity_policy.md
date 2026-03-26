@@ -5,7 +5,9 @@
 <div class="grid" markdown style="grid-template-columns: 70% 30%">
 
 <div markdown>
-This section describes the procedures for configuring Connectivity Policy using the vSphere Client.  
+This section describes the procedures for configuring Connectivity Policy using the vSphere Client.
+<br><br>
+**Connectivity Policy** defines cross-VPC communication rules.
 </div>
 
 
@@ -18,6 +20,8 @@ This section describes the procedures for configuring Connectivity Policy using 
 ---
 
 ## Overview of Connectivity Policy Types
+
+Different Connectivity Policy types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |

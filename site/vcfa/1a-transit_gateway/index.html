@@ -1341,17 +1341,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2132,17 +2121,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2166,8 +2144,9 @@
 
 <div class="grid" style="grid-template-columns: 80% 20%">
 <div>
-<p>This section describes the procedures for configuring Transit Gateways using the VCF-A Tenant.  </p>
-<p>Transit Gateways (Centralized or Distributed) provide the routing between VPC Gateways and physical networks.</p>
+<p>This section describes the procedures for configuring Transit Gateways using the VCF-A Tenant.
+<br><br>
+<strong>Transit Gateways</strong> (Centralized or Distributed) provide the routing between VPC Gateways and physical networks.</p>
 </div>
 <div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-0-Transit_Gateway.jpg" data-desc-position="bottom"><img alt="vCenter External Connection" src="../images/1a-0-Transit_Gateway.jpg" width="100%"></a></p>
@@ -2175,6 +2154,8 @@
 </div>
 <hr>
 <h2 id="overview-of-transit-gateway-types">Overview of Transit Gateway Types</h2>
+<p>Different Transit Gateway types are available:</p>
+<p><strong>Transit Gateways</strong> (Centralized or Distributed) provide the routing between VPC Gateways and physical networks.</p>
 <table>
 <thead>
 <tr>
@@ -2186,12 +2167,12 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><a href="#cent-tgw"><strong>Centralized TGW</strong></a></td>
-<td style="text-align: left;">Supports L2 and L3 Fabric. Offers all Stateful Network Services (Outbound-NAT, NAT, LB, and VPN).</td>
+<td style="text-align: left;">Supports L2 and L3 Fabric. <br> Offers all Stateful Network Services (Outbound-NAT, NAT, LB, and VPN).</td>
 <td style="text-align: left;">Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#dist-tgw"><strong>Distributed TGW</strong></a></td>
-<td style="text-align: left;">Supports only L2 Fabric. Offers Stateful Network Services (Outbound-NAT, NAT, and LB) with VNA Nodes.</td>
+<td style="text-align: left;">Supports only L2 Fabric. <br> Offers Stateful Network Services (Outbound-NAT, NAT, and LB) with VNA Nodes.</td>
 <td style="text-align: left;">Routing occurs locally at the ESXi host level (distributed dataplane). Stateful Network Services traffic is redirected through a VNA Gateway in a VNA Cluster.</td>
 </tr>
 </tbody>
@@ -2203,51 +2184,34 @@
 <div style="margin-left: 40px; margin-right: 40px;">
 <div class="admonition warning">
 <p class="admonition-title">Requirement</p>
-<p>An <a href="2a-edge.md"><strong>Edge Cluster</strong></a> must be pre-provisioned in the environment.  </p>
+<p>An <a href="../3a-edge/"><strong>Edge Cluster</strong></a> must be pre-provisioned in the environment.<br>
+The VCF-A Provider offers an <a href="../4a-external_connection/#cent-conn"><strong>External Connection Centralized</strong></a> to the Organization.</p>
 </div>
 </div>
 <h4 id="step1-create-new-centralized-transit-gateway">Step1. Create new Centralized Transit Gateway</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-1a-Create_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW config" src="images/3b-1a-Create_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
-<h4 id="step2-configure-centralized-transit-gateway-connectivity">Step2. Configure Centralized Transit Gateway Connectivity</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-1b-Configure_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW connectivity" src="images/3b-1b-Configure_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-1a-Create_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW config" src="../images/1a-1a-Create_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
+<h4 id="step2-configure-centralized-transit-gateway">Step2. Configure Centralized Transit Gateway</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-1b-Configure_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW connectivity" src="../images/1a-1b-Configure_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <ul>
 <li>
-<p><strong>Span</strong>:<br>
-  Determines how VPC subnets below this Transit Gateway will extend across vCenter clusters.<br>
-  For more information on Network Span, refer to the <a href="3d-network_span.md">Network Span</a> page.</p>
+<p><strong>Region</strong>:<br>
+  Select the Region for the Transit Gateway.<br>
+  Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.</p>
 </li>
-<li>
-<p><strong>Connection</strong>:<br>
-  Select "Centralized Connection".  </p>
-</li>
-<li>
-<p><strong>High Availability Mode</strong>:<br>
-  Select the operational redundancy and service support:<br>
-  . Active/Active: Maximizes throughput and scalability by distributing the Transit Gateway load across multiple Edge Nodes simultaneously.<br>
-  Active/Standby: Required for stateful network services (NAT and VPN). In this mode, this Transit Gateway North/South traffic is processed by a single "Active" Edge Node to maintain session state.</p>
-</li>
-<li>
-<p><strong>TGW Edge Cluster</strong>:<br>
-  Select the specific Edge Cluster that will host this Centralized Transit Gateway.</p>
-</li>
-</ul>
-<h4 id="step3-configure-workload-domain-connectivity">Step3. Configure Workload Domain Connectivity</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-1c-Configure_WLD.jpg" data-desc-position="bottom"><img alt="Cent WLD connectivity" src="images/3b-1c-Configure_WLD.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-<ul>
 <li>
 <p><strong>External Connection</strong>:<br>
-  You can create a new or use an existing Centralized External Connection.<br>
-  Limited configuration settings are available if creating a new Centralized External Connection from here (only Tier-0 information).<br>
-  For more information on External Connection, refer to the <a href="3a-external_connection.md">External Connection</a> page.</p>
+  Select the External Connection(s) Centralized for that Transit Gateway.<br>
+  For more information on Centralized External Connection, refer to the <a href="../4a-external_connection/#cent-conn">External Connection</a> page.</p>
 </li>
 <li>
-<p><strong>VPC Network Configuration</strong><br>
-  This optional settings creates a new Connectivity Profile:
-  For more information on Connectivity Profile, refer to the <a href="3e-connectivity_profile.md">Connectivity Profile</a> page.</p>
+<p><strong>Create a VPC connectivity profile to associate with this transit gateway</strong>:<br>
+  (Optional) Create Connectivity Profile for future VPC.<br>
+  For more information on Connectivity Profile, refer to the <a href="../1b-connectivity_profile/">Connectivity Profile</a> page.<br>
+  The Connectivity Profile will be associated with this Transit Gateway and with:  </p>
 <ul>
-<li><strong>VPC External IP Blocks:</strong> Select or create a new External IP Block for future VPC Public subnets.</li>
-<li><strong>Private - Transit Gateway IP Blocks:</strong> Select or create a new Private TGW IP Block used for future VPC Private-TGW subnets.</li>
-<li><strong>Default Outbound NAT:</strong> Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.</li>
+<li><strong>External IPv4 Blocks</strong>: Select External IP Block(s) for future VPC Public subnets, NAT, LB VIP, and VPN.</li>
+<li><strong>'Private - TGW' IPv4 blocks</strong>: Used for VPC Subnets Private-TGW.<br>
+  (no option to disable Default Outbound SNAT from that wizard. Edit the created Connectivity Profile to update).  </li>
 </ul>
 </li>
 </ul>
@@ -2260,45 +2224,42 @@
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-1d-Validation_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW validation" src="images/3b-1d-Validation_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-1c-Validation_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW validation" src="../images/1a-1c-Validation_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <hr>
 <h2 id="dist-tgw">Distributed Transit Gateway</h2>
 <h3 id="configuration_1">Configuration</h3>
+<div style="margin-left: 40px; margin-right: 40px;">
+<div class="admonition warning">
+<p class="admonition-title">Requirement</p>
+<p>The VCF-A Provider offers an <a href="../4a-external_connection/#dist-conn"><strong>External Connection Distributed</strong></a> to the Organization.
+For VKS and Network Services NAT, LB, AVI Plugin, a <a href="../3b-vna/"><strong>VNA Cluster</strong></a> must be pre-provisioned in the environment.  </p>
+</div>
+</div>
 <h4 id="step1-create-new-distributed-transit-gateway">Step1. Create new Distributed Transit Gateway</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-2a-Create_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW config" src="images/3b-2a-Create_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
-<h4 id="step2-configure-distributed-transit-gateway-connectivity">Step2. Configure Distributed Transit Gateway Connectivity</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-2b-Configure_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW connectivity" src="images/3b-2b-Configure_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-<h4 id="step3-configure-external-network-connectivity">Step3. Configure External Network Connectivity</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-2c-Configure_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Dist WLD connectivity" src="images/3b-2c-Configure_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-2a-Create_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW config" src="../images/1a-2a-Create_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
+<h4 id="step2-configure-distributed-transit-gateway">Step2. Configure Distributed Transit Gateway</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-2b-Configure_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW connectivity" src="../images/1a-2b-Configure_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <ul>
+<li>
+<p><strong>Region</strong>:<br>
+  Select the Region for the Transit Gateway.<br>
+  Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.</p>
+</li>
 <li>
 <p><strong>External Connection</strong>:<br>
-  You can create a new or use an existing Distributed External Connection.<br>
-  Limited configuration settings are available if creating a new Distributed External Connection from here (only Tier-0 information).<br>
-  For more information on External Connection, refer to the <a href="3a-external_connection.md">External Connection</a> page.</p>
+  Select the External Connection(s) Distributed for that Transit Gateway.<br>
+  For more information on Distributed External Connection, refer to the <a href="../4a-external_connection/#dist-conn">External Connection</a> page.</p>
 </li>
 <li>
-<p><strong>VPC Network Configuration</strong><br>
-  This optional settings creates a new Connectivity Profile:
-  For more information on Connectivity Profile, refer to the <a href="3e-connectivity_profile.md">Connectivity Profile</a> page.</p>
+<p><strong>Create a VPC connectivity profile to associate with this transit gateway</strong>:<br>
+  (Optional) Create Connectivity Profile for future VPC.<br>
+  For more information on Connectivity Profile, refer to the <a href="../1b-connectivity_profile/">Connectivity Profile</a> page.<br>
+  The Connectivity Profile will be associated with this Transit Gateway and with:  </p>
 <ul>
-<li><strong>VPC External IP Blocks:</strong> Select or create a new External IP Block for future VPC Public subnets.</li>
-<li><strong>Private - Transit Gateway IP Blocks:</strong> Select or create a new Private TGW IP Block used for future VPC Private-TGW subnets.</li>
+<li><strong>External IPv4 Blocks</strong>: Select External IP Block(s) for future VPC Public subnets, NAT, and LB VIP.</li>
+<li><strong>'Private - TGW' IPv4 blocks</strong>: Used for VPC Subnets Private-TGW.<br>
+  (no option to disable Default Outbound SNAT from that wizard. Edit the created Connectivity Profile to update).  </li>
 </ul>
-</li>
-</ul>
-<h4 id="step4-configure-vpc-service">Step4. Configure VPC Service</h4>
-<p>Option to offer Network Services NAT, LB, AVI Plugin.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-2d-Configure_VPC_Service.jpg" data-desc-position="bottom"><img alt="Dist WLD connectivity" src="images/3b-2d-Configure_VPC_Service.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
-<ul>
-<li>
-<p><strong>Virtual Network Appliance Cluster</strong>:<br>
-  Select the VNA Cluster to host the VNA Gateway.<br>
-  For more information on VNA, refer to the <a href="../3b-vna/">VNA</a> page.</p>
-</li>
-<li>
-<p><strong>Default Outbound NAT</strong><br>
-  Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.</p>
 </li>
 </ul>
 <h3 id="monitoring_1">Monitoring</h3>
@@ -2310,7 +2271,8 @@
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>
-<h2 id="_1"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3b-2e-Validation_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW validation" src="images/3b-2e-Validation_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-2c-Validation_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW validation" src="../images/1a-2c-Validation_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<hr>
 
 
 

@@ -7,8 +7,9 @@
 <div markdown>
 
 This section describes the procedures for configuring a VPC Gateway using the vSphere Client.
+<br><br>
+**VPC Gateway** is the logical router for VPC networking.
 </div>
-
 
 <div markdown>
 ![vCenter VPC Connectivity](images/1a-0-VPC_Gateway.jpg){ width="100%" }
@@ -25,7 +26,7 @@ This section describes the procedures for configuring a VPC Gateway using the vS
 #### Step1. Create new VPC Gateway
 ![vCenter Create VPC](images/1a-1-Create_VPC_Gateway.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-#### Step2. Configure new VPC Gateway Identity
+#### Step2. Configure new VPC Gateway
 ![vCenter Create VPC](images/1a-2-Create_VPC_Gateway.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 
 * **Private - VPC IP CIDRs**  

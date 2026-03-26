@@ -6,10 +6,10 @@
 
 <div markdown>
 
-This section describes the procedures for configuring Network Address Translation (NAT) for your VPC workloads in private subnets.<br><br>
-NAT allows **VPC Private subnets** to communicate with external networks or provides a way for external users to reach private VPC workloads.
+This section describes the procedures for configuring Network Address Translation (NAT) for your VPC workloads in private subnets.
+<br><br>
+**NAT** allows VPC Private subnets to communicate with external networks or provides a way for external users to reach private VPC workloads.
 </div>
-
 
 <div markdown>
 ![vCenter VPC Connectivity](images/1c-0-VPC_NAT.jpg){ width="100%" }
@@ -20,6 +20,8 @@ NAT allows **VPC Private subnets** to communicate with external networks or prov
 ---
 
 ## Overview of NAT types
+
+Different NAT types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |

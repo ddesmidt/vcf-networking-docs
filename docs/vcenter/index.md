@@ -85,7 +85,7 @@ Explore the configuration guides for each VCF Network Infrastructure and Externa
 * :material-transit-connection: [__Transit Gateway__](3b-transit_gateway.md)  
   Logical router connecting VPC Gateways to physical networks.
 * :material-code-block-brackets: [__IP Blocks External (Infoblox) + TGW Priv.__](3c-ip_block.md)  
-  IP blocks used for VPC subnet allocation.  
+  IP blocks used for VPC IP allocation.  
   Not represented in the diagram.
 * :material-table-split-cell: [__Network Span__](3d-network_span.md)  
   Defines how VPC subnets span across vCenter clusters.  

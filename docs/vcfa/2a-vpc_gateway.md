@@ -7,8 +7,9 @@
 <div markdown>
 
 This section describes the procedures for configuring a VPC Gateway using the VCF-A Tenant.
+<br><br>
+**VPC Gateway** is the logical router for VPC networking.
 </div>
-
 
 <div markdown>
 ![VCFA VPC Connectivity](images/2a-0-VPC_Gateway.jpg){ width="100%" }
@@ -47,7 +48,9 @@ This section describes the procedures for configuring a VPC Gateway using the VC
 ![VCFA Create VPC](images/2a-2-Create_VPC_Gateway.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **Region**  
-  Select the Region for the VPC.
+  Select the Region for the VPC.  
+  Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.
+
 
 * **Connectivity Profile**  
   Select the pre-defined [Connectivity Profile](1b-connectivity_profile.md).  

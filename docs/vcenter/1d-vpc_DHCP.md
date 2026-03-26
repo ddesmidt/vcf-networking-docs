@@ -6,8 +6,9 @@
 
 <div markdown>
 
-This section describes the procedures for configuring Dynamic Host Configuration Protocol (DHCP) for your VPC workloads in VPC subnets.<br><br>
-DHCP is used to dynamically assign IP addresses to workloads.
+This section describes the procedures for configuring Dynamic Host Configuration Protocol (DHCP) for your VPC workloads in VPC subnets.
+<br><br>
+**DHCP** is used to dynamically assign IP addresses to workloads.  
 </div>
 
 
@@ -20,6 +21,7 @@ DHCP is used to dynamically assign IP addresses to workloads.
 ---
 
 ## Overview of DHCP Types
+Different DHCP types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |

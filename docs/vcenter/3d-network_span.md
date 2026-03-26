@@ -6,6 +6,8 @@
 
 <div markdown>
 This section describes the procedures for configuring Network Span using the vSphere Client.  
+<br><br>
+**Network Span**  defines how VPC subnets span across vCenter clusters.
 </div>
 
 
@@ -18,8 +20,6 @@ This section describes the procedures for configuring Network Span using the vSp
 ---
 
 ## Network Span
-
-Network Span defines how VPC subnets span across vCenter clusters.
 
 ### Configuration
 
