@@ -11,7 +11,7 @@
         <link rel="prev" href="../1a-transit_gateway/">
       
       
-        <link rel="next" href="../2a-vpc_gateway/">
+        <link rel="next" href="../1d-ip_block_tenant/">
       
       
         
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview-of-connectivity-profile-types" class="md-skip">
+        <a href="#connectivity-profile" class="md-skip">
           Skip to content
         </a>
       
@@ -1281,26 +1281,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview-of-connectivity-profile-types" class="md-nav__link">
+  <a href="#connectivity-profile" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview of Connectivity Profile Types
+        Connectivity Profile
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cent-conn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Centralized Connectivity Profile
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Centralized Connectivity Profile">
+    <nav class="md-nav" aria-label="Connectivity Profile">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1316,45 +1305,6 @@
         
           <li class="md-nav__item">
   <a href="#monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dist-conn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Distributed Connectivity Profile
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Distributed Connectivity Profile">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Monitoring
@@ -1385,7 +1335,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../1d-ip_quota-tenant.md" class="md-nav__link">
+      <a href="../1d-ip_block_tenant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tenant IP Block
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1e-ip_quota_tenant/" class="md-nav__link">
         
   
   
@@ -1936,14 +1914,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../4c-ip_block/" class="md-nav__link">
+      <a href="../4c-ip_block_provider/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    IP Block
+    Provider IP Block
   
 
     
@@ -2033,26 +2011,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview-of-connectivity-profile-types" class="md-nav__link">
+  <a href="#connectivity-profile" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview of Connectivity Profile Types
+        Connectivity Profile
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cent-conn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Centralized Connectivity Profile
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Centralized Connectivity Profile">
+    <nav class="md-nav" aria-label="Connectivity Profile">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2068,45 +2035,6 @@
         
           <li class="md-nav__item">
   <a href="#monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dist-conn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Distributed Connectivity Profile
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Distributed Connectivity Profile">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Monitoring
@@ -2149,66 +2077,48 @@
 <strong>Connectivity Profile</strong> defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services can be enabled.</p>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3e-0-Conn_Prof.jpg" data-desc-position="bottom"><img alt="vCenter Conn Profile" src="images/3e-0-Conn_Prof.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-0-Conn_Prof.jpg" data-desc-position="bottom"><img alt="VCFA Conn Profile" src="../images/1b-0-Conn_Prof.jpg" width="100%"></a></p>
 </div>
 </div>
 <hr>
-<h2 id="overview-of-connectivity-profile-types">Overview of Connectivity Profile Types</h2>
-<p>Different Connectivity Profile types are available:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Use Case</th>
-<th style="text-align: left;">Routing Logic</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a href="#cent-conn"><strong>Centralized Conn Prof</strong></a></td>
-<td style="text-align: left;">Connectivity Profile for Centralized Transit Gateways.</td>
-<td style="text-align: left;">VPC Gateways route traffic through a Centralized Transit Gateway.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="#dist-conn"><strong>Distributed Conn Prof</strong></a></td>
-<td style="text-align: left;">Connectivity Profile for Distributed Transit Gateways.</td>
-<td style="text-align: left;">VPC Gateways route traffic through a Distributed Transit Gateway.</td>
-</tr>
-</tbody>
-</table>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3e-0-Conn_Prof_Types.jpg" data-desc-position="bottom"><img alt="Ext Connectivity Types" class="center" src="images/3e-0-Conn_Prof_Types.jpg" style="width:75%"></a></p>
-<p>Defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services are enabled.</p>
-<hr>
-<h2 id="cent-conn">Centralized Connectivity Profile</h2>
+<h2 id="connectivity-profile">Connectivity Profile</h2>
+<div style="margin-left: 40px; margin-right: 40px;">
+<details class="info">
+<summary>Default Connectivity Profile</summary>
+<p>Each new VCF-A Organization has a default Connectivity Profile created at the creation of the Organization by the VCF-A Provider.<br>
+The steps below are for the VCF-A Tenant to create another Connectivity Profile in its Organization.</p>
+</details>
+</div>
 <h3 id="configuration">Configuration</h3>
 <h4 id="step1-create-connectivity-profile">Step1. Create Connectivity Profile</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3e-1a-Create_ConnProf.jpg" data-desc-position="bottom"><img alt="vCenter Network Span config" src="images/3e-1a-Create_ConnProf.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1a-Create_ConnProf.jpg" data-desc-position="bottom"><img alt="Connectivity Prof config" src="../images/1b-1a-Create_ConnProf.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ul>
 <li>
+<p><strong>Region</strong>:<br>
+  Select the Region for the Transit Gateway.<br>
+  Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.</p>
+</li>
+<li>
 <p><strong>Transit Gateway</strong>:<br>
-  Select the Centralized Transit Gateway, VPC Gateways will be connected to.</p>
+  Select the Centralized or Distributed Transit Gateway, VPC Gateways will be connected to.</p>
 </li>
 <li>
 <p><strong>External IP Blocks</strong>:<br>
-  Select the External IP Block(s) VPC Subnets Public and NAT will use.</p>
+  Select the <a href="../4c-ip_block_provider/#ext-ipblock">External IP Block(s)</a> for future VPC Subnets Public, NAT, LB VIP, and VPN.</p>
 </li>
 <li>
-<p><strong>Edge Cluster</strong>:<br>
-  (Optional) Select the Edge Cluster to use for the VPC Gateway.<br>
-  Required if N-S Services and/or Default Outbound NAT is enabled in this VPC Connectivity Profile.</p>
+<p><strong>'Private - TGW' IPv4 blocks</strong>:<br>
+  Select the <a href="../1d-ip_block_tenant/#privatetgw-ipblock">Private IP Block(s)</a> for future VPC Subnets Private-TGW.</p>
 </li>
 <li>
-<p><strong>N-S Services</strong>:<br>
-  Enable to allow <a href="1c-vpc_nat.md#full-nat">NAT</a> on VPC Gateways.</p>
-</li>
-<li>
-<p><strong>Default Outbound NAT</strong>:<br>
-  Enable to allow <a href="1c-vpc_nat.md#outbound-nat">Default Outbound NAT</a> on VPC Gateways.<br>
-  Note: If the Centralized Transit Gateway selected is Active/Active, then Default Outbound NAT can not be enabled.</p>
+<p><strong>Default Outbound SNAT</strong>:<br>
+  Enable to allow <a href="../2c-vpc_nat/#outbound-snat">Default Outbound SNAT</a> on VPC Gateways.<br>
+  Note: Requires to select a Centralized Transit Gateway or Distributed Transit Gateway + VNA.</p>
 </li>
 <li>
 <p><strong>External IP Block for Default Outbound NAT</strong>:<br>
-  Select the External IP Block to use for VPC Gateways which enabled Outbound NAT.</p>
+  (Optional) Select a specif External IP Block to use for Outbound NAT.<br>
+  If not selected, it will pick an IP from the External IP Blocks list configured above.</p>
 </li>
 </ul>
 <h3 id="monitoring">Monitoring</h3>
@@ -2216,53 +2126,11 @@
 <p>The status reflects the successful application of the configuration.</p>
 <div style="margin-left: 40px; margin-right: 40px;">
 <details class="info">
-<summary>Note</summary>
+<summary>Note about the Status</summary>
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3e-1b-Validation_ConProf.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="images/3e-1b-Validation_ConProf.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-<hr>
-<h2 id="dist-conn">Distributed Connectivity Profile</h2>
-<h3 id="configuration_1">Configuration</h3>
-<h4 id="step1-create-connectivity-profile_1">Step1. Create Connectivity Profile</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3e-2a-Create_ConnProf.jpg" data-desc-position="bottom"><img alt="vCenter Network Span config" src="images/3e-2a-Create_ConnProf.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
-<ul>
-<li>
-<p><strong>Transit Gateway</strong>:<br>
-  Select the Distributed Transit Gateway, VPC Gateways will be connected to.</p>
-</li>
-<li>
-<p><strong>External IP Blocks</strong>:<br>
-  Select the External IP Block(s) VPC Subnets Public and NAT will use.</p>
-</li>
-<li>
-<p><strong>Virtual Network Appliance Cluster</strong>:<br>
-  (Optional) Select the Virtual Network Appliance Cluster to use for the VPC Gateway.<br>
-  Required if N-S Services and/or Default Outbound NAT is enabled in this VPC Connectivity Profile.</p>
-</li>
-<li>
-<p><strong>N-S Services</strong>:<br>
-  Enable to allow <a href="1c-vpc_nat.md#full-nat">NAT</a> on VPC Gateways.</p>
-</li>
-<li>
-<p><strong>Default Outbound NAT</strong>:<br>
-  Enable to allow <a href="1c-vpc_nat.md#outbound-nat">Default Outbound NAT</a> on VPC Gateways.  </p>
-</li>
-<li>
-<p><strong>External IP Block for Default Outbound NAT</strong>:<br>
-  Select the External IP Block to use for VPC Gateways which enabled Outbound NAT.</p>
-</li>
-</ul>
-<h3 id="monitoring_1">Monitoring</h3>
-<h4 id="status_1">Status</h4>
-<p>The status reflects the successful application of the configuration.</p>
-<div style="margin-left: 40px; margin-right: 40px;">
-<details class="info">
-<summary>Note</summary>
-<p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
-</details>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3e-2b-Validation_ConProf.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="images/3e-2b-Validation_ConProf.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1b-Validation_ConProf.jpg" data-desc-position="bottom"><img alt="Connectivity Prof validation" src="../images/1b-1b-Validation_ConProf.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
 <hr>
 
 

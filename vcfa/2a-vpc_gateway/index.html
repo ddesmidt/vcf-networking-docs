@@ -8,7 +8,7 @@
       
       
       
-        <link rel="prev" href="../1b-connectivity_profile/">
+        <link rel="prev" href="../1e-ip_quota_tenant/">
       
       
         <link rel="next" href="../2b-vpc_subnet/">
@@ -1251,7 +1251,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../1d-ip_quota-tenant.md" class="md-nav__link">
+      <a href="../1d-ip_block_tenant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tenant IP Block
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1e-ip_quota_tenant/" class="md-nav__link">
         
   
   
@@ -1886,14 +1914,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../4c-ip_block/" class="md-nav__link">
+      <a href="../4c-ip_block_provider/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    IP Block
+    Provider IP Block
   
 
     
@@ -2066,14 +2094,14 @@
 </ul>
 </details>
 </div>
-<h3 id="configuration">Configuration</h3>
 <div style="margin-left: 40px; margin-right: 40px;">
 <details class="info">
 <summary>Default VPC Gateway</summary>
-<p>Each new VCF-A Organization has a default VPC.<br>
+<p>Each new VCF-A Organization has a default VPC created at the creation of the Organization by the VCF-A Provider.<br>
 The steps below are for the VCF-A Tenant to create another VPC Gateway in its Organization.</p>
 </details>
 </div>
+<h3 id="configuration">Configuration</h3>
 <h4 id="step1-create-new-vpc-gateway">Step1. Create new VPC Gateway</h4>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-1-Create_VPC_Gateway.jpg" data-desc-position="bottom"><img alt="VCFA Create VPC" src="../images/2a-1-Create_VPC_Gateway.jpg" style="display: block; margin: 0 auto;" width="50%"></a></p>
 <h4 id="step2-configure-new-vpc-gateway">Step2. Configure new VPC Gateway</h4>
@@ -2089,8 +2117,8 @@ The steps below are for the VCF-A Tenant to create another VPC Gateway in its Or
   Select the pre-defined <a href="../1b-connectivity_profile/">Connectivity Profile</a>.<br>
   This profile links the VPC to:<br>
   . <a href="../1a-transit_gateway/">Transit Gateway</a> - determines the primary North-South path to the physical network<br>
-  . <a href="../4c-ip_block/">External IP Blocks</a> and <a href="../4c-ip_block/">'Private -TGW' IP Blocks</a> - determines the future IP addressing of the VPC subnets / NAT / LB<br>
-  . <a href="../2c-vpc_nat/">Default Outbound SNAT</a> - determines if compute (VMs / VKS) connected to Private VPC subnets will be SNATed by default to access external networks.</p>
+  . <a href="4c-ip_block.md">External IP Blocks</a> and <a href="4c-ip_block.md">'Private -TGW' IP Blocks</a> - determines the future IP addressing of the VPC subnets / NAT / LB<br>
+  . <a href="../2c-vpc_nat/">Default Outbound SNAT</a> - determines if compute (VMs / VKS) connected to Private VPC subnets will be SNATed by default to access external networks</p>
 </li>
 <li>
 <p><strong>'Private - VPC' IPv4 CIDRs</strong><br>

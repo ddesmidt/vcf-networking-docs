@@ -8,10 +8,10 @@
       
       
       
-        <link rel="prev" href="../3a-edge/">
+        <link rel="prev" href="../4b-vpc_subnet_vlan/">
       
       
-        <link rel="next" href="../4a-external_connection/">
+        <link rel="next" href="../4d-ip_quota_provider/">
       
       
         
@@ -22,7 +22,7 @@
     
     
       
-        <title>VNA Cluster / Node - VCF Networking Encyclopedia</title>
+        <title>Provider IP Block - VCF Networking Encyclopedia</title>
       
     
     
@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview-of-ip-block-types" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -113,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VNA Cluster / Node
+              Provider IP Block
             
           </span>
         </div>
@@ -1598,8 +1603,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1612,11 +1615,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1">
         
           
           <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
@@ -1637,7 +1640,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1680,17 +1683,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../3b-vna/" class="md-nav__link">
         
   
   
@@ -1706,7 +1702,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1724,8 +1719,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1736,11 +1733,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" checked="">
         
           
           <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
@@ -1761,7 +1758,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1832,10 +1829,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../4c-ip_block_provider/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Provider IP Block
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1851,6 +1873,152 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-ip-block-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of IP Block Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ext-ipblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Block External
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Block External">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privatetgw-ipblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Block Private-TGW
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Block Private-TGW">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privatevpc-ipblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Block Private-VPC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Block Private-VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-ip-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring IP Blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1925,6 +2093,142 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-ip-block-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview of IP Block Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ext-ipblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Block External
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Block External">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privatetgw-ipblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Block Private-TGW
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Block Private-TGW">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#privatevpc-ipblock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Block Private-VPC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Block Private-VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-ip-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring IP Blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1940,9 +2244,148 @@
 
 
 
-  <h1>VNA Cluster / Node</h1>
+<h1>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/VCFA.png" data-desc-position="bottom"><img src="../../assets/VCFA.png" style="height:30px" ;="" vertical-align:middle;=""></a> IP Blocks in VCF-A Provider
+</h1>
 
-
+<div class="grid" style="grid-template-columns: 60% 40%">
+<div>
+<p>This section describes the procedures for configuring IP Blocks using the vSphere Client.
+<br><br>
+<strong>IP Blocks</strong> are used for VPC IP allocation.</p>
+</div>
+<div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3c-0-IP_Block.jpg" data-desc-position="bottom"><img alt="vCenter IP Blocks" src="images/3c-0-IP_Block.jpg" width="100%"></a></p>
+</div>
+</div>
+<hr>
+<h2 id="overview-of-ip-block-types">Overview of IP Block Types</h2>
+<p>Different IP Block types are available:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Use Case</th>
+<th style="text-align: left;">Routing Logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#ext-ipblock"><strong>External</strong></a></td>
+<td style="text-align: left;">Used for <strong>VPC Subnets Public</strong> and <strong>NAT</strong>. <br> Also used by <strong>LB VIP</strong> (AVI configuration), and <strong>VPN</strong> (NSX configuration).</td>
+<td style="text-align: left;">External visibility is high; direct ingress/egress.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#privatetgw-ipblock"><strong>Private-TGW</strong></a></td>
+<td style="text-align: left;">Used for <strong>VPC Subnets Private-TGW</strong></td>
+<td style="text-align: left;">Best for shared internal services across the enterprise.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#privatevpc-ipblock"><strong>Private-VPC</strong></a></td>
+<td style="text-align: left;">Used for <strong>VPC Subnets Private-VPC</strong>. <br> Note: Configuration in within the <a href="1a-vpc_gateway.md">VPC Gateway</a>.</td>
+<td style="text-align: left;">Maximum isolation; workloads are "hidden" even from other VPCs.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3c-0-IP_Block-Types.jpg" data-desc-position="bottom"><img alt="vCenter IP Blocks Types" class="center" src="images/3c-0-IP_Block-Types.jpg" style="width:75%"></a></p>
+<p>For more information on VPC Subnets, refer to the <a href="1b-vpc_subnet.md">VPC Subnet</a> page.</p>
+<hr>
+<h2 id="ext-ipblock">IP Block External</h2>
+<p>This IP Block type is used for <strong>Public VPC Subnets</strong> (and also NAT, LB VIP (AVI configuration), and VPN (NSX configuration)).<br>
+Also used for VLAN-backed Subnets.</p>
+<ul>
+<li><strong>Public VPC Subnets</strong>: These IP Blocks must be manually defined in this section (see configuration steps below).</li>
+<li><strong>VLAN-backed Subnets</strong>: These IP Blocks are not created here; they are configured directly within the <a href="1b-vpc_subnet.md#vlan">VPC Subnet VLAN Extension</a></li>
+</ul>
+<h3 id="configuration">Configuration</h3>
+<h4 id="step1-create-new-ip-block-external">Step1. Create new IP Block External</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3c-1a-Create_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="IP Block Ext config" src="images/3c-1a-Create_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<ul>
+<li>
+<p><strong>Visibility</strong>:<br>
+  Set to External.</p>
+</li>
+<li>
+<p><strong>CIDRs/Ranges</strong>:<br>
+  Enter the specific CIDR(s) or IP Range(s) to be managed by this block.<br>
+  Note the following requirements based on the intended use case:<br>
+  . CIDR: Must be used if this block will be used for VPC-Subnet Publics, NAT, LB-VIP (AVI configuration), and VPN (NSX configuration)<br>
+  . Range: May be used if the block is intended only for NAT, LB-VIP (AVI configuration), or VPN (NSX configuration)</p>
+</li>
+<li>
+<p><strong>Excluded IP Ranges</strong>:<br>
+  (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).</p>
+</li>
+<li>
+<p><strong>Reserved for Specific Subnet</strong>:<br>
+  This setting is used exclusively for VLAN-backed Subnets.<br>
+  For the creation of VPC-Subnet Public this option must be left Disabled.<br>
+  Note: IP Blocks for VLAN-backed Subnets are created directly within the <a href="1b-vpc_subnet.md#vlan">VPC Subnet VLAN Extension</a>.  </p>
+</li>
+</ul>
+<h3 id="monitoring">Monitoring</h3>
+<p>The status reflects the successful application of the configuration.</p>
+<div style="margin-left: 40px; margin-right: 40px;">
+<details class="info">
+<summary>Note about the Status</summary>
+<p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
+</details>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3c-1b-Validation_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="images/3c-1b-Validation_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<hr>
+<h2 id="privatetgw-ipblock">IP Block Private-TGW</h2>
+<h3 id="configuration_1">Configuration</h3>
+<p>This is the IP Block used for future VPC Subnets Private-TGW.</p>
+<h4 id="step1-create-new-ip-block-private-tgw">Step1. Create new IP Block Private-TGW</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3c-2a-Create_IPBlock_Private_TGW.jpg" data-desc-position="bottom"><img alt="IP Block Ext config" src="images/3c-2a-Create_IPBlock_Private_TGW.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<ul>
+<li>
+<p><strong>Visibility</strong>:<br>
+  Set to Private.</p>
+</li>
+<li>
+<p><strong>CIDRs/Ranges</strong>:<br>
+  Enter the specific CIDR block(s) to be managed by this block.<br>
+  Do not use Range.</p>
+</li>
+<li>
+<p><strong>Excluded IP Ranges</strong>:<br>
+  (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).</p>
+</li>
+<li>
+<p><strong>Reserved for Specific Subnet</strong>:<br>
+  Not Applicable.</p>
+</li>
+</ul>
+<h3 id="monitoring_1">Monitoring</h3>
+<h4 id="status">Status</h4>
+<p>The status reflects the successful application of the configuration.</p>
+<div style="margin-left: 40px; margin-right: 40px;">
+<details class="info">
+<summary>Note about the Status</summary>
+<p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
+</details>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3c-2b-Validation_IPBlock_Private_TGW.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="images/3c-2b-Validation_IPBlock_Private_TGW.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<hr>
+<h2 id="privatevpc-ipblock">IP Block Private-VPC</h2>
+<h3 id="configuration_2">Configuration</h3>
+<p>This is the IP Block used for future VPC Subnets Private-VPC.<br>
+It's configuration is managed directly within the <a href="1a-vpc_gateway.md">VPC Gateway</a> settings.</p>
+<hr>
+<h2 id="monitoring-ip-blocks">Monitoring IP Blocks</h2>
+<h4 id="utilization">Utilization</h4>
+<p>Real-time utilization metrics for IP Blocks can be monitored via the following indicators:</p>
+<ul>
+<li>
+<p><strong>Available IPs</strong>: The remaining number of addresses in the pool ready for allocation.</p>
+</li>
+<li>
+<p><strong>Used IPs</strong>: The number of addresses currently assigned to active VPC subnets. For External IP Blocks, this also includes addresses consumed by NAT and Load Balancer Virtual VIPs.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/3c-4-Statistics_IPBlock.jpg" data-desc-position="bottom"><img alt="IP Block Statistics" src="images/3c-4-Statistics_IPBlock.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<hr>
 
 
 
