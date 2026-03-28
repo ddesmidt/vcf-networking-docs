@@ -12,56 +12,46 @@ This section describes the procedures for configuring  Connectivity Profile usin
 
 
 <div markdown>
-![vCenter Conn Profile](images/3e-0-Conn_Prof.jpg){ width="100%" }
+![VCFA Conn Profile](images/1b-0-Conn_Prof.jpg){ width="100%" }
 </div>
 
 </div>
 
 ---
 
-## Overview of Connectivity Profile Types
+## Connectivity Profile
 
-Different Connectivity Profile types are available:
-
-| Type | Use Case | Routing Logic |
-| :--- | :--- | :--- |
-| [**Centralized Conn Prof**](#cent-conn) | Connectivity Profile for Centralized Transit Gateways. | VPC Gateways route traffic through a Centralized Transit Gateway. |
-| [**Distributed Conn Prof**](#dist-conn)| Connectivity Profile for Distributed Transit Gateways. | VPC Gateways route traffic through a Distributed Transit Gateway. |
-
-![Ext Connectivity Types](images/3e-0-Conn_Prof_Types.jpg){: .center style="width:75%" }
-
-
-Defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services are enabled.
-
-
----
-
-## Centralized Connectivity Profile {: #cent-conn }
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Default Connectivity Profile"
+    Each new VCF-A Organization has a default Connectivity Profile created at the creation of the Organization by the VCF-A Provider.  
+    The steps below are for the VCF-A Tenant to create another Connectivity Profile in its Organization.
+</div>
 
 ### Configuration
 
 #### Step1. Create Connectivity Profile
-![vCenter Network Span config](images/3e-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof config](images/1b-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+
+* **Region**:  
+  Select the Region for the Transit Gateway.  
+  Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.
 
 * **Transit Gateway**:  
-  Select the Centralized Transit Gateway, VPC Gateways will be connected to.
+  Select the Centralized or Distributed Transit Gateway, VPC Gateways will be connected to.
 
 * **External IP Blocks**:  
-  Select the External IP Block(s) VPC Subnets Public and NAT will use.
-  
-* **Edge Cluster**:  
-  (Optional) Select the Edge Cluster to use for the VPC Gateway.  
-  Required if N-S Services and/or Default Outbound NAT is enabled in this VPC Connectivity Profile.
-  
-* **N-S Services**:  
-  Enable to allow [NAT](1c-vpc_nat.md#full-nat) on VPC Gateways.
+  Select the [External IP Block(s)](4c-ip_block_provider.md#ext-ipblock) for future VPC Subnets Public, NAT, LB VIP, and VPN.
 
-* **Default Outbound NAT**:  
-  Enable to allow [Default Outbound NAT](1c-vpc_nat.md#outbound-nat) on VPC Gateways.  
-  Note: If the Centralized Transit Gateway selected is Active/Active, then Default Outbound NAT can not be enabled.
+* **'Private - TGW' IPv4 blocks**:  
+  Select the [Private IP Block(s)](1d-ip_block_tenant.md#privatetgw-ipblock) for future VPC Subnets Private-TGW.
+ 
+* **Default Outbound SNAT**:  
+  Enable to allow [Default Outbound SNAT](2c-vpc_nat.md#outbound-snat) on VPC Gateways.  
+  Note: Requires to select a Centralized Transit Gateway or Distributed Transit Gateway + VNA.
 
 * **External IP Block for Default Outbound NAT**:  
-  Select the External IP Block to use for VPC Gateways which enabled Outbound NAT.
+  (Optional) Select a specif External IP Block to use for Outbound NAT.  
+  If not selected, it will pick an IP from the External IP Blocks list configured above.
 
 
 ### Monitoring
@@ -70,52 +60,11 @@ Defines the VPC's connection to the Transit Gateway, specifies the assigned Exte
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Note"
+??? info "Note about the Status"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
-![IP Block Ext validation](images/3e-1b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof validation](images/1b-1b-Validation_ConProf.jpg){ width="60%" style="display: block; margin: 0 auto;" }
 
-
----
-
-## Distributed Connectivity Profile {: #dist-conn }
-
-### Configuration
-
-#### Step1. Create Connectivity Profile
-![vCenter Network Span config](images/3e-2a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
-
-* **Transit Gateway**:  
-  Select the Distributed Transit Gateway, VPC Gateways will be connected to.
-
-* **External IP Blocks**:  
-  Select the External IP Block(s) VPC Subnets Public and NAT will use.
-  
-* **Virtual Network Appliance Cluster**:  
-  (Optional) Select the Virtual Network Appliance Cluster to use for the VPC Gateway.  
-  Required if N-S Services and/or Default Outbound NAT is enabled in this VPC Connectivity Profile.
-  
-* **N-S Services**:  
-  Enable to allow [NAT](1c-vpc_nat.md#full-nat) on VPC Gateways.
-
-* **Default Outbound NAT**:  
-  Enable to allow [Default Outbound NAT](1c-vpc_nat.md#outbound-nat) on VPC Gateways.  
-
-* **External IP Block for Default Outbound NAT**:  
-  Select the External IP Block to use for VPC Gateways which enabled Outbound NAT.
-
-
-### Monitoring
-
-#### Status
-The status reflects the successful application of the configuration.
-
-<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Note"
-    Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
-
-![IP Block Ext validation](images/3e-2b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
-</div>
 
 ---

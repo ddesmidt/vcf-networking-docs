@@ -1370,7 +1370,35 @@
   
   
     <li class="md-nav__item">
-      <a href="1d-ip_quota-tenant.md" class="md-nav__link">
+      <a href="1d-ip_block_tenant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tenant IP Block
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1e-ip_quota_tenant/" class="md-nav__link">
         
   
   
@@ -1921,14 +1949,14 @@
   
   
     <li class="md-nav__item">
-      <a href="4c-ip_block/" class="md-nav__link">
+      <a href="4c-ip_block_provider/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    IP Block
+    Provider IP Block
   
 
     
@@ -2138,7 +2166,10 @@
   Defines cross-VPC communication rules.<br>
   Not represented in the diagram.<br>
   Configuration not available from VCF Automation (available from vCenter or NSX).  </li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.5 2.54l2.62 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95M12 19a7 7 0 0 1-7-7c0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95a10 10 0 0 0 10 10c3.3 0 6.23-1.61 8.05-4.09l-2.6-1.53A6.89 6.89 0 0 1 12 19"></path></svg></span> <a href="1d-ip_quota_tenant/"><strong>IP Quota Tenant</strong></a><br>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3v10h4v-2H4V5h2V3zm10 8h-2v2h4V3h-4v2h2zm10-5v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-3h2v3h16V6h-2.97V4H20c1.11 0 2 .89 2 2"></path></svg></span> <a href="1d-ip_block_tenant/"><strong>IP Blocks External + TGW Priv.</strong></a><br>
+  IP blocks used for VPC subnet allocation.<br>
+  Not represented in the diagram.</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.5 2.54l2.62 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95M12 19a7 7 0 0 1-7-7c0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95a10 10 0 0 0 10 10c3.3 0 6.23-1.61 8.05-4.09l-2.6-1.53A6.89 6.89 0 0 1 12 19"></path></svg></span> <a href="1e-ip_quota_tenant/"><strong>IP Quota Tenant</strong></a><br>
   IP Quota to limit the usage of External/Public IP addresses by VPCs.<br>
   Not represented in the diagram.</li>
 </ul>
@@ -2192,7 +2223,7 @@ xxx talk about Infoblox???</p>
   Connection between the VPC environment and the physical network.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1c-1.11 0-2 .89-2 2v4c0 1.11.89 2 2 2H1v2h12V9h-3c1.11 0 2-.89 2-2V3c0-1.11-.89-2-2-2zm0 2h6v4H4zM3 13v7h7v-2H5v-5zm11 0c-1.11 0-2 .89-2 2v4c0 1.11.89 2 2 2h-3v2h12v-2h-3c1.11 0 2-.89 2-2v-4c0-1.11-.89-2-2-2zm0 2h6v4h-6z"></path></svg></span> <a href="4b-vpc_subnet_vlan/"><strong>Subnet-VLAN</strong></a><br>
   VLAN-backed VPC subnets.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3v10h4v-2H4V5h2V3zm10 8h-2v2h4V3h-4v2h2zm10-5v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-3h2v3h16V6h-2.97V4H20c1.11 0 2 .89 2 2"></path></svg></span> <a href="4c-ip_block/"><strong>IP Blocks External (Infoblox) + TGW Priv.</strong></a><br>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 3v10h4v-2H4V5h2V3zm10 8h-2v2h4V3h-4v2h2zm10-5v12c0 1.11-.89 2-2 2H4a2 2 0 0 1-2-2v-3h2v3h16V6h-2.97V4H20c1.11 0 2 .89 2 2"></path></svg></span> <a href="4c-ip_block_provider/"><strong>IP Blocks External (Infoblox) + TGW Priv.</strong></a><br>
   IP blocks used for VPC subnet allocation.<br>
   Not represented in the diagram.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.5 2.54l2.62 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95M12 19a7 7 0 0 1-7-7c0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95a10 10 0 0 0 10 10c3.3 0 6.23-1.61 8.05-4.09l-2.6-1.53A6.89 6.89 0 0 1 12 19"></path></svg></span> <a href="4d-ip_quota_provider/"><strong>Provider IP Quota</strong></a><br>

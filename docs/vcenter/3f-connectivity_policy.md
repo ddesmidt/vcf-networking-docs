@@ -55,11 +55,11 @@ Different Connectivity Policy types are available:
 
 ### Monitoring
 
-#### Other VPCs with connectivity with yours
+#### Show other VPCs with connectivity with yours
 
 ![vCenter Conn Policy validation](images/3f-1b-Validation_ConnPolicy_Members.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-#### VPCs who belong to no Community
+#### Show VPCs who belong to no Community
 
 ![vCenter Conn Policy validation](images/3f-1b-Validation_VPC_NoConnPolicy.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 

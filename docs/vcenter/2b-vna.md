@@ -56,6 +56,7 @@ This section describes the procedures for configuring NSX Virtual Network Applia
 
 ### Monitoring
 #### Status
+The status reflects the successful application of the configuration.
 ![vCenter VNA Status](images/2b-4-Validation_VNA.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

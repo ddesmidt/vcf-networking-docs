@@ -13,12 +13,18 @@ This section describes the procedures for configuring Transit Gateways using the
 </div>
 
 <div markdown>
-![vCenter External Connection](images/1a-0-Transit_Gateway.jpg){ width="100%" }
+![VCFA External Connection](images/1a-0-Transit_Gateway.jpg){ width="100%" }
 </div>
 
 </div>
 
 ---
+
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Default Transit Gateway"
+    Each new VCF-A Organization has a default Transit Gateway created at the creation of the Organization by the VCF-A Provider.  
+    The steps below are for the VCF-A Tenant to create another VPC Gateway in its Organization.
+</div>
 
 ## Overview of Transit Gateway Types
 
@@ -74,7 +80,7 @@ Different Transit Gateway types are available:
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Note"
+??? info "Note about the Status"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
@@ -121,7 +127,7 @@ The status reflects the successful application of the configuration.
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Note"
+??? info "Note about the Status"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 

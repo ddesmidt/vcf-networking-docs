@@ -33,13 +33,13 @@ This section describes the procedures for configuring a VPC Gateway using the VC
       * **Zones**: Represent the vCenter Cluster(s) associated with a specific vCenter Supervisor.
 </div>
 
-### Configuration
-
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 ??? info "Default VPC Gateway"
-    Each new VCF-A Organization has a default VPC.  
+    Each new VCF-A Organization has a default VPC created at the creation of the Organization by the VCF-A Provider.  
     The steps below are for the VCF-A Tenant to create another VPC Gateway in its Organization.
 </div>
+
+### Configuration
 
 #### Step1. Create new VPC Gateway
 ![VCFA Create VPC](images/2a-1-Create_VPC_Gateway.jpg){ width="50%" style="display: block; margin: 0 auto;" }
@@ -57,7 +57,7 @@ This section describes the procedures for configuring a VPC Gateway using the VC
   This profile links the VPC to:  
   . [Transit Gateway](1a-transit_gateway.md) - determines the primary North-South path to the physical network  
   . [External IP Blocks](4c-ip_block.md) and ['Private -TGW' IP Blocks](4c-ip_block.md) - determines the future IP addressing of the VPC subnets / NAT / LB  
-  . [Default Outbound SNAT](2c-vpc_nat.md) - determines if compute (VMs / VKS) connected to Private VPC subnets will be SNATed by default to access external networks.
+  . [Default Outbound SNAT](2c-vpc_nat.md) - determines if compute (VMs / VKS) connected to Private VPC subnets will be SNATed by default to access external networks
   
 * **'Private - VPC' IPv4 CIDRs**  
   (Optional) Defines the IP address space reserved for internal VPC subnets.  

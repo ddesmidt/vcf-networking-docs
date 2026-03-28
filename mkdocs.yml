@@ -81,7 +81,8 @@ nav:
           - External Connectivity & Services:
             - Transit Gateway: vcfa/1a-transit_gateway.md
             - Connectivity Profile: vcfa/1b-connectivity_profile.md
-            - Tenant IP Quota: vcfa/1d-ip_quota-tenant.md
+            - Tenant IP Block: vcfa/1d-ip_block_tenant.md
+            - Tenant IP Quota: vcfa/1e-ip_quota_tenant.md
           - Network Services:
             - VPC Gateway: vcfa/2a-vpc_gateway.md
             - VPC Subnet: vcfa/2b-vpc_subnet.md
@@ -96,7 +97,7 @@ nav:
           - External Connectivity & Services:
             - External Connection: vcfa/4a-external_connection.md
             - Subnet VLAN: vcfa/4b-vpc_subnet_vlan.md
-            - IP Block: vcfa/4c-ip_block.md
+            - Provider IP Block: vcfa/4c-ip_block_provider.md
             - Provider IP Quota: vcfa/4d-ip_quota_provider.md
 
   

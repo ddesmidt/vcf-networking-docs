@@ -29,7 +29,10 @@ Explore the configuration guides for Tenant-Level Networking:
   Defines cross-VPC communication rules.  
   Not represented in the diagram.  
   Configuration not available from VCF Automation (available from vCenter or NSX).  
-* :material-chart-donut: [__IP Quota Tenant__](1d-ip_quota_tenant.md)  
+* :material-code-block-brackets: [__IP Blocks External + TGW Priv.__](1d-ip_block_tenant.md)  
+  IP blocks used for VPC subnet allocation.  
+  Not represented in the diagram.
+* :material-chart-donut: [__IP Quota Tenant__](1e-ip_quota_tenant.md)  
   IP Quota to limit the usage of External/Public IP addresses by VPCs.  
   Not represented in the diagram.
 
@@ -86,7 +89,7 @@ Explore the configuration guides for Provider-Level Networking:
   Connection between the VPC environment and the physical network.
 * :material-lan-connect: [__Subnet-VLAN__](4b-vpc_subnet_vlan.md)  
   VLAN-backed VPC subnets.
-* :material-code-block-brackets: [__IP Blocks External (Infoblox) + TGW Priv.__](4c-ip_block.md)  
+* :material-code-block-brackets: [__IP Blocks External (Infoblox) + TGW Priv.__](4c-ip_block_provider.md)  
   IP blocks used for VPC subnet allocation.  
   Not represented in the diagram.
 * :material-chart-donut: [__Provider IP Quota__](4d-ip_quota_provider.md)  

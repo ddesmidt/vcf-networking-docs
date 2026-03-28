@@ -25,9 +25,9 @@ Different IP Block types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
-| [**External**](#ext-ipblock) | Used for **VPC Subnets Public** and **NAT**. <br> Also used by **LB VIP** (AVI configuration), and **VPN** (NSX configuration). | External visibility is high; direct ingress/egress. |
-| [**Private-TGW**](#privatetgw-ipblock)| Used for **VPC Subnets Private-TGW** | Best for shared internal services across the enterprise. |
-| [**Private-VPC**](#privatevpc-ipblock)| Used for **VPC Subnets Private-VPC**. <br> Note: Configuration in within the [VPC Gateway](1a-vpc_gateway.md). | Maximum isolation; workloads are "hidden" even from other VPCs. |
+| [**External**](#ext-ipblock) | Used for [**VPC Subnets Public**](1b-vpc_subnet.md#overlay) and [**different NAT**](1c-vpc_nat.md). <br> Also used by **LB VIP** (AVI configuration) and **VPN** (NSX configuration). | External visibility is high; direct ingress/egress. |
+| [**Private-TGW**](#privatetgw-ipblock)| Used for [**VPC Subnets Private-TGW**](1b-vpc_subnet.md#overlay) and [**specific NAT (SNAT/DNAT)**](1c-vpc_nat.md#full-nat)| Best for shared internal services across the enterprise. |
+| [**Private-VPC**](#privatevpc-ipblock)| Used for [**VPC Subnets Private-VPC**](1b-vpc_subnet.md#overlay). <br> Note: Configuration is within the [VPC Gateway](1a-vpc_gateway.md). | Maximum isolation; workloads are "hidden" even from other VPCs. |
 
 ![vCenter IP Blocks Types](images/3c-0-IP_Block-Types.jpg){: .center style="width:75%" }
 
@@ -51,10 +51,9 @@ Also used for VLAN-backed Subnets.
   Set to External.
 
 * **CIDRs/Ranges**:  
-  Enter the specific CIDR(s) or IP Range(s) to be managed by this block.  
-  Note the following requirements based on the intended use case:  
-  . CIDR: Must be used if this block will be used for VPC-Subnet Publics, NAT, LB-VIP (AVI configuration), and VPN (NSX configuration)  
-  . Range: May be used if the block is intended only for NAT, LB-VIP (AVI configuration), or VPN (NSX configuration)
+  Enter the specific CIDR(s) and/or IP Range(s) to be managed by this block.  
+  . CIDR: Must be used if this block will be used for [VPC-Subnet Publics](1b-vpc_subnet.md#overlay), [NAT](1c-vpc_nat.md#full-nat), LB-VIP (AVI configuration), and VPN (NSX configuration)  
+  . Range: Can be used if the block is intended only for [NAT](1c-vpc_nat.md#full-nat), LB-VIP (AVI configuration), or VPN (NSX configuration). It can't be used for for VPC-Subnet Publics.
   
 * **Excluded IP Ranges**:  
   (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).
@@ -69,7 +68,7 @@ Also used for VLAN-backed Subnets.
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Note"
+??? info "Note about the Status"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
@@ -90,11 +89,12 @@ This is the IP Block used for future VPC Subnets Private-TGW.
   Set to Private.
 
 * **CIDRs/Ranges**:  
-  Enter the specific CIDR block(s) to be managed by this block.  
-  Do not use Range.
+  Enter the specific CIDR(s) and/or IP Range(s) to be managed by this block.  
+  . CIDR: Must be used if this block will be used for [VPC-Subnet Private-TGW](1b-vpc_subnet.md#overlay) and [specific NAT (SNAT/DNAT)](1c-vpc_nat.md#full-nat).  
+  . Range: Can be used if the block is intended only for [specific NAT (SNAT/DNAT)](1c-vpc_nat.md#full-nat). It can't be used for for VPC-Subnet Private-TGW.
   
 * **Excluded IP Ranges**:  
-  (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).
+  (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation.
   
 * **Reserved for Specific Subnet**:  
   Not Applicable.
@@ -105,7 +105,7 @@ This is the IP Block used for future VPC Subnets Private-TGW.
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Note"
+??? info "Note about the Status"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 

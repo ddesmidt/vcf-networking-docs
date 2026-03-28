@@ -79,6 +79,7 @@ This section describes the procedures for configuring NSX Edge Clusters and Node
 
 ### Monitoring
 #### Status
+The status reflects the successful application of the configuration.
 ![vCenter Edge Status](images/2a-4-Validation_Edge.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

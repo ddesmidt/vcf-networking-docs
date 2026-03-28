@@ -27,7 +27,7 @@ Different Connectivity Profile types are available:
 | [**Centralized Conn Prof**](#cent-conn) | Connectivity Profile for Centralized Transit Gateways. | VPC Gateways route traffic through a Centralized Transit Gateway. |
 | [**Distributed Conn Prof**](#dist-conn)| Connectivity Profile for Distributed Transit Gateways. | VPC Gateways route traffic through a Distributed Transit Gateway. |
 
-![Ext Connectivity Types](images/3e-0-Conn_Prof_Types.jpg){: .center style="width:75%" }
+![Connectivity Prof Types](images/3e-0-Conn_Prof_Types.jpg){: .center style="width:75%" }
 
 
 Defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services are enabled.
@@ -40,13 +40,16 @@ Defines the VPC's connection to the Transit Gateway, specifies the assigned Exte
 ### Configuration
 
 #### Step1. Create Connectivity Profile
-![vCenter Network Span config](images/3e-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof config](images/3e-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Transit Gateway**:  
   Select the Centralized Transit Gateway, VPC Gateways will be connected to.
 
 * **External IP Blocks**:  
-  Select the External IP Block(s) VPC Subnets Public and NAT will use.
+  Select the [External IP Block(s)](3c-ip_block.md#ext-ipblock) or create a new one for future VPC Subnets Public and NAT.
+  
+* **Private - Transit Gateway IP Blocks**:  
+  Select the [Private IP Block(s)](3c-ip_block.md#privatetgw-ipblock) or create a new one for future VPC Subnets Private-TGW.
   
 * **Edge Cluster**:  
   (Optional) Select the Edge Cluster to use for the VPC Gateway.  
@@ -60,7 +63,9 @@ Defines the VPC's connection to the Transit Gateway, specifies the assigned Exte
   Note: If the Centralized Transit Gateway selected is Active/Active, then Default Outbound NAT can not be enabled.
 
 * **External IP Block for Default Outbound NAT**:  
-  Select the External IP Block to use for VPC Gateways which enabled Outbound NAT.
+  (Optional) Select a specif External IP Block to use for Outbound NAT.  
+  If not selected, it will pick an IP from the External IP Blocks list configured above.
+
 
 
 ### Monitoring
@@ -69,11 +74,11 @@ Defines the VPC's connection to the Transit Gateway, specifies the assigned Exte
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Note"
+??? info "Note about the Status"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
-![IP Block Ext validation](images/3e-1b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof validation](images/3e-1b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 
 ---
@@ -83,13 +88,13 @@ The status reflects the successful application of the configuration.
 ### Configuration
 
 #### Step1. Create Connectivity Profile
-![vCenter Network Span config](images/3e-2a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof config](images/3e-2a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Transit Gateway**:  
   Select the Distributed Transit Gateway, VPC Gateways will be connected to.
 
 * **External IP Blocks**:  
-  Select the External IP Block(s) VPC Subnets Public and NAT will use.
+  Select the External IP Block(s) for future VPC Subnets Public and NAT.
   
 * **Virtual Network Appliance Cluster**:  
   (Optional) Select the Virtual Network Appliance Cluster to use for the VPC Gateway.  
@@ -111,10 +116,10 @@ The status reflects the successful application of the configuration.
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Note"
+??? info "Note about the Status"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 
-![IP Block Ext validation](images/3e-2b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof validation](images/3e-2b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 </div>
 
 ---

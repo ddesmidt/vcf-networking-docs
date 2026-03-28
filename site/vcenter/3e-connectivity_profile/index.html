@@ -1388,7 +1388,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/1d-ip_quota-tenant.md" class="md-nav__link">
+      <a href="../../vcfa/1d-ip_block_tenant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tenant IP Block
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcfa/1e-ip_quota_tenant/" class="md-nav__link">
         
   
   
@@ -1936,14 +1964,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/4c-ip_block/" class="md-nav__link">
+      <a href="../../vcfa/4c-ip_block_provider/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    IP Block
+    Provider IP Block
   
 
     
@@ -2176,13 +2204,13 @@
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-0-Conn_Prof_Types.jpg" data-desc-position="bottom"><img alt="Ext Connectivity Types" class="center" src="../images/3e-0-Conn_Prof_Types.jpg" style="width:75%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-0-Conn_Prof_Types.jpg" data-desc-position="bottom"><img alt="Connectivity Prof Types" class="center" src="../images/3e-0-Conn_Prof_Types.jpg" style="width:75%"></a></p>
 <p>Defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services are enabled.</p>
 <hr>
 <h2 id="cent-conn">Centralized Connectivity Profile</h2>
 <h3 id="configuration">Configuration</h3>
 <h4 id="step1-create-connectivity-profile">Step1. Create Connectivity Profile</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-1a-Create_ConnProf.jpg" data-desc-position="bottom"><img alt="vCenter Network Span config" src="../images/3e-1a-Create_ConnProf.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-1a-Create_ConnProf.jpg" data-desc-position="bottom"><img alt="Connectivity Prof config" src="../images/3e-1a-Create_ConnProf.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ul>
 <li>
 <p><strong>Transit Gateway</strong>:<br>
@@ -2190,7 +2218,11 @@
 </li>
 <li>
 <p><strong>External IP Blocks</strong>:<br>
-  Select the External IP Block(s) VPC Subnets Public and NAT will use.</p>
+  Select the <a href="../3c-ip_block/#ext-ipblock">External IP Block(s)</a> or create a new one for future VPC Subnets Public and NAT.</p>
+</li>
+<li>
+<p><strong>Private - Transit Gateway IP Blocks</strong>:<br>
+  Select the <a href="../3c-ip_block/#privatetgw-ipblock">Private IP Block(s)</a> or create a new one for future VPC Subnets Private-TGW.</p>
 </li>
 <li>
 <p><strong>Edge Cluster</strong>:<br>
@@ -2208,7 +2240,8 @@
 </li>
 <li>
 <p><strong>External IP Block for Default Outbound NAT</strong>:<br>
-  Select the External IP Block to use for VPC Gateways which enabled Outbound NAT.</p>
+  (Optional) Select a specif External IP Block to use for Outbound NAT.<br>
+  If not selected, it will pick an IP from the External IP Blocks list configured above.</p>
 </li>
 </ul>
 <h3 id="monitoring">Monitoring</h3>
@@ -2216,16 +2249,16 @@
 <p>The status reflects the successful application of the configuration.</p>
 <div style="margin-left: 40px; margin-right: 40px;">
 <details class="info">
-<summary>Note</summary>
+<summary>Note about the Status</summary>
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-1b-Validation_ConProf.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="../images/3e-1b-Validation_ConProf.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-1b-Validation_ConProf.jpg" data-desc-position="bottom"><img alt="Connectivity Prof validation" src="../images/3e-1b-Validation_ConProf.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <hr>
 <h2 id="dist-conn">Distributed Connectivity Profile</h2>
 <h3 id="configuration_1">Configuration</h3>
 <h4 id="step1-create-connectivity-profile_1">Step1. Create Connectivity Profile</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-2a-Create_ConnProf.jpg" data-desc-position="bottom"><img alt="vCenter Network Span config" src="../images/3e-2a-Create_ConnProf.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-2a-Create_ConnProf.jpg" data-desc-position="bottom"><img alt="Connectivity Prof config" src="../images/3e-2a-Create_ConnProf.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ul>
 <li>
 <p><strong>Transit Gateway</strong>:<br>
@@ -2233,7 +2266,7 @@
 </li>
 <li>
 <p><strong>External IP Blocks</strong>:<br>
-  Select the External IP Block(s) VPC Subnets Public and NAT will use.</p>
+  Select the External IP Block(s) for future VPC Subnets Public and NAT.</p>
 </li>
 <li>
 <p><strong>Virtual Network Appliance Cluster</strong>:<br>
@@ -2258,10 +2291,10 @@
 <p>The status reflects the successful application of the configuration.</p>
 <div style="margin-left: 40px; margin-right: 40px;">
 <details class="info">
-<summary>Note</summary>
+<summary>Note about the Status</summary>
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-2b-Validation_ConProf.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="../images/3e-2b-Validation_ConProf.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e-2b-Validation_ConProf.jpg" data-desc-position="bottom"><img alt="Connectivity Prof validation" src="../images/3e-2b-Validation_ConProf.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 </div>
 <hr>
 

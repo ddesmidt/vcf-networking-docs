@@ -33,7 +33,7 @@ This section describes the procedures for configuring Network Span using the vSp
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Note"
+??? info "Note about the Status"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 

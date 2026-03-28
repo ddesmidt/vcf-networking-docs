@@ -1427,7 +1427,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/1d-ip_quota-tenant.md" class="md-nav__link">
+      <a href="../../vcfa/1d-ip_block_tenant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tenant IP Block
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcfa/1e-ip_quota_tenant/" class="md-nav__link">
         
   
   
@@ -1975,14 +2003,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/4c-ip_block/" class="md-nav__link">
+      <a href="../../vcfa/4c-ip_block_provider/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    IP Block
+    Provider IP Block
   
 
     
@@ -2244,17 +2272,17 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><a href="#ext-ipblock"><strong>External</strong></a></td>
-<td style="text-align: left;">Used for <strong>VPC Subnets Public</strong> and <strong>NAT</strong>. <br> Also used by <strong>LB VIP</strong> (AVI configuration), and <strong>VPN</strong> (NSX configuration).</td>
+<td style="text-align: left;">Used for <a href="../1b-vpc_subnet/#overlay"><strong>VPC Subnets Public</strong></a> and <a href="../1c-vpc_nat/"><strong>different NAT</strong></a>. <br> Also used by <strong>LB VIP</strong> (AVI configuration) and <strong>VPN</strong> (NSX configuration).</td>
 <td style="text-align: left;">External visibility is high; direct ingress/egress.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#privatetgw-ipblock"><strong>Private-TGW</strong></a></td>
-<td style="text-align: left;">Used for <strong>VPC Subnets Private-TGW</strong></td>
+<td style="text-align: left;">Used for <a href="../1b-vpc_subnet/#overlay"><strong>VPC Subnets Private-TGW</strong></a> and <a href="../1c-vpc_nat/#full-nat"><strong>specific NAT (SNAT/DNAT)</strong></a></td>
 <td style="text-align: left;">Best for shared internal services across the enterprise.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#privatevpc-ipblock"><strong>Private-VPC</strong></a></td>
-<td style="text-align: left;">Used for <strong>VPC Subnets Private-VPC</strong>. <br> Note: Configuration in within the <a href="../1a-vpc_gateway/">VPC Gateway</a>.</td>
+<td style="text-align: left;">Used for <a href="../1b-vpc_subnet/#overlay"><strong>VPC Subnets Private-VPC</strong></a>. <br> Note: Configuration is within the <a href="../1a-vpc_gateway/">VPC Gateway</a>.</td>
 <td style="text-align: left;">Maximum isolation; workloads are "hidden" even from other VPCs.</td>
 </tr>
 </tbody>
@@ -2279,10 +2307,9 @@ Also used for VLAN-backed Subnets.</p>
 </li>
 <li>
 <p><strong>CIDRs/Ranges</strong>:<br>
-  Enter the specific CIDR(s) or IP Range(s) to be managed by this block.<br>
-  Note the following requirements based on the intended use case:<br>
-  . CIDR: Must be used if this block will be used for VPC-Subnet Publics, NAT, LB-VIP (AVI configuration), and VPN (NSX configuration)<br>
-  . Range: May be used if the block is intended only for NAT, LB-VIP (AVI configuration), or VPN (NSX configuration)</p>
+  Enter the specific CIDR(s) and/or IP Range(s) to be managed by this block.<br>
+  . CIDR: Must be used if this block will be used for <a href="../1b-vpc_subnet/#overlay">VPC-Subnet Publics</a>, <a href="../1c-vpc_nat/#full-nat">NAT</a>, LB-VIP (AVI configuration), and VPN (NSX configuration)<br>
+  . Range: Can be used if the block is intended only for <a href="../1c-vpc_nat/#full-nat">NAT</a>, LB-VIP (AVI configuration), or VPN (NSX configuration). It can't be used for for VPC-Subnet Publics.</p>
 </li>
 <li>
 <p><strong>Excluded IP Ranges</strong>:<br>
@@ -2299,7 +2326,7 @@ Also used for VLAN-backed Subnets.</p>
 <p>The status reflects the successful application of the configuration.</p>
 <div style="margin-left: 40px; margin-right: 40px;">
 <details class="info">
-<summary>Note</summary>
+<summary>Note about the Status</summary>
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>
@@ -2317,12 +2344,13 @@ Also used for VLAN-backed Subnets.</p>
 </li>
 <li>
 <p><strong>CIDRs/Ranges</strong>:<br>
-  Enter the specific CIDR block(s) to be managed by this block.<br>
-  Do not use Range.</p>
+  Enter the specific CIDR(s) and/or IP Range(s) to be managed by this block.<br>
+  . CIDR: Must be used if this block will be used for <a href="../1b-vpc_subnet/#overlay">VPC-Subnet Private-TGW</a> and <a href="../1c-vpc_nat/#full-nat">specific NAT (SNAT/DNAT)</a>.<br>
+  . Range: Can be used if the block is intended only for <a href="../1c-vpc_nat/#full-nat">specific NAT (SNAT/DNAT)</a>. It can't be used for for VPC-Subnet Private-TGW.</p>
 </li>
 <li>
 <p><strong>Excluded IP Ranges</strong>:<br>
-  (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).</p>
+  (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation.</p>
 </li>
 <li>
 <p><strong>Reserved for Specific Subnet</strong>:<br>
@@ -2334,7 +2362,7 @@ Also used for VLAN-backed Subnets.</p>
 <p>The status reflects the successful application of the configuration.</p>
 <div style="margin-left: 40px; margin-right: 40px;">
 <details class="info">
-<summary>Note</summary>
+<summary>Note about the Status</summary>
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>

@@ -74,6 +74,7 @@ Different Subnet Overlay types are available:
 
 ### Monitoring
 #### Topology
+You can see the VPC Subnets Overlay in a graphical way under Topology:
 ![vCenter Validation VPC Subnet](images/1b-1c-Validation_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
@@ -118,6 +119,7 @@ Different Subnet VLAN options are available:
 
 ### Monitoring 
 #### Topology
+You can see the VPC Subnets VLAN-Extension in a graphical way under Topology:
 ![vCenter Validation VPC Subnet](images/1b-2c-Validation_VPC_Subnet_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
