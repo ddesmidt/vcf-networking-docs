@@ -1,12 +1,12 @@
 <h1>
-  <img src="../../assets/VCFA.png" style="height:30px"; vertical-align:middle;> VPC Subnet Configuration in vCenter
+  <img src="../../assets/VCFA.png" style="height:30px"; vertical-align:middle;> VPC Subnet Configuration in VCF-A Tenant
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 80% 20%">
 
 <div markdown>
 
-This section describes the procedures for configuring a VPC Subnet using the vSphere Client.
+This section describes the procedures for configuring a VPC Subnet by the VCF-A Tenant.
 <br><br>
 There are 2 types of **VPC Subnets**:
 
@@ -15,35 +15,63 @@ There are 2 types of **VPC Subnets**:
 </div>
 
 <div markdown>
-![vCenter VPC Connectivity](images/1b-0-VPC_Subnet.jpg){ width="100%" }
+![VCFA VPC Connectivity](images/2b-0-VPC_Subnet.jpg){ width="100%" }
 </div>
 
 </div>
 
+---
 
-Attention if "#overlay" used in 1d-ip_block_tenant.md
+## VCF-A Namespaces
+
+Workloads (VMs and Kubernetes Clusters) are deployed in **VCF-A Namespaces**.  
+Each VCF-A Namespace has:
+* **Scope**: associated with specific **Zones** within a **Region** and linked to a VPC
+* **Resource Control**: boundaries for CPU, memory, storage, and network resources for their workloads
+
+![VCFA Namespace](images/2b-0-Namespace.jpg){: .center style="width:80%" }
+
+**VPC Subnet Placement**
+VPC Subnets can be provisioned at two different levels depending on the desired scope:
+
+* VCF-A Namespace Level: for dedicated VCF-A Namespace VPC-Subnets
+* VPC Gateway Level: for shared VPC-Subnets cross VCF-A Namespaces
+
+
+**VPC Subnets** can be created in:
+
+* **VCF-A namespaces** (which is associated to a VPC)
+* **VPC Gateway**
+
 ---
 
 ## VPC Subnet Overlay {: #overlay }
 
-### Overview of Overlay options
+VPC Subnets can directly be created in a Namespace.  
+Or can be created globally under Manage & Govern.
+
+
+**VPC Subnets** always have the same span as their VPC (so within a Region).  
+And workloads (VMs / K8s Cluster) are deployed in a VCF-A Namespace which are scoped within 1 or more VCF Automation Region Zones.
+
+### Overview of Overlay Types
 Different Subnet Overlay types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
 | **Public** | Provide Public IPs to workloads with direct access to the physical network (No-NAT). | External visibility is high; direct ingress/egress. |
-| **Private-TGW** | Provide Private IPs to workloads with no access to the physical network (requires NAT), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
-| **Private-VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs (requires NAT). | Maximum isolation; workloads are "hidden" even from other VPCs. |
+| **Private-TGW** | Provide Private IPs to workloads with no access to the physical network (requires [NAT](2d-vpc_nat.md)), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
+| **Private-VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs (requires [NAT](2d-vpc_nat.md)). | Maximum isolation; workloads are "hidden" even from other VPCs. |
 
-![VPC Subnet Option](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){: .center style="width:95%" }
+![VPC Subnet Option](images/2c-0-VPC_Subnet_AccessMode_Types.jpg){: .center style="width:80%" }
 
 ### Configuration
 
 #### Step1. Create new VPC Subnet (Overlay)
-![vCenter Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![VCFA Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 #### Step2. Configure new VPC Subnet
-![vCenter Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![VCFA Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **VLAN Extensions**  
   "No" for a VPC-Subnet Overlay.  
@@ -76,7 +104,7 @@ Different Subnet Overlay types are available:
 ### Monitoring
 #### Topology
 You can see the VPC Subnets Overlay in a graphical way under Topology:
-![vCenter Validation VPC Subnet](images/1b-1c-Validation_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![VCFA Validation VPC Subnet](images/1b-1c-Validation_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
 
@@ -96,11 +124,11 @@ Different Subnet VLAN options are available:
 ### Configuration
 
 #### Step1. Create new VPC Subnet VLAN-Extension
-![vCenter Create VPC](images/1b-2a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![VCFA Create VPC](images/1b-2a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 
 #### Step2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity)
-![vCenter Create VPC](images/1b-2b-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![VCFA Create VPC](images/1b-2b-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **VLAN Extensions**  
   "Yes" for a VPC-Subnet VLAN-Extension.  
@@ -121,6 +149,6 @@ Different Subnet VLAN options are available:
 ### Monitoring 
 #### Topology
 You can see the VPC Subnets VLAN-Extension in a graphical way under Topology:
-![vCenter Validation VPC Subnet](images/1b-2c-Validation_VPC_Subnet_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![VCFA Validation VPC Subnet](images/1b-2c-Validation_VPC_Subnet_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---

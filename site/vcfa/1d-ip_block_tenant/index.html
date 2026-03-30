@@ -1359,17 +1359,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#privatevpc-ipblock" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1529,7 +1518,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../2b-vpc_subnet/" class="md-nav__link">
+      <a href="../2b-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VCF-A Namespace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2c-vpc_subnet/" class="md-nav__link">
         
   
   
@@ -1557,7 +1574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2c-vpc_nat/" class="md-nav__link">
+      <a href="../2d-vpc_nat/" class="md-nav__link">
         
   
   
@@ -1585,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2d-vpc_DHCP/" class="md-nav__link">
+      <a href="../2e-vpc_DHCP/" class="md-nav__link">
         
   
   
@@ -1613,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2e-vpc_lb/" class="md-nav__link">
+      <a href="../2f-vpc_lb/" class="md-nav__link">
         
   
   
@@ -1641,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2f-vpc_vpn/" class="md-nav__link">
+      <a href="../2g-vpc_vpn/" class="md-nav__link">
         
   
   
@@ -2111,17 +2128,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#privatevpc-ipblock" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2172,7 +2178,7 @@
 
 <div class="grid" style="grid-template-columns: 60% 40%">
 <div>
-<p>This section describes the procedures for configuring IP Blocks using the vSphere Client.
+<p>This section describes the procedures for configuring IP Blocks by the VCF-A Tenant.
 <br><br>
 <strong>IP Blocks</strong> are used for VPC IP allocation.</p>
 </div>
@@ -2194,22 +2200,22 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><a href="#privatetgw-ipblock"><strong>Private-TGW</strong></a></td>
-<td style="text-align: left;">Used for <a href="../2b-vpc_subnet/#overlay"><strong>VPC Subnets Private-TGW</strong></a> and <a href="../2c-vpc_nat/#full-nat"><strong>specific NAT (SNAT/DNAT)</strong></a></td>
+<td style="text-align: left;">Used for <a href="../2c-vpc_subnet/#overlay"><strong>VPC Subnets Private-TGW</strong></a> and <a href="../2d-vpc_nat/#full-nat"><strong>specific NAT (SNAT/DNAT)</strong></a></td>
 <td style="text-align: left;">Best for shared internal services across the enterprise.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="#privatevpc-ipblock"><strong>Private-VPC</strong></a></td>
-<td style="text-align: left;">Used for <a href="1b-vpc_subnet.md#overlay"><strong>VPC Subnets Private-VPC</strong></a>. <br> Note: Configuration in within the <a href="../2a-vpc_gateway/">VPC Gateway</a>.</td>
+<td style="text-align: left;">Used for <a href="../2c-vpc_subnet/#overlay"><strong>VPC Subnets Private-VPC</strong></a>. <br> Note: Configuration in within the <a href="../2a-vpc_gateway/">VPC Gateway</a>.</td>
 <td style="text-align: left;">Maximum isolation; workloads are "hidden" even from other VPCs.</td>
 </tr>
 </tbody>
 </table>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0-IP_Block_Tenant-Types.jpg" data-desc-position="bottom"><img alt="VCFA IP Blocks Types" class="center" src="../images/1d-0-IP_Block_Tenant-Types.jpg" style="width:60%"></a></p>
-<p>For more information on VPC Subnets, refer to the <a href="../2b-vpc_subnet/">VPC Subnet</a> page.</p>
+<p>For more information on VPC Subnets, refer to the <a href="../2c-vpc_subnet/">VPC Subnet</a> page.</p>
 <div style="margin-left: 40px; margin-right: 40px;">
 <details class="info">
 <summary>Note about the External IP Blocks</summary>
-<p>IP Blocks External are used for <strong>VPC Subnets Public</strong> and <strong>NAT</strong>. Also used by <strong>LB VIP</strong>, and <strong>VPN</strong>.
+<p>IP Blocks External are used for <strong>VPC Subnets Public</strong> and <strong>NAT</strong>. Also used by <strong>LB VIP</strong>, and <strong>VPN</strong>.<br>
 IP Blocks type External are configured by the VCF-A Provider and offered to the Organization (VCF-A Tenant).</p>
 </details>
 </div>
@@ -2223,18 +2229,21 @@ IP Blocks type External are configured by the VCF-A Provider and offered to the 
 <li>
 <p><strong>Region</strong>:<br>
   Select the Region for the IP Block.<br>
-  Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.<br>
-  Only <a href="../1b-connectivity_profile/">Connectivity Profiles</a> associated that Region will be able to use that IP Block.</p>
+  Only <a href="../1b-connectivity_profile/">Connectivity Profiles</a> associated that Region will be able to use that IP Block.<br>
+  Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.</p>
 </li>
 <li>
 <p><strong>CIDRs</strong>:<br>
+  (Optional / Combinable with IP Ranges)<br>
   Enter the specific CIDR block(s) to be managed by this block.<br>
-  CIDR must be used if this block will be used for <a href="1b-vpc_subnet.md#overlay">VPC-Subnet Private-TGW</a> and <a href="../2c-vpc_nat/#full-nat">specific NAT (SNAT/DNAT)</a>. </p>
+  Required for: <a href="../2c-vpc_subnet/#overlay">VPC-Subnet Private-TGW</a> and <a href="../2d-vpc_nat/#full-nat">specific NAT (SNAT/DNAT)</a>.</p>
 </li>
 <li>
 <p><strong>IP Address Ranges</strong>:<br>
+  (Optional / Combinable with CIDRs)<br>
   Enter the specific IP Address Range(s) to be managed by this block.<br>
-  Range can be used for NAT, LB-VIP, or VPN. It can't be used for for VPC-Subnet Private-TGW.</p>
+  Supported for: <a href="../2d-vpc_nat/">All NAT</a>, <a href="../2f-vpc_lb/">Load Balancer VIPs</a>, and <a href="../2g-vpc_vpn/">VPN</a> services.<br>
+  Note: IP Ranges cannot be used for <a href="../2c-vpc_subnet/#overlay">VPC-Subnet Private-TGW</a> allocations; these require CIDRs.</p>
 </li>
 <li>
 <p><strong>Excluded IPs</strong>:<br>
@@ -2244,6 +2253,7 @@ IP Blocks type External are configured by the VCF-A Provider and offered to the 
 <h3 id="monitoring">Monitoring</h3>
 <h4 id="utilization">Utilization</h4>
 <p>Real-time utilization metrics for IP Blocks can be monitored via the following indicators:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-1c-Statistics_IPBlock_Private.jpg" data-desc-position="bottom"><img alt="IP Block Statistics" src="../images/1d-1c-Statistics_IPBlock_Private.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ul>
 <li>
 <p><strong>IP Block Usage Summary</strong>: Overall Usage.</p>
@@ -2252,7 +2262,7 @@ IP Blocks type External are configured by the VCF-A Provider and offered to the 
 <p><strong>Used IPs</strong>: The number of addresses currently assigned to active VPC subnets. For External IP Blocks, this also includes addresses consumed by NAT and Load Balancer Virtual VIPs.</p>
 </li>
 </ul>
-<h2 id="_1"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-1c-Statistics_IPBlock_Private.jpg" data-desc-position="bottom"><img alt="IP Block Statistics" src="../images/1d-1c-Statistics_IPBlock_Private.jpg" style="display: block; margin: 0 auto;" width="95%"></a></h2>
+<hr>
 <h2 id="privatevpc-ipblock">IP Block Private-VPC</h2>
 <h3 id="configuration_1">Configuration</h3>
 <p>This is the IP Block used for future VPC Subnets Private-VPC.<br>

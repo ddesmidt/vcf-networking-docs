@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for configuring a VPC Gateway using the VCF-A Tenant.
+This section describes the procedures for configuring a VPC Gateway by the VCF-A Tenant.
 <br><br>
 **VPC Gateway** is the logical router for VPC networking.
 </div>
@@ -21,7 +21,8 @@ This section describes the procedures for configuring a VPC Gateway using the VC
 
 ## VPC Gateway
 
-**VPC Gateways** are always scoped within a VCF Automation Region.
+**VPC Gateways** are always spanned within a VCF Automation Region.  
+
 
 ![VCFA VPC](images/2a-0-VPC_Gateway_VCFA.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
@@ -45,7 +46,7 @@ This section describes the procedures for configuring a VPC Gateway using the VC
 ![VCFA Create VPC](images/2a-1-Create_VPC_Gateway.jpg){ width="50%" style="display: block; margin: 0 auto;" }
 
 #### Step2. Configure new VPC Gateway
-![VCFA Create VPC](images/2a-2-Create_VPC_Gateway.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![VCFA Create VPC](images/2a-2-Create_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **Region**  
   Select the Region for the VPC.  
@@ -56,8 +57,8 @@ This section describes the procedures for configuring a VPC Gateway using the VC
   Select the pre-defined [Connectivity Profile](1b-connectivity_profile.md).  
   This profile links the VPC to:  
   . [Transit Gateway](1a-transit_gateway.md) - determines the primary North-South path to the physical network  
-  . [External IP Blocks](4c-ip_block.md) and ['Private -TGW' IP Blocks](4c-ip_block.md) - determines the future IP addressing of the VPC subnets / NAT / LB  
-  . [Default Outbound SNAT](2c-vpc_nat.md) - determines if compute (VMs / VKS) connected to Private VPC subnets will be SNATed by default to access external networks
+  . [External IP Blocks](1d-ip_block_tenant.md) and ['Private -TGW' IP Blocks](1d-ip_block_tenant.md) - determines the future IP addressing of the VPC subnets / NAT / LB  
+  . [Default Outbound SNAT](2d-vpc_nat.md) - determines if compute (VMs / VKS) connected to Private VPC subnets will be SNATed by default to access external networks
   
 * **'Private - VPC' IPv4 CIDRs**  
   (Optional) Defines the IP address space reserved for internal VPC subnets.  

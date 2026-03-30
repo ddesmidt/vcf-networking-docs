@@ -33,25 +33,27 @@ Explore the configuration guides for Tenant-Level Networking:
   IP blocks used for VPC subnet allocation.  
   Not represented in the diagram.
 * :material-chart-donut: [__IP Quota Tenant__](1e-ip_quota_tenant.md)  
-  IP Quota to limit the usage of External/Public IP addresses by VPCs.  
+  IP Quota to limit the usage of External/Public and/or Private-TGW IP addresses by Tenant's VPCs.  
   Not represented in the diagram.
 
 ### Network Services
 * :material-router: [**VPC Gateway**](2a-vpc_gateway.md)  
   Logical router.
-* :material-lan: [**VPC Subnet**](2b-vpc_subnet.md)  
+* :material-layers-plus: [**VCF-A Tenant Namespace**](2b-namespace.md)  
+  Workloads (VMs K8s Clusters) resources boundaries and Zone(s) (vCenter Cluster(s)).
+* :material-lan: [**VPC Subnet**](2c-vpc_subnet.md)  
   Logical Subnet (for VMs/K8s connection).  
   Option to also create Subnet-VLAN.
-* :material-swap-horizontal: [**NAT**](2c-vpc_nat.md)  
+* :material-swap-horizontal: [**NAT**](2d-vpc_nat.md)  
   External-IP (1:1 NAT)  
   or Outbound-NAT (N:1 SNAT)  
   or NAT (SNAT/DNAT)
-* :material-ip-network-outline: [**DHCP**](2d-vpc_DHCP.md)  
+* :material-ip-network-outline: [**DHCP**](2e-vpc_DHCP.md)  
   DHCP Server (managed by VCF)  
   or DHCP Relay (managed by 3rd party DHCP Server like Infoblox)
-* :material-arrow-split-vertical: [**Load Balancer**](2e-vpc_lb.md)  
+* :material-arrow-split-vertical: [**Load Balancer**](2f-vpc_lb.md)  
   xxx.
-* :octicons-lock-16: [**VPN**](2f-vpc_vpn.md)  
+* :octicons-lock-16: [**VPN**](2g-vpc_vpn.md)  
   Secure Site-to-Site connectivity.
 </div>
 

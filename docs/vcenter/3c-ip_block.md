@@ -52,8 +52,8 @@ Also used for VLAN-backed Subnets.
 
 * **CIDRs/Ranges**:  
   Enter the specific CIDR(s) and/or IP Range(s) to be managed by this block.  
-  . CIDR: Must be used if this block will be used for [VPC-Subnet Publics](1b-vpc_subnet.md#overlay), [NAT](1c-vpc_nat.md#full-nat), LB-VIP (AVI configuration), and VPN (NSX configuration)  
-  . Range: Can be used if the block is intended only for [NAT](1c-vpc_nat.md#full-nat), LB-VIP (AVI configuration), or VPN (NSX configuration). It can't be used for for VPC-Subnet Publics.
+  . CIDR: Required for [VPC-Subnet Publics](1b-vpc_subnet.md#overlay), [Specific NAT](1c-vpc_nat.md#full-nat), Load Balancer VIPs (AVI configuration), and VPN (NSX configuration)  
+  . Range: Supported for [All NAT](1c-vpc_nat.md), Load Balancer VIPs (AVI configuration), and VPN (NSX configuration). It cannot be used for for [VPC-Subnet Publics](1b-vpc_subnet.md#overlay); these require CIDRs.
   
 * **Excluded IP Ranges**:  
   (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation (e.g. IP Range used by the physical network).
@@ -90,8 +90,8 @@ This is the IP Block used for future VPC Subnets Private-TGW.
 
 * **CIDRs/Ranges**:  
   Enter the specific CIDR(s) and/or IP Range(s) to be managed by this block.  
-  . CIDR: Must be used if this block will be used for [VPC-Subnet Private-TGW](1b-vpc_subnet.md#overlay) and [specific NAT (SNAT/DNAT)](1c-vpc_nat.md#full-nat).  
-  . Range: Can be used if the block is intended only for [specific NAT (SNAT/DNAT)](1c-vpc_nat.md#full-nat). It can't be used for for VPC-Subnet Private-TGW.
+  . CIDR: Required for [VPC-Subnet Private-TGW](1b-vpc_subnet.md#overlay) and [Specific NAT](1c-vpc_nat.md#full-nat)  
+  . Range: Supported for [specific NAT (SNAT/DNAT)](1c-vpc_nat.md#full-nat), Load Balancer VIPs (AVI configuration), and VPN (NSX configuration). It cannot be used for for [VPC-Subnet Private-TGW](1b-vpc_subnet.md#overlay); these require CIDRs.
   
 * **Excluded IP Ranges**:  
   (Optional) Specify any IP Range(s) within the CIDRs above that should be withheld from automatic allocation.

@@ -11,7 +11,7 @@
         <link rel="prev" href="../1e-ip_quota_tenant/">
       
       
-        <link rel="next" href="../2b-vpc_subnet/">
+        <link rel="next" href="../2b-namespace/">
       
       
         
@@ -1479,7 +1479,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../2b-vpc_subnet/" class="md-nav__link">
+      <a href="../2b-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VCF-A Namespace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2c-vpc_subnet/" class="md-nav__link">
         
   
   
@@ -1507,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2c-vpc_nat/" class="md-nav__link">
+      <a href="../2d-vpc_nat/" class="md-nav__link">
         
   
   
@@ -1535,7 +1563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2d-vpc_DHCP/" class="md-nav__link">
+      <a href="../2e-vpc_DHCP/" class="md-nav__link">
         
   
   
@@ -1563,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2e-vpc_lb/" class="md-nav__link">
+      <a href="../2f-vpc_lb/" class="md-nav__link">
         
   
   
@@ -1591,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2f-vpc_vpn/" class="md-nav__link">
+      <a href="../2g-vpc_vpn/" class="md-nav__link">
         
   
   
@@ -2072,7 +2100,7 @@
 
 <div class="grid" style="grid-template-columns: 80% 20%">
 <div>
-<p>This section describes the procedures for configuring a VPC Gateway using the VCF-A Tenant.
+<p>This section describes the procedures for configuring a VPC Gateway by the VCF-A Tenant.
 <br><br>
 <strong>VPC Gateway</strong> is the logical router for VPC networking.</p>
 </div>
@@ -2082,7 +2110,7 @@
 </div>
 <hr>
 <h2 id="vpc-gateway">VPC Gateway</h2>
-<p><strong>VPC Gateways</strong> are always scoped within a VCF Automation Region.</p>
+<p><strong>VPC Gateways</strong> are always spanned within a VCF Automation Region.  </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-0-VPC_Gateway_VCFA.jpg" data-desc-position="bottom"><img alt="VCFA VPC" src="../images/2a-0-VPC_Gateway_VCFA.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <div style="margin-left: 40px; margin-right: 40px;">
 <details class="info">
@@ -2105,7 +2133,7 @@ The steps below are for the VCF-A Tenant to create another VPC Gateway in its Or
 <h4 id="step1-create-new-vpc-gateway">Step1. Create new VPC Gateway</h4>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-1-Create_VPC_Gateway.jpg" data-desc-position="bottom"><img alt="VCFA Create VPC" src="../images/2a-1-Create_VPC_Gateway.jpg" style="display: block; margin: 0 auto;" width="50%"></a></p>
 <h4 id="step2-configure-new-vpc-gateway">Step2. Configure new VPC Gateway</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-2-Create_VPC_Gateway.jpg" data-desc-position="bottom"><img alt="VCFA Create VPC" src="../images/2a-2-Create_VPC_Gateway.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-2-Create_VPC_Gateway.jpg" data-desc-position="bottom"><img alt="VCFA Create VPC" src="../images/2a-2-Create_VPC_Gateway.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <ul>
 <li>
 <p><strong>Region</strong><br>
@@ -2117,8 +2145,8 @@ The steps below are for the VCF-A Tenant to create another VPC Gateway in its Or
   Select the pre-defined <a href="../1b-connectivity_profile/">Connectivity Profile</a>.<br>
   This profile links the VPC to:<br>
   . <a href="../1a-transit_gateway/">Transit Gateway</a> - determines the primary North-South path to the physical network<br>
-  . <a href="4c-ip_block.md">External IP Blocks</a> and <a href="4c-ip_block.md">'Private -TGW' IP Blocks</a> - determines the future IP addressing of the VPC subnets / NAT / LB<br>
-  . <a href="../2c-vpc_nat/">Default Outbound SNAT</a> - determines if compute (VMs / VKS) connected to Private VPC subnets will be SNATed by default to access external networks</p>
+  . <a href="../1d-ip_block_tenant/">External IP Blocks</a> and <a href="../1d-ip_block_tenant/">'Private -TGW' IP Blocks</a> - determines the future IP addressing of the VPC subnets / NAT / LB<br>
+  . <a href="../2d-vpc_nat/">Default Outbound SNAT</a> - determines if compute (VMs / VKS) connected to Private VPC subnets will be SNATed by default to access external networks</p>
 </li>
 <li>
 <p><strong>'Private - VPC' IPv4 CIDRs</strong><br>

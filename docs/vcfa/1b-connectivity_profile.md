@@ -5,7 +5,7 @@
 <div class="grid" markdown style="grid-template-columns: 60% 40%">
 
 <div markdown>
-This section describes the procedures for configuring  Connectivity Profile using the VCF-A Tenant.
+This section describes the procedures for configuring  Connectivity Profile by the VCF-A Tenant.
 <br><br>
 **Connectivity Profile** defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services can be enabled.
 </div>
@@ -46,7 +46,7 @@ This section describes the procedures for configuring  Connectivity Profile usin
   Select the [Private IP Block(s)](1d-ip_block_tenant.md#privatetgw-ipblock) for future VPC Subnets Private-TGW.
  
 * **Default Outbound SNAT**:  
-  Enable to allow [Default Outbound SNAT](2c-vpc_nat.md#outbound-snat) on VPC Gateways.  
+  Enable to allow [Default Outbound SNAT](2d-vpc_nat.md#outbound-snat) on VPC Gateways.  
   Note: Requires to select a Centralized Transit Gateway or Distributed Transit Gateway + VNA.
 
 * **External IP Block for Default Outbound NAT**:  

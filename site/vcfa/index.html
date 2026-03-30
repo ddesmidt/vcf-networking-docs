@@ -1514,7 +1514,35 @@
   
   
     <li class="md-nav__item">
-      <a href="2b-vpc_subnet/" class="md-nav__link">
+      <a href="2b-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VCF-A Namespace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2c-vpc_subnet/" class="md-nav__link">
         
   
   
@@ -1542,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2c-vpc_nat/" class="md-nav__link">
+      <a href="2d-vpc_nat/" class="md-nav__link">
         
   
   
@@ -1570,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2d-vpc_DHCP/" class="md-nav__link">
+      <a href="2e-vpc_DHCP/" class="md-nav__link">
         
   
   
@@ -1598,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2e-vpc_lb/" class="md-nav__link">
+      <a href="2f-vpc_lb/" class="md-nav__link">
         
   
   
@@ -1626,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2f-vpc_vpn/" class="md-nav__link">
+      <a href="2g-vpc_vpn/" class="md-nav__link">
         
   
   
@@ -2170,26 +2198,28 @@
   IP blocks used for VPC subnet allocation.<br>
   Not represented in the diagram.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.5 2.54l2.62 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95M12 19a7 7 0 0 1-7-7c0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95a10 10 0 0 0 10 10c3.3 0 6.23-1.61 8.05-4.09l-2.6-1.53A6.89 6.89 0 0 1 12 19"></path></svg></span> <a href="1e-ip_quota_tenant/"><strong>IP Quota Tenant</strong></a><br>
-  IP Quota to limit the usage of External/Public IP addresses by VPCs.<br>
+  IP Quota to limit the usage of External/Public and/or Private-TGW IP addresses by Tenant's VPCs.<br>
   Not represented in the diagram.</li>
 </ul>
 <h3 id="network-services">Network Services</h3>
 <ul>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8m1-7v3h2l-3 3-3-3h2v-3m-6 0h3v2l3-3-3-3v2H5m6 0V8H9l3-3 3 3h-2v3m6 0h-3V9l-3 3 3 3v-2h3"></path></svg></span> <a href="2a-vpc_gateway/"><strong>VPC Gateway</strong></a><br>
   Logical router.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h1v2H2v2h4v2H5c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2H8v-2h8v2h-1c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2h-1v-2h4v-2h-9V9h1c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm0 2h4v3h-4zM5 17h4v3H5zm10 0h4v3h-4z"></path></svg></span> <a href="2b-vpc_subnet/"><strong>VPC Subnet</strong></a><br>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 14h2v3h3v2h-3v3h-2v-3h-3v-2h3zm-6 2L2 9l9-7 9 7zm0 2.54 1-.79V18c0 .71.12 1.39.35 2L11 21.07l-9-7 1.62-1.26z"></path></svg></span> <a href="2b-namespace/"><strong>VCF-A Tenant Namespace</strong></a><br>
+  Workloads (VMs K8s Clusters) resources boundaries and Zone(s) (vCenter Cluster(s)).</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h1v2H2v2h4v2H5c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2H8v-2h8v2h-1c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2h-1v-2h4v-2h-9V9h1c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm0 2h4v3h-4zM5 17h4v3H5zm10 0h4v3h-4z"></path></svg></span> <a href="2c-vpc_subnet/"><strong>VPC Subnet</strong></a><br>
   Logical Subnet (for VMs/K8s connection).<br>
   Option to also create Subnet-VLAN.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21 9-4-4v3h-7v2h7v3M7 11l-4 4 4 4v-3h7v-2H7z"></path></svg></span> <a href="2c-vpc_nat/"><strong>NAT</strong></a><br>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21 9-4-4v3h-7v2h7v3M7 11l-4 4 4 4v-3h7v-2H7z"></path></svg></span> <a href="2d-vpc_nat/"><strong>NAT</strong></a><br>
   External-IP (1:1 NAT)<br>
   or Outbound-NAT (N:1 SNAT)<br>
   or NAT (SNAT/DNAT)</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-8-5V5h10v10zm3-9H8v8h2zm4 0h-3v8h2v-2h1a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m0 4h-1V8h1z"></path></svg></span> <a href="2d-vpc_DHCP/"><strong>DHCP</strong></a><br>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2zm-8-5V5h10v10zm3-9H8v8h2zm4 0h-3v8h2v-2h1a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m0 4h-1V8h1z"></path></svg></span> <a href="2e-vpc_DHCP/"><strong>DHCP</strong></a><br>
   DHCP Server (managed by VCF)<br>
   or DHCP Relay (managed by 3rd party DHCP Server like Infoblox)</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16v-3h-3v9h-2V2h2v9h3V8l4 4zM2 12l4 4v-3h3v9h2V2H9v9H6V8z"></path></svg></span> <a href="2e-vpc_lb/"><strong>Load Balancer</strong></a><br>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16v-3h-3v9h-2V2h2v9h3V8l4 4zM2 12l4 4v-3h3v9h2V2H9v9H6V8z"></path></svg></span> <a href="2f-vpc_lb/"><strong>Load Balancer</strong></a><br>
   xxx.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25M10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"></path></svg></span> <a href="2f-vpc_vpn/"><strong>VPN</strong></a><br>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25M10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"></path></svg></span> <a href="2g-vpc_vpn/"><strong>VPN</strong></a><br>
   Secure Site-to-Site connectivity.</li>
 </ul>
 </div>

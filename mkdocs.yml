@@ -85,11 +85,12 @@ nav:
             - Tenant IP Quota: vcfa/1e-ip_quota_tenant.md
           - Network Services:
             - VPC Gateway: vcfa/2a-vpc_gateway.md
-            - VPC Subnet: vcfa/2b-vpc_subnet.md
-            - NAT: vcfa/2c-vpc_nat.md
-            - DHCP: vcfa/2d-vpc_DHCP.md
-            - Load Balancer: vcfa/2e-vpc_lb.md
-            - VPN: vcfa/2f-vpc_vpn.md
+            - VCF-A Namespace: vcfa/2b-namespace.md
+            - VPC Subnet: vcfa/2c-vpc_subnet.md
+            - NAT: vcfa/2d-vpc_nat.md
+            - DHCP: vcfa/2e-vpc_DHCP.md
+            - Load Balancer: vcfa/2f-vpc_lb.md
+            - VPN: vcfa/2g-vpc_vpn.md
       - VCF-A Provider:
           - Provider Infrastructure:
             - Edge Cluster / Node: vcfa/3a-edge.md

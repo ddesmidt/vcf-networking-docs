@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for configuring Transit Gateways using the VCF-A Tenant.
+This section describes the procedures for configuring Transit Gateways by the VCF-A Tenant.
 <br><br>
 **Transit Gateways** (Centralized or Distributed) provide the routing between VPC Gateways and physical networks.
 

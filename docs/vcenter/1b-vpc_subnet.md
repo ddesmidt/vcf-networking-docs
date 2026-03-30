@@ -25,16 +25,20 @@ There are 2 types of **VPC Subnets**:
 
 ## VPC Subnet Overlay {: #overlay }
 
-### Overview of Overlay options
+Tenant creates subnet-overlay and share to namespace
+
+
+
+### Overview of Overlay Types
 Different Subnet Overlay types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
 | **Public** | Provide Public IPs to workloads with direct access to the physical network (No-NAT). | External visibility is high; direct ingress/egress. |
-| **Private-TGW** | Provide Private IPs to workloads with no access to the physical network (requires NAT), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
-| **Private-VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs (requires NAT). | Maximum isolation; workloads are "hidden" even from other VPCs. |
+| **Private-TGW** | Provide Private IPs to workloads with no access to the physical network (requires [NAT](1c-vpc_nat.md)), but routably accessible to other VPCs in the same [Transit Gateway](3b-transit_gateway.md). | Best for shared internal services across the enterprise. |
+| **Private-VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs in the same [Transit Gateway](3b-transit_gateway.md)   (requires [NAT](1c-vpc_nat.md)). | Maximum isolation; workloads are "hidden" even from other VPCs. |
 
-![VPC Subnet Option](images/1b-0-VPC_Subnet_AccessMode_Options.jpg){: .center style="width:95%" }
+![VPC Subnet Option](images/1b-0-VPC_Subnet_AccessMode_Types.jpg){: .center style="width:95%" }
 
 ### Configuration
 
@@ -81,7 +85,19 @@ You can see the VPC Subnets Overlay in a graphical way under Topology:
 
 ## VPC Subnet VLAN-Extension {: #vlan }
 
-### Overview of VLAN options
+Org creates subnet-VLAN and share to Org
+  => Subnet available in Tenant Subnets.
+  then Tenant share to namespace
+Note: That subnet-VLAN can be shared in multiple Orgs.
+
+
+Org creates DTGW-VLAN-Dedicated and add "Dedicated VLAN Connection" to Org
+  => DTGW available in Tenant.
+  then Tenant adds that DTGW-VLAN-Dedicated to a VPC (public mode only)
+Note: That subnet-VLAN can NOT be shared in multiple Orgs.
+
+
+### Overview of VLAN Options
 Different Subnet VLAN options are available:
 
 | Type | Use Case | Routing Logic |
