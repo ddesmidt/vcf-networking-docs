@@ -576,10 +576,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview-of-overlay-options" class="md-nav__link">
+  <a href="#overview-of-overlay-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview of Overlay options
+        Overview of Overlay Types
       
     </span>
   </a>
@@ -629,7 +629,7 @@
   <a href="#overview-of-vlan-options" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview of VLAN options
+        Overview of VLAN Options
       
     </span>
   </a>
@@ -1541,7 +1541,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/2b-vpc_subnet/" class="md-nav__link">
+      <a href="../../vcfa/2b-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VCF-A Namespace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcfa/2c-vpc_subnet/" class="md-nav__link">
         
   
   
@@ -1569,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/2c-vpc_nat/" class="md-nav__link">
+      <a href="../../vcfa/2d-vpc_nat/" class="md-nav__link">
         
   
   
@@ -1597,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/2d-vpc_DHCP/" class="md-nav__link">
+      <a href="../../vcfa/2e-vpc_DHCP/" class="md-nav__link">
         
   
   
@@ -1625,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/2e-vpc_lb/" class="md-nav__link">
+      <a href="../../vcfa/2f-vpc_lb/" class="md-nav__link">
         
   
   
@@ -1653,7 +1681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../vcfa/2f-vpc_vpn/" class="md-nav__link">
+      <a href="../../vcfa/2g-vpc_vpn/" class="md-nav__link">
         
   
   
@@ -2082,10 +2110,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview-of-overlay-options" class="md-nav__link">
+  <a href="#overview-of-overlay-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview of Overlay options
+        Overview of Overlay Types
       
     </span>
   </a>
@@ -2135,7 +2163,7 @@
   <a href="#overview-of-vlan-options" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview of VLAN options
+        Overview of VLAN Options
       
     </span>
   </a>
@@ -2206,7 +2234,8 @@ There are 2 types of <strong>VPC Subnets</strong>:</p>
 </div>
 <hr>
 <h2 id="overlay">VPC Subnet Overlay</h2>
-<h3 id="overview-of-overlay-options">Overview of Overlay options</h3>
+<p>Tenant creates subnet-overlay and share to namespace</p>
+<h3 id="overview-of-overlay-types">Overview of Overlay Types</h3>
 <p>Different Subnet Overlay types are available:</p>
 <table>
 <thead>
@@ -2224,17 +2253,17 @@ There are 2 types of <strong>VPC Subnets</strong>:</p>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Private-TGW</strong></td>
-<td style="text-align: left;">Provide Private IPs to workloads with no access to the physical network (requires NAT), but routably accessible to other VPCs.</td>
+<td style="text-align: left;">Provide Private IPs to workloads with no access to the physical network (requires <a href="../1c-vpc_nat/">NAT</a>), but routably accessible to other VPCs in the same <a href="../3b-transit_gateway/">Transit Gateway</a>.</td>
 <td style="text-align: left;">Best for shared internal services across the enterprise.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Private-VPC</strong></td>
-<td style="text-align: left;">Provide Private IPs to workloads with no access to the physical network and other VPCs (requires NAT).</td>
+<td style="text-align: left;">Provide Private IPs to workloads with no access to the physical network and other VPCs in the same <a href="../3b-transit_gateway/">Transit Gateway</a>   (requires <a href="../1c-vpc_nat/">NAT</a>).</td>
 <td style="text-align: left;">Maximum isolation; workloads are "hidden" even from other VPCs.</td>
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-0-VPC_Subnet_AccessMode_Options.jpg" data-desc-position="bottom"><img alt="VPC Subnet Option" class="center" src="../images/1b-0-VPC_Subnet_AccessMode_Options.jpg" style="width:95%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-0-VPC_Subnet_AccessMode_Types.jpg" data-desc-position="bottom"><img alt="VPC Subnet Option" class="center" src="../images/1b-0-VPC_Subnet_AccessMode_Types.jpg" style="width:95%"></a></p>
 <h3 id="configuration">Configuration</h3>
 <h4 id="step1-create-new-vpc-subnet-overlay">Step1. Create new VPC Subnet (Overlay)</h4>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1a-Create_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-1a-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
@@ -2282,7 +2311,15 @@ There are 2 types of <strong>VPC Subnets</strong>:</p>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1c-Validation_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="../images/1b-1c-Validation_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <hr>
 <h2 id="vlan">VPC Subnet VLAN-Extension</h2>
-<h3 id="overview-of-vlan-options">Overview of VLAN options</h3>
+<p>Org creates subnet-VLAN and share to Org
+  =&gt; Subnet available in Tenant Subnets.
+  then Tenant share to namespace
+Note: That subnet-VLAN can be shared in multiple Orgs.</p>
+<p>Org creates DTGW-VLAN-Dedicated and add "Dedicated VLAN Connection" to Org
+  =&gt; DTGW available in Tenant.
+  then Tenant adds that DTGW-VLAN-Dedicated to a VPC (public mode only)
+Note: That subnet-VLAN can NOT be shared in multiple Orgs.</p>
+<h3 id="overview-of-vlan-options">Overview of VLAN Options</h3>
 <p>Different Subnet VLAN options are available:</p>
 <table>
 <thead>
