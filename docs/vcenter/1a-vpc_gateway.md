@@ -8,7 +8,7 @@
 
 This section describes the procedures for configuring a VPC Gateway using the vSphere Client.
 <br><br>
-**VPC Gateway** is the logical router for VPC networking.
+**VPC Gateways** are the logical router for VPC networking.
 </div>
 
 <div markdown>

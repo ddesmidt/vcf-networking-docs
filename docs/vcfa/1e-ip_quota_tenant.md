@@ -28,7 +28,7 @@ This is the IP Quota applied to 1 or more VPCs.
 ![IP Quota Ext config](images/1e-1a-Create_IPQuota_Tenant.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **Region**:  
-  Select the Region for the IP Block.  
+  Select the [Region](3a-region_zone.md#region) for the IP Block.  
   Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.  
 
 * **Visibility**:  

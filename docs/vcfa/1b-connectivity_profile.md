@@ -33,7 +33,7 @@ This section describes the procedures for configuring  Connectivity Profile by t
 ![Connectivity Prof config](images/1b-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Region**:  
-  Select the Region for the Transit Gateway.  
+  Select the [Region](3a-region_zone.md#region) for the Transit Gateway.  
   Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.
 
 * **Transit Gateway**:  

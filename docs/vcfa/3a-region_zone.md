@@ -1,14 +1,14 @@
 <h1>
-  <img src="../../assets/VCFA.png" style="height:30px"; vertical-align:middle;> VPC Gateway Configuration in VCF-A Tenant
+  <img src="../../assets/VCFA.png" style="height:30px"; vertical-align:middle;> Region & Zone Configuration in VCF-A Provider
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 80% 20%">
 
 <div markdown>
 
-This section describes the procedures for configuring a VPC Gateway by the VCF-A Tenant.
+This section describes the procedures for configuring a Zone & Region by the VCF-A Provider.
 <br><br>
-**VPC Gateways** are the logical router for VPC networking.
+**Regions & Zones** are logical bondaries mapped 
 </div>
 
 <div markdown>
@@ -19,12 +19,33 @@ This section describes the procedures for configuring a VPC Gateway by the VCF-A
 
 ---
 
+[Region](3a-region_zone#region) 
+[Zone](3a-region_zone#zone) 
+
+
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "VCF Automation Regions and Zones"
+    In VCF Automation, the infrastructure is mapped as follows:
+
+      * **Regions**: Represent the vCenter Supervisor(s) associated with a specific NSX instance.
+      * **Zones**: Represent the vCenter Cluster(s) associated with a specific vCenter Supervisor.
+</div>
+
+
 ## VPC Gateway
 
-**VPC Gateways** are always spanned within a VCF Automation [Region](3a-region_zone.md#region) .  
+**VPC Gateways** are always spanned within a VCF Automation Region.  
 
 
 ![VCFA VPC](images/2a-0-VPC_Gateway_VCFA.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "VPC Automation Regions and Zones"
+    In VCF Automation, the infrastructure is mapped as follows:
+
+      * **Regions**: Represent the vCenter Supervisor(s) associated with a specific NSX instance.
+      * **Zones**: Represent the vCenter Cluster(s) associated with a specific vCenter Supervisor.
+</div>
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 ??? info "Default VPC Gateway"
@@ -41,7 +62,7 @@ This section describes the procedures for configuring a VPC Gateway by the VCF-A
 ![VCFA Create VPC](images/2a-2-Create_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **Region**  
-  Select the [Region](3a-region_zone.md#region) for the VPC.  
+  Select the Region for the VPC.  
   Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.
 
 

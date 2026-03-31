@@ -26,8 +26,8 @@ Different Transit Gateway types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
-| [**Centralized Connection**](#cent-conn) | External connectivity for Centralized Transit Gateways via Edge Clusters. | Routes traffic through a centralized Tier-0/VRF Gateway for external access. |
-| [**Distributed VLAN Connection**](#dist-conn)| External connectivity for Distributed Transit Gateways (optionally utilizing VNA Nodes). | Provides a direct handoff to a specific VLAN. |
+| [**Centralized Connection**](#cent-conn) | Supports L2 and L3 Fabric.<br> External connectivity for Centralized Transit Gateways via Edge Clusters. | Routes traffic through a centralized Tier-0/VRF Gateway for external access. |
+| [**Distributed VLAN Connection**](#dist-conn)| Supports only L2 Fabric. <br> External connectivity for Distributed Transit Gateways (optionally utilizing VNA Nodes). | Provides a direct handoff to a specific VLAN. |
 
 ![Ext Connectivity Types](images/3a-0-External_Connection_Types.jpg){: .center style="width:60%" }
 

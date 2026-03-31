@@ -51,7 +51,7 @@ This is the IP Block used for future VPC Subnets Private-TGW.
 ![IP Block Ext config](images/1d-1a-Create_IPBlock_Private_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 * **Region**:  
-  Select the Region for the IP Block.  
+  Select the [Region](3a-region_zone.md#region) for the IP Block.  
   Only [Connectivity Profiles](1b-connectivity_profile.md) associated that Region will be able to use that IP Block.  
   Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.
 

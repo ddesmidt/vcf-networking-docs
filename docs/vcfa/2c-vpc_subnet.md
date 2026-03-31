@@ -8,51 +8,29 @@
 
 This section describes the procedures for configuring a VPC Subnet by the VCF-A Tenant.
 <br><br>
-There are 2 types of **VPC Subnets**:
+**VPC Subnets** are Logical Subnets for workload (VMs / K8s) connection.
+<br><br>
+There are 2 types of VPC Subnets:
 
 * [Overlay](#overlay)
 * [VLAN](#vlan)
 </div>
 
 <div markdown>
-![VCFA VPC Connectivity](images/2b-0-VPC_Subnet.jpg){ width="100%" }
+![VCFA VPC Connectivity](images/2c-0-VPC_Subnet.jpg){ width="100%" }
 </div>
 
 </div>
 
 ---
-
-## VCF-A Namespaces
-
-Workloads (VMs and Kubernetes Clusters) are deployed in **VCF-A Namespaces**.  
-Each VCF-A Namespace has:
-* **Scope**: associated with specific **Zones** within a **Region** and linked to a VPC
-* **Resource Control**: boundaries for CPU, memory, storage, and network resources for their workloads
-
-![VCFA Namespace](images/2b-0-Namespace.jpg){: .center style="width:80%" }
-
-**VPC Subnet Placement**
-VPC Subnets can be provisioned at two different levels depending on the desired scope:
-
-* VCF-A Namespace Level: for dedicated VCF-A Namespace VPC-Subnets
-* VPC Gateway Level: for shared VPC-Subnets cross VCF-A Namespaces
-
-
-**VPC Subnets** can be created in:
-
-* **VCF-A namespaces** (which is associated to a VPC)
-* **VPC Gateway**
-
----
-
 ## VPC Subnet Overlay {: #overlay }
 
-VPC Subnets can directly be created in a Namespace.  
-Or can be created globally under Manage & Govern.
+VPC Subnets Overlay can be created:
 
+* under a [VPC Gateway](2a-vpc_gateway.md)
+* under a [Namespace](2b-namespace.md)
 
-**VPC Subnets** always have the same span as their VPC (so within a Region).  
-And workloads (VMs / K8s Cluster) are deployed in a VCF-A Namespace which are scoped within 1 or more VCF Automation Region Zones.
+![VCFA Subnet Overlay](images/2c-1-VPC_Subnet_Overlay.jpg){: .center style="width:80%" }
 
 ### Overview of Overlay Types
 Different Subnet Overlay types are available:
@@ -63,7 +41,7 @@ Different Subnet Overlay types are available:
 | **Private-TGW** | Provide Private IPs to workloads with no access to the physical network (requires [NAT](2d-vpc_nat.md)), but routably accessible to other VPCs. | Best for shared internal services across the enterprise. |
 | **Private-VPC** | Provide Private IPs to workloads with no access to the physical network and other VPCs (requires [NAT](2d-vpc_nat.md)). | Maximum isolation; workloads are "hidden" even from other VPCs. |
 
-![VPC Subnet Option](images/2c-0-VPC_Subnet_AccessMode_Types.jpg){: .center style="width:80%" }
+![VCFA Subnet Option](images/2c-0-VPC_Subnet_AccessMode_Types.jpg){: .center style="width:80%" }
 
 ### Configuration
 
@@ -109,6 +87,20 @@ You can see the VPC Subnets Overlay in a graphical way under Topology:
 ---
 
 ## VPC Subnet VLAN-Extension {: #vlan }
+
+xxx Do I call it Extension???
+
+VPC Subnet VLANs are defined by the VCF-A Provider and consumed by the VCF-A Tenant.
+
+The VCF-A Provider has two instantiation paths:
+
+* [Subnet-VLAN](4b-vpc_subnet_vlan.md#subnet): Can be shared in multiple Organizations
+* [Distributed Transit Gateway VLAN Dedicated](4b-vpc_subnet_vlan.md#dtgw): Dedicated to a single Organization
+
+This section details the Tenant-side VPC Subnet VLAN-Extention creation process using these VCF-A Provider offered resources.
+
+![VCFA Subnet Overlay](images/2c-2-VPC_Subnet_VLAN.jpg){: .center style="width:80%" }
+
 
 ### Overview of VLAN options
 Different Subnet VLAN options are available:

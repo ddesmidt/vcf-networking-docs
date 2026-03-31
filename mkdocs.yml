@@ -93,8 +93,9 @@ nav:
             - VPN: vcfa/2g-vpc_vpn.md
       - VCF-A Provider:
           - Provider Infrastructure:
-            - Edge Cluster / Node: vcfa/3a-edge.md
-            - VNA Cluster / Node: vcfa/3b-vna.md
+            - Zone / Region: vcfa/3a-zone_region.md
+            - Edge Cluster / Node: vcfa/3b-edge.md
+            - VNA Cluster / Node: vcfa/3c-vna.md
           - External Connectivity & Services:
             - External Connection: vcfa/4a-external_connection.md
             - Subnet VLAN: vcfa/4b-vpc_subnet_vlan.md

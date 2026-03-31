@@ -47,7 +47,7 @@ Different Transit Gateway types are available:
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 !!! warning "Requirement"
-    An [**Edge Cluster**](3a-edge.md) must be pre-provisioned in the environment.  
+    An [**Edge Cluster**](3b-edge.md) must be pre-provisioned in the environment.  
     The VCF-A Provider offers an [**External Connection Centralized**](4a-external_connection.md#cent-conn) to the Organization.
 </div>
 
@@ -58,7 +58,7 @@ Different Transit Gateway types are available:
 ![Cent TGW connectivity](images/1a-1b-Configure_Cent_TGW.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **Region**:  
-  Select the Region for the Transit Gateway.  
+  Select the [Region](3a-region_zone.md#region) for the Transit Gateway.  
   Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.
 
 * **External Connection**:  
@@ -95,7 +95,7 @@ The status reflects the successful application of the configuration.
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 !!! warning "Requirement"
     The VCF-A Provider offers an [**External Connection Distributed**](4a-external_connection.md#dist-conn) to the Organization.
-    For VKS and Network Services NAT, LB, AVI Plugin, a [**VNA Cluster**](3b-vna.md) must be pre-provisioned in the environment.  
+    For VKS and Network Services NAT, LB, AVI Plugin, a [**VNA Cluster**](3c-vna.md) must be pre-provisioned in the environment.  
 </div>
 
 #### Step1. Create new Distributed Transit Gateway 
@@ -105,7 +105,7 @@ The status reflects the successful application of the configuration.
 ![Dist TGW connectivity](images/1a-2b-Configure_Dist_TGW.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 * **Region**:  
-  Select the Region for the Transit Gateway.  
+  Select the [Region](3a-region_zone.md#region) for the Transit Gateway.  
   Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.
 
 * **External Connection**:  

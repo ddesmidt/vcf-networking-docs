@@ -40,7 +40,7 @@ Explore the configuration guides for Tenant-Level Networking:
 * :material-router: [**VPC Gateway**](2a-vpc_gateway.md)  
   Logical router.
 * :material-layers-plus: [**VCF-A Tenant Namespace**](2b-namespace.md)  
-  Workloads (VMs K8s Clusters) resources boundaries and Zone(s) (vCenter Cluster(s)).
+  Resource boundaries (CPU/RAM/Storage) and placement mapping (Zones/vCenter Clusters) for VM and K8s workloads.
 * :material-lan: [**VPC Subnet**](2c-vpc_subnet.md)  
   Logical Subnet (for VMs/K8s connection).  
   Option to also create Subnet-VLAN.
@@ -78,9 +78,13 @@ Explore the configuration guides for Provider-Level Networking:
 <div style="height:20px;"></div>
 
 ### Provider Infrastructure
-* :material-layers-outline: [__Edge Cluster / Edge Node__](3a-edge.md)  
+* :material-layers-outline: [__Region / Zone__](3a-region_zone.md)  
+  Region: vCenter Supervisor(s) associated with a specific NSX instance.  
+  Zone: vCenter Cluster(s) associated with a specific vCenter Supervisor.  
+  Not represented in the diagram.  
+* :material-layers-outline: [__Edge Cluster / Edge Node__](3b-edge.md)  
   NSX Edge appliances providing centralized network services for Central Transit Gateway Designs.
-* :material-layers-outline: [__VNA Cluster / VNA Node__](3b-vna.md)  
+* :material-layers-outline: [__VNA Cluster / VNA Node__](3c-vna.md)  
   NSX Virtual Network appliances providing centralized network services for Distributed Transit Gateway Designs.
 * :material-router: ~~__Tier-0 / BGP__~~  
   Tier-0 logical router providing connectivity between Centralized Transit Gateways and the physical network.  

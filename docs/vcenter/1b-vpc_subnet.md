@@ -8,7 +8,9 @@
 
 This section describes the procedures for configuring a VPC Subnet using the vSphere Client.
 <br><br>
-There are 2 types of **VPC Subnets**:
+**VPC Subnets** are Logical Subnets for workload (VMs / K8s) connection.
+<br><br>
+There are 2 types of VPC Subnets:
 
 * [Overlay](#overlay)
 * [VLAN](#vlan)
