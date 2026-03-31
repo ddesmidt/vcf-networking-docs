@@ -1461,6 +1461,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="VCF-A Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1742,7 +1770,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../3a-edge/" class="md-nav__link">
+      <a href="../3a-zone_region.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zone / Region
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3b-edge/" class="md-nav__link">
         
   
   
@@ -1770,7 +1826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3b-vna/" class="md-nav__link">
+      <a href="../3c-vna/" class="md-nav__link">
         
   
   
@@ -2019,6 +2075,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="VCF-A Namespaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2042,32 +2126,82 @@
   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/VCFA.png" data-desc-position="bottom"><img src="../../assets/VCFA.png" style="height:30px" ;="" vertical-align:middle;=""></a> VCF-A Namespace in VCF-A Tenant
 </h1>
 
-<div class="grid" style="grid-template-columns: 80% 20%">
+<div class="grid" style="grid-template-columns: 20% 80%">
 <div>
-<p>This section describes the procedures for configuring a VCF-A Namespace by the VCF-A Tenant.</p>
+<p>This section describes the procedures for configuring a VCF-A Namespace by the VCF-A Tenant.
+<br><br>
+<strong>VCF-A Namespaces</strong> are resource boundaries (CPU/RAM/Storage) and placement mapping (Zones/vCenter Clusters) for VM and K8s workloads.</p>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-0-Namespace.jpg" data-desc-position="bottom"><img alt="VCFA VPC Connectivity" src="../images/2b-0-Namespace.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-0-Namespace.jpg" data-desc-position="bottom"><img alt="VCFA Namespace" src="../images/2b-0-Namespace.jpg" width="100%"></a></p>
 </div>
 </div>
 <hr>
 <h2 id="vcf-a-namespaces">VCF-A Namespaces</h2>
-<p>Workloads (VMs and Kubernetes Clusters) are deployed in <strong>VCF-A Namespaces</strong>.<br>
-Each VCF-A Namespace has:
-* <strong>Scope</strong>: associated with specific <strong>Zones</strong> within a <strong>Region</strong> and linked to a VPC
-* <strong>Resource Control</strong>: boundaries for CPU, memory, storage, and network resources for their workloads</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-0-Namespace.jpg" data-desc-position="bottom"><img alt="VCFA Namespace" class="center" src="../images/2b-0-Namespace.jpg" style="width:80%"></a></p>
-<p><strong>VPC Subnet Placement</strong>
-VPC Subnets can be provisioned at two different levels depending on the desired scope:</p>
+<p>Workloads (VMs and Kubernetes Clusters) are deployed in <strong>VCF-A Namespaces</strong>.</p>
+<p>Each VCF-A Namespace has:</p>
 <ul>
-<li>VCF-A Namespace Level: for dedicated VCF-A Namespace VPC-Subnets</li>
-<li>VPC Gateway Level: for shared VPC-Subnets cross VCF-A Namespaces</li>
+<li><strong>Placement Logic</strong>: associated with specific {Zones within a Region](3a-region_zone.md#zone) and linked to a <a href="../2a-vpc_gateway/">VPC Gateway</a></li>
+<li><strong>Resource Allocation</strong>: CPU, memory, and storage resources boundaries for workloads</li>
 </ul>
-<p><strong>VPC Subnets</strong> can be created in:</p>
+<h3 id="configuration">Configuration</h3>
+<h4 id="step1-create-new-vcf-a-namespaces">Step1. Create new VCF-A Namespaces</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1-Create_Namespace.jpg" data-desc-position="bottom"><img alt="VCFA Create Namespace" src="../images/2b-1-Create_Namespace.jpg" style="display: block; margin: 0 auto;" width="50%"></a></p>
+<h4 id="step2-configure-new-vcf-a-namespaces">Step2. Configure new VCF-A Namespaces</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2-Create_Namespace.jpg" data-desc-position="bottom"><img alt="VCFA Create Namespace" src="../images/2b-2-Create_Namespace.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <ul>
-<li><strong>VCF-A namespaces</strong> (which is associated to a VPC)</li>
-<li><strong>VPC Gateway</strong></li>
+<li>
+<p><strong>Project</strong><br>
+  Select the Project.<br>
+  Project's users will be granted access to the Namespace.</p>
+</li>
+<li>
+<p><strong>Namespace class</strong><br>
+  Select the Namespace class.<br>
+   Note: Namespace class is the resource (CPU and Memory) boudaries and Storage Class for the Namespace.</p>
+</li>
+<li>
+<p><strong>Region</strong><br>
+  Select the <a href="../3a-region_zone/#region">Region</a> for the Namespace.<br>
+  Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.</p>
+</li>
+<li>
+<p><strong>Zones</strong><br>
+  Select the <a href="../3a-region_zone/#zone">Zone(s)</a> for the Namespace.<br>
+  Note: Zone represents the vCenter Cluster(s) associated with a specific vCenter Supervisor.</p>
+</li>
+<li>
+<p><strong>Networking</strong><br>
+  Select between:<br>
+  . Shared VPC: The Namespace will be associated to an existing VPC<br>
+  . Dedicated VPC: The Namespace will be associated to a new VPC</p>
+</li>
+<li>
+<p><strong>VPC</strong> in case of Shared VPC<br>
+  Select the existing VPC for that Namespace.</p>
+</li>
+<li>
+<p><strong>Connectivity profile + 'Private - VPC' IPv4 CIDRs</strong> in case of Dedicated VPC<br>
+  Select the pre-defined <a href="../1b-connectivity_profile/">Connectivity Profile</a>.<br>
+  (Optional) Defines the IP address space reserved for internal VPC subnets.</p>
+</li>
+<li>
+<p><strong>Shared subnet</strong><br>
+  Select <a href="../2c-vpc_subnet/#overlay">VPC Subnets Overlay</a> or <a href="../2c-vpc_subnet/#vlan">VPC Subnets VLAN</a> you want shared with the Namespace.</p>
+</li>
 </ul>
+<h3 id="monitoring">Monitoring</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3-Validation_VPC_Gateway.jpg" data-desc-position="bottom"><img alt="VCFA Validation Namespace" src="../images/2a-3-Validation_VPC_Gateway.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<h4 id="status">Status</h4>
+<p>View the operational state and health status of the VPC Gateway at a glance.</p>
+<h4 id="ip-block-usage">IP Block Usage</h4>
+<p>Monitor the consumption of the IP Blocks (External, Private-TGW, and Private-VPC).</p>
+<ul>
+<li>External &amp; Private-TGW: Displays aggregate usage across this VPC and all other VPCs sharing these global resource pools</li>
+<li>Private-VPC: Displays the local usage of CIDR ranges reserved exclusively for this VPC</li>
+</ul>
+<h4 id="ip-quota-usage">IP Quota Usage</h4>
+<p>Track the specific consumption of External IP addresses by this VPC against its assigned IP Quota.</p>
 <hr>
 
 

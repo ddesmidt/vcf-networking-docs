@@ -1805,7 +1805,35 @@
   
   
     <li class="md-nav__item">
-      <a href="3a-edge/" class="md-nav__link">
+      <a href="3a-zone_region.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zone / Region
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3b-edge/" class="md-nav__link">
         
   
   
@@ -1833,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="3b-vna/" class="md-nav__link">
+      <a href="3c-vna/" class="md-nav__link">
         
   
   
@@ -2206,7 +2234,7 @@
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8m1-7v3h2l-3 3-3-3h2v-3m-6 0h3v2l3-3-3-3v2H5m6 0V8H9l3-3 3 3h-2v3m6 0h-3V9l-3 3 3 3v-2h3"></path></svg></span> <a href="2a-vpc_gateway/"><strong>VPC Gateway</strong></a><br>
   Logical router.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 14h2v3h3v2h-3v3h-2v-3h-3v-2h3zm-6 2L2 9l9-7 9 7zm0 2.54 1-.79V18c0 .71.12 1.39.35 2L11 21.07l-9-7 1.62-1.26z"></path></svg></span> <a href="2b-namespace/"><strong>VCF-A Tenant Namespace</strong></a><br>
-  Workloads (VMs K8s Clusters) resources boundaries and Zone(s) (vCenter Cluster(s)).</li>
+  Resource boundaries (CPU/RAM/Storage) and placement mapping (Zones/vCenter Clusters) for VM and K8s workloads.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h1v2H2v2h4v2H5c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2H8v-2h8v2h-1c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2h-1v-2h4v-2h-9V9h1c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm0 2h4v3h-4zM5 17h4v3H5zm10 0h4v3h-4z"></path></svg></span> <a href="2c-vpc_subnet/"><strong>VPC Subnet</strong></a><br>
   Logical Subnet (for VMs/K8s connection).<br>
   Option to also create Subnet-VLAN.</li>
@@ -2239,9 +2267,13 @@ xxx talk about Infoblox???</p>
 <div style="height:20px;"></div>
 <h3 id="provider-infrastructure">Provider Infrastructure</h3>
 <ul>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 18.54 7.37-5.74L21 14.07l-9 7-9-7 1.62-1.26zM12 16 3 9l9-7 9 7zm0-11.47L6.26 9 12 13.47 17.74 9z"></path></svg></span> <a href="3a-edge/"><strong>Edge Cluster / Edge Node</strong></a><br>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 18.54 7.37-5.74L21 14.07l-9 7-9-7 1.62-1.26zM12 16 3 9l9-7 9 7zm0-11.47L6.26 9 12 13.47 17.74 9z"></path></svg></span> <a href="3a-region_zone/"><strong>Region / Zone</strong></a><br>
+  Region: vCenter Supervisor(s) associated with a specific NSX instance.<br>
+  Zone: vCenter Cluster(s) associated with a specific vCenter Supervisor.<br>
+  Not represented in the diagram.  </li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 18.54 7.37-5.74L21 14.07l-9 7-9-7 1.62-1.26zM12 16 3 9l9-7 9 7zm0-11.47L6.26 9 12 13.47 17.74 9z"></path></svg></span> <a href="3b-edge/"><strong>Edge Cluster / Edge Node</strong></a><br>
   NSX Edge appliances providing centralized network services for Central Transit Gateway Designs.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 18.54 7.37-5.74L21 14.07l-9 7-9-7 1.62-1.26zM12 16 3 9l9-7 9 7zm0-11.47L6.26 9 12 13.47 17.74 9z"></path></svg></span> <a href="3b-vna/"><strong>VNA Cluster / VNA Node</strong></a><br>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 18.54 7.37-5.74L21 14.07l-9 7-9-7 1.62-1.26zM12 16 3 9l9-7 9 7zm0-11.47L6.26 9 12 13.47 17.74 9z"></path></svg></span> <a href="3c-vna/"><strong>VNA Cluster / VNA Node</strong></a><br>
   NSX Virtual Network appliances providing centralized network services for Distributed Transit Gateway Designs.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8m1-7v3h2l-3 3-3-3h2v-3m-6 0h3v2l3-3-3-3v2H5m6 0V8H9l3-3 3 3h-2v3m6 0h-3V9l-3 3 3 3v-2h3"></path></svg></span> <del><strong>Tier-0 / BGP</strong></del><br>
   Tier-0 logical router providing connectivity between Centralized Transit Gateways and the physical network.<br>
