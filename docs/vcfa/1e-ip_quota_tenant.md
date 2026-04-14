@@ -32,7 +32,7 @@ This is the IP Quota applied to 1 or more VPCs.
   Note: Region represents the vCenter Supervisor(s) associated with a specific NSX instance.  
 
 * **Visibility**:  
-  Define the scope of the quota: 
+  Define the scope of the quota:  
   . External: Applies limits to the consumption of [External/Public](2c-vpc_subnet.md) IP addresses  
   . Private - Transit Gateway: Applies limits to the consumption of [Private-TGW](2c-vpc_subnet.md) IP addresses
 

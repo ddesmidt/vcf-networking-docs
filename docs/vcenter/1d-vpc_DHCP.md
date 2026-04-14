@@ -89,11 +89,19 @@ Different DHCP types are available:
 
 ## DHCP Relay Configuration {: #dhcp-relay }
 
-### Configuration
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-!!! warning "Limitation"
-    When the 3rd party DHCP Server is connected to the physical network (not VPC subnet), DHCP Relay is supported exclusively on **VPC Public Subnets**.
+!!! warning "External DHCP Server Connectivity"
+    ![vCenter External DHCP Server](images/1d-0b-External_DHCP_Server.jpg){: .center style="width:40%" }
+
+    When a 3rd-party DHCP server is located on the physical network (outside the VPC subnet), DHCP Relay is supported exclusively on:
+
+    * [**VPC Public Subnets**](1b-vpc_subnet.md#overlay)
+    * [**Centralized Transit Gateways**](3b-transit_gateway.md)
+   
 </div>
+
+
+### Configuration
 
 #### Step0. Edit Global DHCP Server Configuration
 ![vCenter Edit Gloabl DHCP Server](images/1d-0b-Edit_DHCP_Relay_Config.jpg){ width="90%" style="display: block; margin: 0 auto;" }

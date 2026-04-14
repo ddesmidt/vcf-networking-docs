@@ -8,7 +8,7 @@
 
 This section describes the procedures for configuring a VCF-A Namespace by the VCF-A Tenant.
 <br><br>
-**VCF-A Namespaces** are resource boundaries (CPU/RAM/Storage) and placement mapping (Zones/vCenter Clusters) for VM and K8s workloads.
+**VCF-A Namespaces** are resource boundaries (CPU / RAM / Storage) and placement mapping (Zones / vCenter Clusters) for VM and K8s workloads.
 </div>
 
 <div markdown>

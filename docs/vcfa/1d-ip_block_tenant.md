@@ -88,6 +88,6 @@ Real-time utilization metrics for IP Blocks can be monitored via the following i
 ### Configuration
 
 This is the IP Block used for future VPC Subnets Private-VPC.  
-It's configuration is managed directly within the [VPC Gateway](2a-vpc_gateway.md) settings.
+Its configuration is managed directly within the [VPC Gateway](2a-vpc_gateway.md) settings.
 
 ---

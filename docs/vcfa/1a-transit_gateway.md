@@ -46,9 +46,9 @@ Different Transit Gateway types are available:
 ### Configuration
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-!!! warning "Requirement"
-    An [**Edge Cluster**](3b-edge.md) must be pre-provisioned in the environment.  
-    The VCF-A Provider offers an [**External Connection Centralized**](4a-external_connection.md#cent-conn) to the Organization.
+!!! warning "Prerequisites"
+    * **Organization Networking**: The VCF-A Provider configured the Tenant Organization with a Networking Connection Centralized.
+    * **[**Edge Cluster**](3b-edge.md) Provisioning**: An Edge Cluster must be pre-provisioned within the environment. This task is performed by the VCF-A Provider directly in NSX Manager or vCenter.
 </div>
 
 #### Step1. Create new Centralized Transit Gateway 
@@ -93,9 +93,9 @@ The status reflects the successful application of the configuration.
 ### Configuration
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-!!! warning "Requirement"
-    The VCF-A Provider offers an [**External Connection Distributed**](4a-external_connection.md#dist-conn) to the Organization.
-    For VKS and Network Services NAT, LB, AVI Plugin, a [**VNA Cluster**](3c-vna.md) must be pre-provisioned in the environment.  
+!!! warning "Prerequisites"
+    * **Organization Networking**: The VCF-A Provider configured the Tenant Organization with a Networking Connection Distributed.
+    * **[**VNA Cluster**](3b-edge.md) Provisioning**: A VNA Cluster must be pre-provisioned within the environment for VKS and Network Services NAT, LB, AVI Plugin. This task is performed by the VCF-A Provider directly in NSX Manager or vCenter.  
 </div>
 
 #### Step1. Create new Distributed Transit Gateway 

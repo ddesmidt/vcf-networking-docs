@@ -111,3 +111,6 @@ The status reflects the successful application of the configuration.
 ![Dist Ext Conn validation](images/3a-2b-Validation_Dist_Ext_Conn.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
+
+
+Note: In VCF-A a Tier-0 can be associated to only an External CTGW
