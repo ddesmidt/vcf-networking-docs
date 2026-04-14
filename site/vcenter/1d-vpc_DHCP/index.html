@@ -2320,13 +2320,18 @@
 </div>
 <hr>
 <h2 id="dhcp-relay">DHCP Relay Configuration</h2>
-<h3 id="configuration_2">Configuration</h3>
 <div style="margin-left: 40px; margin-right: 40px;">
 <div class="admonition warning">
-<p class="admonition-title">Limitation</p>
-<p>When the 3rd party DHCP Server is connected to the physical network (not VPC subnet), DHCP Relay is supported exclusively on <strong>VPC Public Subnets</strong>.</p>
+<p class="admonition-title">External DHCP Server Connectivity</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0b-External_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter External DHCP Server" class="center" src="../images/1d-0b-External_DHCP_Server.jpg" style="width:40%"></a></p>
+<p>When a 3rd-party DHCP server is located on the physical network (outside the VPC subnet), DHCP Relay is supported exclusively on:</p>
+<ul>
+<li><a href="../1b-vpc_subnet/#overlay"><strong>VPC Public Subnets</strong></a></li>
+<li><a href="../3b-transit_gateway/"><strong>Centralized Transit Gateways</strong></a></li>
+</ul>
 </div>
 </div>
+<h3 id="configuration_2">Configuration</h3>
 <h4 id="step0-edit-global-dhcp-server-configuration_1">Step0. Edit Global DHCP Server Configuration</h4>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0b-Edit_DHCP_Relay_Config.jpg" data-desc-position="bottom"><img alt="vCenter Edit Gloabl DHCP Server" src="../images/1d-0b-Edit_DHCP_Relay_Config.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <ul>
