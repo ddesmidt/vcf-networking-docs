@@ -2274,9 +2274,11 @@ The steps below are for the VCF-A Tenant to create another VPC Gateway in its Or
 <h3 id="configuration">Configuration</h3>
 <div style="margin-left: 40px; margin-right: 40px;">
 <div class="admonition warning">
-<p class="admonition-title">Requirement</p>
-<p>An <a href="../3b-edge/"><strong>Edge Cluster</strong></a> must be pre-provisioned in the environment.<br>
-The VCF-A Provider offers an <a href="../4a-external_connection/#cent-conn"><strong>External Connection Centralized</strong></a> to the Organization.</p>
+<p class="admonition-title">Prerequisites</p>
+<ul>
+<li><strong>Organization Networking</strong>: The VCF-A Provider configured the Tenant Organization with a Networking Connection Centralized.</li>
+<li><strong><a href="../3b-edge/"><strong>Edge Cluster</strong></a> Provisioning</strong>: An Edge Cluster must be pre-provisioned within the environment. This task is performed by the VCF-A Provider directly in NSX Manager or vCenter.</li>
+</ul>
 </div>
 </div>
 <h4 id="step1-create-new-centralized-transit-gateway">Step1. Create new Centralized Transit Gateway</h4>
@@ -2321,9 +2323,11 @@ The VCF-A Provider offers an <a href="../4a-external_connection/#cent-conn"><str
 <h3 id="configuration_1">Configuration</h3>
 <div style="margin-left: 40px; margin-right: 40px;">
 <div class="admonition warning">
-<p class="admonition-title">Requirement</p>
-<p>The VCF-A Provider offers an <a href="../4a-external_connection/#dist-conn"><strong>External Connection Distributed</strong></a> to the Organization.
-For VKS and Network Services NAT, LB, AVI Plugin, a <a href="../3c-vna/"><strong>VNA Cluster</strong></a> must be pre-provisioned in the environment.  </p>
+<p class="admonition-title">Prerequisites</p>
+<ul>
+<li><strong>Organization Networking</strong>: The VCF-A Provider configured the Tenant Organization with a Networking Connection Distributed.</li>
+<li><strong><a href="../3b-edge/"><strong>VNA Cluster</strong></a> Provisioning</strong>: A VNA Cluster must be pre-provisioned within the environment for VKS and Network Services NAT, LB, AVI Plugin. This task is performed by the VCF-A Provider directly in NSX Manager or vCenter.  </li>
+</ul>
 </div>
 </div>
 <h4 id="step1-create-new-distributed-transit-gateway">Step1. Create new Distributed Transit Gateway</h4>
