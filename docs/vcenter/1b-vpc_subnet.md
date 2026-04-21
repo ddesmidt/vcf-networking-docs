@@ -123,7 +123,7 @@ Different Subnet VLAN options are available:
   "Yes" for a VPC-Subnet VLAN-Extension.  
 
 * **Access Mode**  
-  Select Access Mode (L2-Only* / Public - No VPC Connectivity / Public - VPC Connectivity) based on the VM connectivity you need.
+  Select Access Mode (L2-Only / Public - No VPC Connectivity / Public - VPC Connectivity) based on the VM connectivity you need.
 
 * **VLAN ID**  
   Enter the physical VLAN ID.
