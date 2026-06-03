@@ -56,13 +56,6 @@ Explore the configuration guides for each VPC network service:
 
 ## VPC Northbound Architecture
 
-<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
-??? info "Personal Node on what could be added later"
-    * section to talk about "Design" to help customers choose between all those options (Centralized / Dist) and what needs to be configured for each  
-    * corner use case "Internet/DC1" External Connections  
-    * Infoblox  
-</div>
-
 Explore the configuration guides for each VCF Network Infrastructure and External Connectivity & Service:
 
 <div class="grid" markdown style="grid-template-columns: 25% 75%; gap: 10px;">
@@ -105,6 +98,12 @@ Explore the configuration guides for each VCF Network Infrastructure and Externa
 
 </div>
 
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Personal Node on what could be added later"
+    * section to talk about "Design" to help customers choose between all those options (Centralized / Dist) and what needs to be configured for each  
+    * corner use case "Internet/DC1" External Connections  
+    * Infoblox  
+</div>
 
 
 
