@@ -1,5 +1,5 @@
 <h1>
-  <img src="../assets/vCenter.png" style="height:30px"; vertical-align:middle;> vCenter Network Services
+  <img src="../assets/vCenter.png" style="height:30px; vertical-align:middle;"> vCenter Network Services
 </h1>
 
 
@@ -90,7 +90,7 @@ Explore the configuration guides for each VCF Network Infrastructure and Externa
 * :material-table-split-cell: [__Network Span__](3d-network_span.md)  
   Defines how VPC subnets span across vCenter clusters.  
   Not represented in the diagram.
-* :material-transit-connection: [__Connectivity Profile__](3e-connectivity_profile.md)  
+* :material-group: [__Connectivity Profile__](3e-connectivity_profile.md)  
   Defines the VPC's connection to the Transit Gateway, specifies the assigned External and Private-TGW IP blocks, and determines which VPC Services are enabled.  
   Not represented in the diagram.
 * :material-camera-control: [__Connectivity Policy__](3f-connectivity_policy.md)  
