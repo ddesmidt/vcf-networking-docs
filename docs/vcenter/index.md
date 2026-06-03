@@ -55,9 +55,13 @@ Explore the configuration guides for each VPC network service:
 ---
 
 ## VPC Northbound Architecture
-xxx Add section to talk about "Design / Educate" how customers choose between all those options.  
-:material-vector-polyline-plus: xxx Add how to do the use case "Internet / DC1" ???  
-xxx talk about Infoblox???
+
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
+??? info "Personal Node on what could be added later"
+    * section to talk about "Design" to help customers choose between all those options (Centralized / Dist) and what needs to be configured for each  
+    * corner use case "Internet/DC1" External Connections  
+    * Infoblox  
+</div>
 
 Explore the configuration guides for each VCF Network Infrastructure and External Connectivity & Service:
 
