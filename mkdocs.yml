@@ -79,28 +79,28 @@ nav:
       - Introduction: vcfa/index.md
       - VCF-A Tenant:
           - External Connectivity & Services:
-            - Transit Gateway: vcfa/wip.md
-            - Connectivity Profile: vcfa/wip.md
-            - Tenant IP Block: vcfa/wip.md
-            - Tenant IP Quota: vcfa/wip.md
+            - Transit Gateway: vcfa/wip-tgw.md
+            - Connectivity Profile: vcfa/wip-profile.md
+            - Tenant IP Block: vcfa/wip-block.md
+            - Tenant IP Quota: vcfa/wip-quota.md
           - Network Services:
-            - VPC Gateway: vcfa/wip.md
-            - VCF-A Namespace: vcfa/wip.md
-            - VPC Subnet: vcfa/wip.md
-            - NAT: vcfa/wip.md
-            - DHCP: vcfa/wip.md
-            - Load Balancer: vcfa/wip.md
-            - VPN: vcfa/wip.md
+            - VPC Gateway: vcfa/wip-gateway.md
+            - VCF-A Namespace: vcfa/wip-namespace.md
+            - VPC Subnet: vcfa/wip-subnet.md
+            - NAT: vcfa/wip-nat.md
+            - DHCP: vcfa/wip-dhcp.md
+            - Load Balancer: vcfa/wip-lb.md
+            - VPN: vcfa/wip-vpn.md
       - VCF-A Provider:
           - Provider Infrastructure:
-            - Zone / Region: vcfa/wip.md
-            - Edge Cluster / Node: vcfa/wip.md
-            - VNA Cluster / Node: vcfa/wip.md
+            - Zone / Region: vcfa/wip-zone.md
+            - Edge Cluster / Node: vcfa/wip-edge.md
+            - VNA Cluster / Node: vcfa/wip-vna.md
           - External Connectivity & Services:
-            - External Connection: vcfa/wip.md
-            - Subnet VLAN: vcfa/wip.md
-            - Provider IP Block: vcfa/wip.md
-            - Provider IP Quota: vcfa/wip.md
+            - External Connection: vcfa/wip-extconn.md
+            - Subnet VLAN: vcfa/wip-subnet_vlan.md
+            - Provider IP Block: vcfa/wip-ipblock.md
+            - Provider IP Quota: vcfa/wip-ipquota.md
 
   
 
