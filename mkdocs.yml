@@ -79,28 +79,28 @@ nav:
       - Introduction: vcfa/index.md
       - VCF-A Tenant:
           - External Connectivity & Services:
-            - Transit Gateway: vcfa/1a-transit_gateway.md
-            - Connectivity Profile: vcfa/1b-connectivity_profile.md
-            - Tenant IP Block: vcfa/1d-ip_block_tenant.md
-            - Tenant IP Quota: vcfa/1e-ip_quota_tenant.md
+            - Transit Gateway: vcfa/wip.md
+            - Connectivity Profile: vcfa/wip.md
+            - Tenant IP Block: vcfa/wip.md
+            - Tenant IP Quota: vcfa/wip.md
           - Network Services:
-            - VPC Gateway: vcfa/2a-vpc_gateway.md
-            - VCF-A Namespace: vcfa/2b-namespace.md
-            - VPC Subnet: vcfa/2c-vpc_subnet.md
-            - NAT: vcfa/2d-vpc_nat.md
-            - DHCP: vcfa/2e-vpc_DHCP.md
-            - Load Balancer: vcfa/2f-vpc_lb.md
-            - VPN: vcfa/2g-vpc_vpn.md
+            - VPC Gateway: vcfa/wip.md
+            - VCF-A Namespace: vcfa/wip.md
+            - VPC Subnet: vcfa/wip.md
+            - NAT: vcfa/wip.md
+            - DHCP: vcfa/wip.md
+            - Load Balancer: vcfa/wip.md
+            - VPN: vcfa/wip.md
       - VCF-A Provider:
           - Provider Infrastructure:
-            - Zone / Region: vcfa/3a-zone_region.md
-            - Edge Cluster / Node: vcfa/3b-edge.md
-            - VNA Cluster / Node: vcfa/3c-vna.md
+            - Zone / Region: vcfa/wip.md
+            - Edge Cluster / Node: vcfa/wip.md
+            - VNA Cluster / Node: vcfa/wip.md
           - External Connectivity & Services:
-            - External Connection: vcfa/4a-external_connection.md
-            - Subnet VLAN: vcfa/4b-vpc_subnet_vlan.md
-            - Provider IP Block: vcfa/4c-ip_block_provider.md
-            - Provider IP Quota: vcfa/4d-ip_quota_provider.md
+            - External Connection: vcfa/wip.md
+            - Subnet VLAN: vcfa/wip.md
+            - Provider IP Block: vcfa/wip.md
+            - Provider IP Quota: vcfa/wip.md
 
   
 
