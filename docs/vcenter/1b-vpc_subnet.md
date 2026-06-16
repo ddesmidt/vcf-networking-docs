@@ -105,7 +105,7 @@ Different Subnet VLAN options are available:
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
 | **L2-Only** | Provides direct access to a physical VLAN. | Access to Public VPC Subnets is via the external network only. No access to Private VPC Subnets. |
-| **Public - No VPC Connectivity** | The VPC Gateway is aware of the VLAN subnet, but provides no routing services to it. | Not recommended in vCenter (only VCF-A). |
+| **Public - No VPC Connectivity** | The VPC Gateway is aware of the VLAN subnet, but provides no routing services to it. | In vCenter, this option provides the exact same functionality as the L2-Only mode (designed for VCF Automation). |
 | **Public - VPC Connectivity** | Provides access to the physical VLAN via the VPC Gateway (bridges). | Enables simultaneous access to the Physical VLAN and internal Overlay VPC Subnets. |
 
 ![VPC Subnet VLAN Option](images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg){: .center style="width:80%" }
