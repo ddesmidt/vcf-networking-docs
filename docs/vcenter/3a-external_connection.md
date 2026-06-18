@@ -35,6 +35,8 @@ Different Transit Gateway types are available:
 
 ## Centralized External Connection {: #cent-conn }
 
+![Ext Connectivity Cent](images/3a-1-Cent.jpg){: .center style="width:30%" }
+
 ### Configuration 
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
@@ -86,6 +88,8 @@ The status reflects the successful application of the configuration.
 ---
 
 ## Distributed External Connection {: #dist-conn }
+
+![Ext Connectivity Dist](images/3a-2-Dist.jpg){: .center style="width:30%" }
 
 ### Configuration
 

@@ -34,6 +34,8 @@ Different Transit Gateway types are available:
 
 ## Centralized Transit Gateway {: #cent-tgw }
 
+![Ext Connectivity Cent](images/3b-1-Cent.jpg){: .center style="width:30%" }
+
 ### Configuration
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
@@ -93,6 +95,8 @@ The status reflects the successful application of the configuration.
 ---
 
 ## Distributed Transit Gateway  {: #dist-tgw }
+
+![Ext Connectivity Dist](images/3b-2-Dist.jpg){: .center style="width:30%" }
 
 ### Configuration
 
