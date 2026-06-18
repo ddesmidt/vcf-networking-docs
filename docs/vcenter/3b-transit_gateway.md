@@ -130,7 +130,8 @@ Option to offer Network Services NAT, AVI Plugin.
   For more information on VNA, refer to the [VNA](2b-vna.md) page.
 
 * **Default Outbound NAT**  
-  Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.
+  Enable the automatic Source NAT (N:1 SNAT) for future VPC Private-TGW and Private-VPC subnets.  
+  For more information on Outbound NAT, refer to the [Outbound NAT](1c-vpc_nat.md#outbound-nat) page.
 
 ### Monitoring
 
