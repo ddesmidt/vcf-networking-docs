@@ -35,7 +35,7 @@ Different Transit Gateway types are available:
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
 | [**Centralized TGW**](#cent-tgw) | Supports L2 and L3 Fabric. <br> Offers all Stateful Network Services (Outbound-NAT, NAT, LB, and VPN). | Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster. |
-| [**Distributed TGW**](#dist-tgw)| Supports only L2 Fabric. <br> Offers Stateful Network Services (Outbound-NAT, NAT, and LB) with VNA Nodes. | Routing occurs locally at the ESXi host level (distributed dataplane). Stateful Network Services traffic is redirected through a VNA Gateway in a VNA Cluster. |
+| [**Distributed TGW**](#dist-tgw)| Supports only L2 Fabric. <br> Offers Stateful Network Services (Outbound-NAT, NAT, and LB) with VNA Nodes. | Routing occurs locally at the ESXi host level (distributed dataplane). Stateful Network Services traffic is redirected through a VPC-SR Gateway in a VNA Cluster. |
 
 ![TGW Types](images/1a-0-Transit_Gateway_Types.jpg){: .center style="width:70%" }
 

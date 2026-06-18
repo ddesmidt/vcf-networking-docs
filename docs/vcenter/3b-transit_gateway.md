@@ -26,7 +26,7 @@ Different Transit Gateway types are available:
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
 | [**Centralized TGW**](#cent-tgw) | Supports L2 and L3 Fabric.<br> Offers Stateful Network Services (Outbound-NAT and NAT). VPN can also be configured but from NSX. | Egress traffic is hairpinned through a centralized Tier-0/VRF gateway hosted on an Edge Cluster. |
-| [**Distributed TGW**](#dist-tgw)| Supports only L2 Fabric. <br> Offers Stateful Network Services (Outbound-NAT and NAT) with VNA Nodes. VPN can also be configured but from NSX. | Routing occurs locally at the ESXi host level (distributed dataplane). Stateful Network Services traffic is redirected through a VNA Gateway in a VNA Cluster. |
+| [**Distributed TGW**](#dist-tgw)| Supports only L2 Fabric. <br> Offers Stateful Network Services (Outbound-NAT and NAT) with VNA Nodes. VPN can also be configured but from NSX. | Routing occurs locally at the ESXi host level (distributed dataplane). Stateful Network Services traffic is redirected through a VPC-SR Gateway in a VNA Cluster. |
 
 ![TGW Types](images/3b-0-Transit_Gateway_Types.jpg){: .center style="width:70%" }
 
@@ -126,7 +126,7 @@ Option to offer Network Services NAT, AVI Plugin.
 ![Dist WLD connectivity](images/3b-2d-Configure_VPC_Service.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 * **Virtual Network Appliance Cluster**:  
-  Select the VNA Cluster to host the VNA Gateway.  
+  Select the VNA Cluster to host the future VPC-SR Gateways.  
   For more information on VNA, refer to the [VNA](2b-vna.md) page.
 
 * **Default Outbound NAT**  
