@@ -2,7 +2,7 @@
   <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> VNA Configuration in vCenter
 </h1>
 
-<div class="grid" markdown style="grid-template-columns: 72% 28%">
+<div class="grid" markdown style="grid-template-columns: 65% 35%">
 
 <div markdown>
 
@@ -23,8 +23,6 @@ This section describes the procedures for configuring NSX Virtual Network Applia
 ## VNA Cluster / VNA Nodes
 
 ### Configuration
-
-VNA Nodes only require 1 interface in a Management VLAN (any subnet with access to the NSX Manager) and a FQDN name.
 
 #### Step1. Create new VNA Cluster / VNA Nodes
 ![vCenter VNA Cluster](images/2b-1-Create_VNA.jpg){ width="80%" style="display: block; margin: 0 auto;" }

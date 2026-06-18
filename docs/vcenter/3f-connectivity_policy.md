@@ -37,6 +37,12 @@ Different Connectivity Policy types are available:
 
 ### Configuration
 
+<div style="margin-left: 20px; margin-right: 20px;" markdown="1">
+??? info ":material-information-outline: Deep Dive: Blogs & Video Demonstrations"
+    * **Video Walkthrough:** Watch the step-by-step Connectivity Policy configuration [<span style="color: #FF0000;">:fontawesome-brands-youtube:</span> on YouTube](https://youtu.be/_pdVqTBho98){ target="_blank" }.
+    * **Technical Blog:** Read the detailed Connectivity Policy blog on the [<span style="color: #007cbb;">:material-newspaper-variant-outline:</span> VMware Cloud Foundation Blog](https://blogs.vmware.com/cloud-foundation/2026/05/15/vcf-networking-9-1-simpler-vpc-connectivity-control/){ target="_blank" }.
+</div>
+
 #### Step1. Create Connectivity Policy
 ![vCenter Conn Policy config](images/3f-1a-Create_ConnPolicy.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
