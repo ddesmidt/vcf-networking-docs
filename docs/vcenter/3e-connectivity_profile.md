@@ -37,6 +37,8 @@ Defines the VPC's connection to the Transit Gateway, specifies the assigned Exte
 
 ## Centralized Connectivity Profile {: #cent-conn }
 
+![Conn Prof Cent](images/3e-1-Cent.jpg){: .center style="width:30%" }
+
 ### Configuration
 
 #### Step1. Create Connectivity Profile
@@ -84,6 +86,8 @@ The status reflects the successful application of the configuration.
 ---
 
 ## Distributed Connectivity Profile {: #dist-conn }
+
+![Conn Prof Dist](images/3e-2-Dist.jpg){: .center style="width:30%" }
 
 ### Configuration
 
